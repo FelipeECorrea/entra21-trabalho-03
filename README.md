@@ -3,6 +3,10 @@
 
 <h1 align="center">Trabalho 03</h1>
 <p align="center">Repositório criado para hospedar o terceiro trabalho de C# do Entra21 Noturno.</p>
+
+## Objetivo :dart:
+
+O objetivo do trabalho foi desenvolver algoritmos em linguagem C# para suprir as necessidades propostas pelo professor [Francisco Lucas Sens](https://github.com/franciscosens).
   
 ## Tecnologias :globe_with_meridians:
 
