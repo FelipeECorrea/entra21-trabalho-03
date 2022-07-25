@@ -34,3 +34,10 @@ dotnet --version
 <b>[Kauã Amaral](https://github.com/KauaAmaral)</b>
 <b>[Juliana Forbici](https://github.com/JulianaForbici)</b>
 
+### Contatos: :hammer:
+
+<div>
+<a href="https://www.linkedin.com/in/felipeecorrea" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>   
+<a href="https://www.linkedin.com/in/kauaamaral" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>   
+<a href = "mailto:contato@julianaforbici"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<div>
