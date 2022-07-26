@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Database\conexao.cs" />
     <Compile Include="Models\Jogador.cs" />
+    <Compile Include="Models\Partida.cs" />
     <Compile Include="Models\Time.cs" />
     <Compile Include="Models\Torneio.cs" />
     <Compile Include="Models\Transmissao.cs" />
@@ -101,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
+    <Folder Include="Views\Partidas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\Estrutura.sql" />

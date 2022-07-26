@@ -1,1 +1,57 @@
-﻿
+﻿CREATE TABLE torneios (
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(25),
+	modo_lan BIT,
+	data_inicio DATETIME2,
+	data_termino DATETIME2,
+	premiacao DECIMAL(10,2));
+
+CREATE TABLE transmissoes (
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	id_torneio INTEGER,
+	nome_live VARCHAR(50),
+	nome_narrador VARCHAR(50),
+	plataforma VARCHAR(25),
+	idioma_portugues BIT,
+	idioma_ingles BIT,
+	idioma_espanhol BIT,
+	drop_caixas_sim BIT,
+
+	FOREIGN KEY(id_torneio) REFERENCES torneios(id));
+
+CREATE TABLE times (
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(25),
+	nacionalidade VARCHAR(20),
+	data_criacao DATETIME2);
+
+CREATE TABLE jogadores (
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	id_time INTEGER,
+	nick VARCHAR(25),
+	email VARCHAR(70),
+	senha VARCHAR(50),
+	patente_prata BIT,
+	patente_ouro BIT,
+	patente_ak BIT,
+	patente_cherife BIT,
+	patente_aguia BIT,
+	patente_global BIT,
+	
+	FOREIGN KEY(id_time) REFERENCES times(id));
+
+CREATE TABLE partidas (
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	id_time INTEGER,
+	id_torneio INTEGER,
+	grupo_sorteado VARCHAR(100),
+	mapa_mirage BIT,
+	mapa_dust2 BIT,
+	mapa_overpass BIT,
+	mapa_vertigo BIT,
+	mapa_nuke BIT,
+	mapa_inferno BIT,
+	mapa_train BIT,
+
+	FOREIGN KEY(id_time) REFERENCES times(id),
+	FOREIGN KEY(id_torneio) REFERENCES torneios(id));
