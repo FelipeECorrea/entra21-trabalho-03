@@ -4,9 +4,9 @@ using System.IO;
 
 namespace Sistema.Database
 {
-    internal class Conexao
+    public class Conexao
     {
-        public SqlCommand ConectarCriandoComando()
+        internal SqlConnection Conectar()
         {
             var conexao = new SqlConnection();
 
@@ -16,9 +16,7 @@ namespace Sistema.Database
 
             conexao.Open();
 
-            var comando = conexao.CreateCommand();
-
-            return comando;
+            return conexao;
         }
     }
 }
