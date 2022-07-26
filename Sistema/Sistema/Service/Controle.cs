@@ -12,7 +12,7 @@ namespace Sistema.Service
         public string aviso = "";
         public bool AcessarProg(string email, string senha)
         {
-            UsuariosCadastrado loginUsuario = new UsuariosCadastrado();
+            UsuarioCadastrados loginUsuario = new UsuarioCadastrados();
             validar = loginUsuario.verificarCadastro(email, senha);
 
             if (loginUsuario.aviso.Equals(""))
@@ -22,8 +22,14 @@ namespace Sistema.Service
             return validar;
         }
 
-        public string Cadastrar(string email, string senha, string csenha)
+        public string Cadastrar(string usuario, string email, string senha, string csenha)
         {
+            UsuarioCadastrados loginUsuario = new UsuarioCadastrados();
+            this.aviso = loginUsuario.cadastrar(usuario, email, senha, csenha);
+            if (loginUsuario.validar)
+            {
+                this.validar = true;
+            }
             return aviso;
         }
     }

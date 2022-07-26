@@ -55,12 +55,14 @@ CREATE TABLE partidas (
 
 	FOREIGN KEY(id_time) REFERENCES times(id),
 	FOREIGN KEY(id_torneio) REFERENCES torneios(id));
+
 CREATE TABLE contas (
+	usuario VARCHAR(15),
 	email VARCHAR(50),
 	senha VARCHAR(15)
 );
 
-SELECT * FROM contas;
-
 INSERT INTO contas VALUES
-	('pessoal@gmail.com', '1998');
+	('Felipe Corrêa','pessoal.fec@gmail.com', '1998');
+
+SELECT * FROM contas;

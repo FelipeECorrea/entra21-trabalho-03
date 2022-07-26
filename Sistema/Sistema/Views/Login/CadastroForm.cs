@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,21 @@ namespace Sistema.Views.Login
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void buttonNewCadastro_Click(object sender, EventArgs e)
+        {
+            Controle controle = new Controle();
+            string aviso = controle.Cadastrar(textBoxUsuario.Text,textBoxEmail.Text, textBoxSenha.Text, textBoxCSenha.Text);
+
+            if (controle.validar)
+            {
+                MessageBox.Show(aviso, "Cadastro", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(controle.aviso);
+            }
         }
     }
 }

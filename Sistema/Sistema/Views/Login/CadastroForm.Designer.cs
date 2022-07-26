@@ -50,6 +50,7 @@
             this.buttonNewCadastro.TabIndex = 0;
             this.buttonNewCadastro.Text = "Cadastrar";
             this.buttonNewCadastro.UseVisualStyleBackColor = true;
+            this.buttonNewCadastro.Click += new System.EventHandler(this.buttonNewCadastro_Click);
             // 
             // label1
             // 

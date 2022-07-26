@@ -30,16 +30,14 @@ namespace Sistema.Views
             if (controle.validar)
             {
                 MessageBox.Show("Seja Bem Vindo","Entrando",MessageBoxButtons.OK,MessageBoxIcon.Information);
-
+                var abrirMenu = new MenuPrincipalForm();
+                abrirMenu.Show();
                 this.Visible = false;
             }
             else
             {
                 MessageBox.Show("Login não encontrado, Verifique E-mail e Senha", "ERROR!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-
-            var abrirMenu = new MenuPrincipalForm();
-            abrirMenu.Show();
         }
     }
 }
