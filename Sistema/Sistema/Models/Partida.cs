@@ -1,6 +1,6 @@
 ﻿namespace Sistema.Models
 {
-    internal class Partida
+    public class Partida
     {
         public int Id { get; set; }
         public string PartidaSorteada { get; set; }

@@ -2,7 +2,7 @@
 
 namespace Sistema.Models
 {
-    internal class Torneio
+    public class Torneio
     {
 		public int Id { get; set; }
 		public string Nome { get; set; }

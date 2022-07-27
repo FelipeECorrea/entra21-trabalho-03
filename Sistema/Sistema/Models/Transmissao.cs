@@ -1,6 +1,6 @@
 ﻿namespace Sistema.Models
 {
-    internal class Transmissao
+    public class Transmissao
     {
 		public int Id { get; set; }
 		public string NomeLive { get; set; }

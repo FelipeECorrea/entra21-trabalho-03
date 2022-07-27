@@ -2,7 +2,7 @@
 
 namespace Sistema.Models
 {
-    internal class Jogador
+    public class Jogador
     {
         public int Id { get; set; }
         public string Nick { get; set; }
