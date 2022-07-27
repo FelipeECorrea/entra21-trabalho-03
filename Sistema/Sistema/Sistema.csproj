@@ -62,7 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\Conexao.cs" />
-    <Compile Include="Models\Jogador.cs" />
+    <Compile Include="Models\Jogadores.cs" />
     <Compile Include="Models\Partida.cs" />
     <Compile Include="Models\Time.cs" />
     <Compile Include="Models\Torneio.cs" />
@@ -130,7 +130,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Service\" />
     <Folder Include="Views\Partidas\" />
   </ItemGroup>
   <ItemGroup>
