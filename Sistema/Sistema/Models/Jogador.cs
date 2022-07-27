@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Sistema.Models
 {
-    internal class Jogadores
+    public class Jogadores
     {
+            public int Id { get; set; }
+            public string Email { get; set; }
+            public string Apelido { get; set; }
+            public string Senha { get; set; }
+            public DateTime DataCriacao { get; set; }
+            public string Patente { get; set; }
+            public string Time { get; set; }
+
     }
 }
