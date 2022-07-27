@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonCadastrar = new System.Windows.Forms.Button();
-            this.buttonEditar = new System.Windows.Forms.Button();
-            this.buttonApagar = new System.Windows.Forms.Button();
             this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTorneio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTransmissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonCadastrar = new System.Windows.Forms.Button();
+            this.buttonEditar = new System.Windows.Forms.Button();
+            this.buttonApagar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,33 +54,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(607, 426);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // buttonCadastrar
-            // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(635, 12);
-            this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(153, 104);
-            this.buttonCadastrar.TabIndex = 1;
-            this.buttonCadastrar.Text = "Cadastrar";
-            this.buttonCadastrar.UseVisualStyleBackColor = true;
-            // 
-            // buttonEditar
-            // 
-            this.buttonEditar.Location = new System.Drawing.Point(635, 176);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(153, 104);
-            this.buttonEditar.TabIndex = 1;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = true;
-            // 
-            // buttonApagar
-            // 
-            this.buttonApagar.Location = new System.Drawing.Point(635, 334);
-            this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(153, 104);
-            this.buttonApagar.TabIndex = 1;
-            this.buttonApagar.Text = "Apagar";
-            this.buttonApagar.UseVisualStyleBackColor = true;
             // 
             // ColumnCodigo
             // 
@@ -107,7 +80,37 @@
             this.ColumnTransmissao.Name = "ColumnTransmissao";
             this.ColumnTransmissao.ReadOnly = true;
             // 
-            // GrupoListagem
+            // buttonCadastrar
+            // 
+            this.buttonCadastrar.Location = new System.Drawing.Point(635, 12);
+            this.buttonCadastrar.Name = "buttonCadastrar";
+            this.buttonCadastrar.Size = new System.Drawing.Size(153, 104);
+            this.buttonCadastrar.TabIndex = 1;
+            this.buttonCadastrar.Text = "Cadastrar";
+            this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Location = new System.Drawing.Point(635, 176);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(153, 104);
+            this.buttonEditar.TabIndex = 1;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
+            // 
+            // buttonApagar
+            // 
+            this.buttonApagar.Location = new System.Drawing.Point(635, 334);
+            this.buttonApagar.Name = "buttonApagar";
+            this.buttonApagar.Size = new System.Drawing.Size(153, 104);
+            this.buttonApagar.TabIndex = 1;
+            this.buttonApagar.Text = "Apagar";
+            this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
+            // 
+            // GrupoListagemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,7 +119,7 @@
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "GrupoListagem";
+            this.Name = "GrupoListagemForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grupos Listagem";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
