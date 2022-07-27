@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema.Models
 {
-    public class Jogadores
+    public class Jogador
     {
             public int Id { get; set; }
             public string Email { get; set; }
