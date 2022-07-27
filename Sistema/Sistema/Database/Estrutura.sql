@@ -1,7 +1,7 @@
 ﻿CREATE TABLE torneios (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(25),
-	modo_lan BIT,
+	modo_presencial BIT,
 	data_inicio DATETIME2,
 	data_termino DATETIME2,
 	premiacao DECIMAL(10,2));
@@ -15,7 +15,6 @@ CREATE TABLE transmissoes (
 	idioma_portugues BIT,
 	idioma_ingles BIT,
 	idioma_espanhol BIT,
-	drop_caixas_sim BIT,
 
 	FOREIGN KEY(id_torneio) REFERENCES torneios(id));
 
