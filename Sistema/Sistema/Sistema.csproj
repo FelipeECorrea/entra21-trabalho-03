@@ -77,7 +77,7 @@
     <Compile Include="Views\Campeonato\CampeonatoCadastroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Campeonato\CampeonatoCadastroForm.Designer.cs">
+    <Compile Include="Views\Campeonato\CampeonatoCadastroForm.designer.cs">
       <DependentUpon>CampeonatoCadastroForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Grupo\GrupoCadastroEdicaoForm.cs">
