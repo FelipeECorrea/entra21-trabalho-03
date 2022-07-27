@@ -71,6 +71,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\Controle.cs" />
+    <Compile Include="Service\GrupoService.cs" />
+    <Compile Include="Service\IGrupoService.cs" />
     <Compile Include="Service\UsuarioCadastrados.cs" />
     <Compile Include="Views\Campeonato\CampeonadoCadastroForm.cs">
       <SubType>Form</SubType>
