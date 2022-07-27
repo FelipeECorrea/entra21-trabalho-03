@@ -1,6 +1,6 @@
 ﻿namespace Sistema.Views.Campeonato
 {
-    partial class CampeonadoCadastroForm
+    partial class CampeonatoCadastroForm
     {
         /// <summary>
         /// Required designer variable.

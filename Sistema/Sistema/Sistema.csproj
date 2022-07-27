@@ -74,11 +74,11 @@
     <Compile Include="Service\GrupoService.cs" />
     <Compile Include="Service\IGrupoService.cs" />
     <Compile Include="Service\UsuarioCadastrados.cs" />
-    <Compile Include="Views\Campeonato\CampeonadoCadastroForm.cs">
+    <Compile Include="Views\Campeonato\CampeonatoCadastroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Campeonato\CampeonadoCadastroForm.Designer.cs">
-      <DependentUpon>CampeonadoCadastroForm.cs</DependentUpon>
+    <Compile Include="Views\Campeonato\CampeonatoCadastroForm.Designer.cs">
+      <DependentUpon>CampeonatoCadastroForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Grupo\GrupoCadastroEdicaoForm.cs">
       <SubType>Form</SubType>
@@ -119,8 +119,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Campeonato\CampeonadoCadastroForm.resx">
-      <DependentUpon>CampeonadoCadastroForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Campeonato\CampeonatoCadastroForm.resx">
+      <DependentUpon>CampeonatoCadastroForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Grupo\GrupoCadastroEdicaoForm.resx">
       <DependentUpon>GrupoCadastroEdicaoForm.cs</DependentUpon>

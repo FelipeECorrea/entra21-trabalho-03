@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sistema.Views.Campeonato
 {
-    public partial class CampeonadoCadastroForm : Form
+    public partial class CampeonatoCadastroForm : Form
     {
-        public CampeonadoCadastroForm()
+        public CampeonatoCadastroForm()
         {
             InitializeComponent();
         }
