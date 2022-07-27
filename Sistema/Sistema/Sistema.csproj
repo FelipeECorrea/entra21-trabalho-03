@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\Conexao.cs" />
-    <Compile Include="Models\Jogadores.cs" />
     <Compile Include="Models\Partida.cs" />
     <Compile Include="Models\Time.cs" />
     <Compile Include="Models\Torneio.cs" />
