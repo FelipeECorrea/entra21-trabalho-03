@@ -80,6 +80,12 @@
     <Compile Include="Views\Campeonato\CampeonatoCadastroForm.designer.cs">
       <DependentUpon>CampeonatoCadastroForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Campeonato\CampeonatoListagemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Campeonato\CampeonatoListagemForm.Designer.cs">
+      <DependentUpon>CampeonatoListagemForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Grupo\GrupoCadastroEdicaoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="Views\Campeonato\CampeonatoCadastroForm.resx">
       <DependentUpon>CampeonatoCadastroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Campeonato\CampeonatoListagemForm.resx">
+      <DependentUpon>CampeonatoListagemForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Grupo\GrupoCadastroEdicaoForm.resx">
       <DependentUpon>GrupoCadastroEdicaoForm.cs</DependentUpon>
