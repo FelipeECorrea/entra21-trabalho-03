@@ -26,44 +26,42 @@ WHERE id = @ID";
 
         public void Cadastrar(Grupo grupo)
         {
-            //            var conexao = new Conexao().Conectar();
+            var conexao = new Conexao().Conectar();
 
-            //            var comando = conexao.CreateCommand();
+            var comando = conexao.CreateCommand();
 
-            //            comando.CommandText = @"INSERT INTO grupos (id_time, id_torneio, id_transmissao) VALUES
-            //(@ID_TIME, @ID_TORNEIO, @ID_TRANSMISSAO);";
+            comando.CommandText = @"INSERT INTO grupos (id_time, id_torneio, id_transmissao) VALUES
+            (@ID_TIME, @ID_TORNEIO, @ID_TRANSMISSAO);";
 
-            //            // TODO: Verificar os Id se estao de acordo em Cadastrar
-            //            comando.Parameters.AddWithValue("@ID_TIME", grupo.Time.Id);
-            //            comando.Parameters.AddWithValue("@ID_TORNEIO", grupo.Torneio.Id);
-            //            comando.Parameters.AddWithValue("@ID_TRANSMISSAO", grupo.Transmissao.Id);
+            comando.Parameters.AddWithValue("@ID_TIME", grupo.Time.Id);
+            comando.Parameters.AddWithValue("@ID_TORNEIO", grupo.Torneio.Id);
+            comando.Parameters.AddWithValue("@ID_TRANSMISSAO", grupo.Transmissao.Id);
 
-            //            comando.ExecuteNonQuery();
+            comando.ExecuteNonQuery();
 
-            //            conexao.Close();
+            conexao.Close();
         }
 
         public void Editar(Grupo grupo)
         {
-            //            var conexao = new Conexao().Conectar();
+            var conexao = new Conexao().Conectar();
 
-            //            var comando = conexao.CreateCommand();
+            var comando = conexao.CreateCommand();
 
-            //            comando.CommandText = @"UPDATE grupos SET
-            //id_time = @ID_TIME,
-            //id_torneio = @ID_TORNEIO,
-            //id_transmissao = @ID_TRANSMISSAO
-            //WHERE id = @ID";
+            comando.CommandText = @"UPDATE grupos SET
+            id_time = @ID_TIME,
+            id_torneio = @ID_TORNEIO,
+            id_transmissao = @ID_TRANSMISSAO
+            WHERE id = @ID";
 
-            //            // TODO: Verificar os Id se estao de acordo em Editar
-            //            comando.Parameters.AddWithValue("@ID_TIME", grupo.Time.Id);
-            //            comando.Parameters.AddWithValue("@ID_TORNEIO", grupo.Torneio.Id);
-            //            comando.Parameters.AddWithValue("@ID_TRANSMISSAO", grupo.Transmissao.Id);
-            //            comando.Parameters.AddWithValue("@ID", grupo.Id);
+            comando.Parameters.AddWithValue("@ID_TIME", grupo.Time.Id);
+            comando.Parameters.AddWithValue("@ID_TORNEIO", grupo.Torneio.Id);
+            comando.Parameters.AddWithValue("@ID_TRANSMISSAO", grupo.Transmissao.Id);
+            comando.Parameters.AddWithValue("@ID", grupo.Id);
 
-            //            comando.ExecuteNonQuery();
+            comando.ExecuteNonQuery();
 
-            //            conexao.Close();
+            conexao.Close();
         }
 
         public Grupo ObterPorId(int id)
@@ -87,20 +85,19 @@ WHERE id = @ID";
 
             var registro = dataTable.Rows[0];
 
-            // TODO: Verificar os Id se estao de acordo em ObterPorId
             var grupo = new Grupo();
             grupo.Id = Convert.ToInt32(registro["id"]);
 
-            //            grupo.Time = new Time();
-            //            grupo.Time.Id = Convert.ToInt32(registro["id_time"]);
+            grupo.Time = new Time();
+            grupo.Time.Id = Convert.ToInt32(registro["id_time"]);
 
-            //            grupo.Torneio = new Torneio();
-            //            grupo.Torneio.Id = Convert.ToInt32(registro["id_torneio"]);
+            grupo.Torneio = new Torneio();
+            grupo.Torneio.Id = Convert.ToInt32(registro["id_torneio"]);
 
-            //            grupo.Transmissao = new Transmissao();
-            //            grupo.Transmissao.Id = Convert.ToInt32(registro["id_transmissao"]);
+            grupo.Transmissao = new Transmissao();
+            grupo.Transmissao.Id = Convert.ToInt32(registro["id_transmissao"]);
 
-            //            conexao.Close();
+            conexao.Close();
 
             return grupo;
         }
@@ -137,18 +134,17 @@ INNER JOIN transmissoes ON(grupos.id_transmissao = transmissoes.id)";
                 var grupo = new Grupo();
                 grupo.Id = Convert.ToInt32(registro["id"]);
 
-                // TODO: Verificar .Id e .Nome dos itens
-                //grupo.Time = new Time();
-                //grupo.Time.Id = Convert.ToInt32(registro["time_id"]);
-                //grupo.Time.Nome = registro["time_nome"];
+                grupo.Time = new Time();
+                grupo.Time.Id = Convert.ToInt32(registro["time_id"]);
+                grupo.Time.Nome = registro["time_nome"].ToString();
 
-                //grupo.Torneio = new Torneio();
-                //grupo.Torneio.Id = Convert.ToInt32(registro["torneio_id"]);
-                //grupo.Torneio.Nome = registro["torneio_nome"];
+                grupo.Torneio = new Torneio();
+                grupo.Torneio.Id = Convert.ToInt32(registro["torneio_id"]);
+                grupo.Torneio.Nome = registro["torneio_nome"].ToString();
 
-                //grupo.Transmissao = new Transmissao();
-                //grupo.Transmissao.Id = Convert.ToInt32(registro["transmissoes_id"]);
-                //grupo.Transmissao.NomeLive = registro["transmissoes_nome_live"];
+                grupo.Transmissao = new Transmissao();
+                grupo.Transmissao.Id = Convert.ToInt32(registro["transmissoes_id"]);
+                grupo.Transmissao.NomeLive = registro["transmissoes_nome_live"].ToString();
 
                 grupos.Add(grupo);
             }
