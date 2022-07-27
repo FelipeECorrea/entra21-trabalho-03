@@ -40,21 +40,26 @@ CREATE TABLE jogadores (
 	
 	FOREIGN KEY(id_time) REFERENCES times(id));
 
-CREATE TABLE partidas (
+CREATE TABLE grupos (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	id_time INTEGER,
 	id_torneio INTEGER,
-	grupo_sorteado VARCHAR(100),
+	id_transmissao INTEGER,
+
+	FOREIGN KEY(id_time) REFERENCES times(id),
+	FOREIGN KEY(id_torneio) REFERENCES torneios(id),
+	FOREIGN KEY(id_transmissao) REFERENCES transmissoes(id));
+
+CREATE TABLE partidas (
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	partida_sorteada VARCHAR(100),
 	mapa_mirage BIT,
 	mapa_dust2 BIT,
 	mapa_overpass BIT,
 	mapa_vertigo BIT,
 	mapa_nuke BIT,
 	mapa_inferno BIT,
-	mapa_train BIT,
-
-	FOREIGN KEY(id_time) REFERENCES times(id),
-	FOREIGN KEY(id_torneio) REFERENCES torneios(id));
+	mapa_train BIT);
 
 CREATE TABLE contas (
 	usuario VARCHAR(15),
