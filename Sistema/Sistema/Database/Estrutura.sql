@@ -31,12 +31,7 @@ CREATE TABLE jogadores (
 	nick VARCHAR(25),
 	email VARCHAR(70),
 	senha VARCHAR(50),
-	patente_prata BIT,
-	patente_ouro BIT,
-	patente_ak BIT,
-	patente_cherife BIT,
-	patente_aguia BIT,
-	patente_global BIT,
+	patente VARCHAR(25),
 	
 	FOREIGN KEY(id_time) REFERENCES times(id));
 
