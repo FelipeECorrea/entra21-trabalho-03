@@ -53,7 +53,7 @@ CREATE TABLE partidas (
 	mapa_vertigo BIT,
 	mapa_nuke BIT,
 	mapa_inferno BIT,
-	mapa_train BIT);
+	mapa_ancient BIT);
 
 CREATE TABLE contas (
 	usuario VARCHAR(15),

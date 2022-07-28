@@ -39,7 +39,7 @@
             // comboBoxTime
             // 
             this.comboBoxTime.FormattingEnabled = true;
-            this.comboBoxTime.Location = new System.Drawing.Point(12, 58);
+            this.comboBoxTime.Location = new System.Drawing.Point(12, 51);
             this.comboBoxTime.Name = "comboBoxTime";
             this.comboBoxTime.Size = new System.Drawing.Size(300, 21);
             this.comboBoxTime.TabIndex = 0;
@@ -47,14 +47,14 @@
             // comboBoxTorneio
             // 
             this.comboBoxTorneio.FormattingEnabled = true;
-            this.comboBoxTorneio.Location = new System.Drawing.Point(12, 150);
+            this.comboBoxTorneio.Location = new System.Drawing.Point(12, 143);
             this.comboBoxTorneio.Name = "comboBoxTorneio";
             this.comboBoxTorneio.Size = new System.Drawing.Size(300, 21);
             this.comboBoxTorneio.TabIndex = 0;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(172, 214);
+            this.buttonSalvar.Location = new System.Drawing.Point(172, 207);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(140, 23);
             this.buttonSalvar.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(12, 214);
+            this.buttonCancelar.Location = new System.Drawing.Point(12, 207);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(140, 23);
             this.buttonCancelar.TabIndex = 1;
@@ -75,7 +75,7 @@
             // labelTime
             // 
             this.labelTime.AutoSize = true;
-            this.labelTime.Location = new System.Drawing.Point(144, 31);
+            this.labelTime.Location = new System.Drawing.Point(144, 24);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(30, 13);
             this.labelTime.TabIndex = 2;
@@ -84,7 +84,7 @@
             // labelTorneio
             // 
             this.labelTorneio.AutoSize = true;
-            this.labelTorneio.Location = new System.Drawing.Point(144, 123);
+            this.labelTorneio.Location = new System.Drawing.Point(144, 116);
             this.labelTorneio.Name = "labelTorneio";
             this.labelTorneio.Size = new System.Drawing.Size(43, 13);
             this.labelTorneio.TabIndex = 2;

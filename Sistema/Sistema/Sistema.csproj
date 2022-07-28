@@ -120,6 +120,24 @@
     <Compile Include="Views\MenuPrincipalForm.Designer.cs">
       <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Partidas\MapasCadastroEdicaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Partidas\MapasCadastroEdicaoForm.Designer.cs">
+      <DependentUpon>MapasCadastroEdicaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Partidas\PartidaJogar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Partidas\PartidaJogar.Designer.cs">
+      <DependentUpon>PartidaJogar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Partidas\PartidaListagemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Partidas\PartidaListagemForm.Designer.cs">
+      <DependentUpon>PartidaListagemForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -135,6 +153,9 @@
     <EmbeddedResource Include="Views\Campeonato\CampeonatoListagemForm.resx">
       <DependentUpon>CampeonatoListagemForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Grupos\GrupoCadastroEdicaoForm.resx">
+      <DependentUpon>GrupoCadastroEdicaoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login\CadastroForm.resx">
       <DependentUpon>CadastroForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +164,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MenuPrincipalForm.resx">
       <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Partidas\MapasCadastroEdicaoForm.resx">
+      <DependentUpon>MapasCadastroEdicaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Partidas\PartidaJogar.resx">
+      <DependentUpon>PartidaJogar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Partidas\PartidaListagemForm.resx">
+      <DependentUpon>PartidaListagemForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
