@@ -135,12 +135,6 @@
     <EmbeddedResource Include="Views\Campeonato\CampeonatoListagemForm.resx">
       <DependentUpon>CampeonatoListagemForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Grupos\GrupoCadastroEdicaoForm.resx">
-      <DependentUpon>GrupoCadastroEdicaoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Grupos\GrupoListagemForm.resx">
-      <DependentUpon>GrupoListagemForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login\CadastroForm.resx">
       <DependentUpon>CadastroForm.cs</DependentUpon>
     </EmbeddedResource>
