@@ -47,6 +47,7 @@
             this.buttonJogar.TabIndex = 6;
             this.buttonJogar.Text = "Jogar";
             this.buttonJogar.UseVisualStyleBackColor = true;
+            this.buttonJogar.Click += new System.EventHandler(this.buttonJogar_Click);
             // 
             // dataGridView1
             // 

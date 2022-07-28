@@ -53,8 +53,10 @@ CREATE TABLE partidas (
 	mapa_vertigo BIT,
 	mapa_nuke BIT,
 	mapa_inferno BIT,
-	mapa_ancient BIT);
-
+	mapa_ancient BIT
+	
+	FOREIGN KEY(id_grupos) REFERENCES grupos(id));
+	
 CREATE TABLE contas (
 	usuario VARCHAR(15),
 	email VARCHAR(50),

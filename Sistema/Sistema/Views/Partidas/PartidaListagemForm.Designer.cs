@@ -30,12 +30,11 @@
         {
             this.buttonMapas = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTorneio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTransmissão = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPremiacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +56,21 @@
             this.ColumnCodigo,
             this.ColumnPartida,
             this.ColumnTorneio,
-            this.ColumnTransmissão,
-            this.ColumnPremiacao});
+            this.ColumnTransmissão});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(607, 426);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(638, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Escolha os mapas para iniciar";
             // 
             // ColumnCodigo
             // 
@@ -90,21 +97,6 @@
             this.ColumnTransmissão.Name = "ColumnTransmissão";
             this.ColumnTransmissão.ReadOnly = true;
             // 
-            // ColumnPremiacao
-            // 
-            this.ColumnPremiacao.HeaderText = "Premiação";
-            this.ColumnPremiacao.Name = "ColumnPremiacao";
-            this.ColumnPremiacao.ReadOnly = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(638, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Escolha os mapas para iniciar";
-            // 
             // PartidaListagemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,11 +118,10 @@
 
         private System.Windows.Forms.Button buttonMapas;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPartida;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTorneio;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTransmissão;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPremiacao;
-        private System.Windows.Forms.Label label1;
     }
 }

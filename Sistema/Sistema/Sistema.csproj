@@ -73,8 +73,10 @@
     <Compile Include="Service\Controle.cs" />
     <Compile Include="Service\GrupoService.cs" />
     <Compile Include="Service\IGrupoService.cs" />
+    <Compile Include="Service\IPartidaService.cs" />
     <Compile Include="Service\ITimeService.cs" />
     <Compile Include="Service\ITorneioService.cs" />
+    <Compile Include="Service\PartidaService.cs" />
     <Compile Include="Service\TimeService.cs" />
     <Compile Include="Service\TorneioService.cs" />
     <Compile Include="Service\UsuarioCadastrados.cs" />

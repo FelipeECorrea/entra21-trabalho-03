@@ -10,6 +10,6 @@
         public bool MapaVertigo { get; set; }
         public bool MapaNuke { get; set; }
         public bool MapaInferno { get; set; }
-        public bool MapaTrain { get; set; }
+        public bool MapaAncient { get; set; }
     }
 }

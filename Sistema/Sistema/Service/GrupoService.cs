@@ -148,6 +148,8 @@ INNER JOIN transmissoes ON(grupos.id_transmissao = transmissoes.id)";
 
                 grupos.Add(grupo);
             }
+            conexao.Close();
+
             return grupos;
         }
     }
