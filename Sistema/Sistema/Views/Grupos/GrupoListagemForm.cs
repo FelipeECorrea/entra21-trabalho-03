@@ -18,19 +18,20 @@ namespace Sistema.Views.Grupos
 
         private void PreencherDataGridView()
         {
-            var grupops = _grupoService.ObterTodos();
+            var grupos = _grupoService.ObterTodos();
 
             dataGridView1.Rows.Clear();
 
-            for (int i = 0; i < grupops.Count; i++)
+            for (int i = 0; i < grupos.Count; i++)
             {
-                var grupo = grupops[i];
+                var grupo = grupos[i];
 
+                // TODO: Kauã Verificar na hora de testar se vai estar correto as transmissoes
                 dataGridView1.Rows.Add(new object[]
                 {
                     grupo.Time.Nome,
                     grupo.Torneio.Nome,
-                    grupo.Transmissao.NomeLive
+                    grupo.Transmissao.Torneio.Nome
                 });
             }
         }
@@ -57,7 +58,6 @@ namespace Sistema.Views.Grupos
 
             var grupo = _grupoService.ObterPorId(id);
 
-            // TODO: Verificar se o grupo vai funcionar apos encrementar os modedls
             var grupoCadastroEdicaoForm = new GrupoCadastroEdicaoForm(grupo);
             grupoCadastroEdicaoForm.ShowDialog();
 

@@ -46,7 +46,6 @@ namespace Sistema.Views.Grupos
 
         private void PreencherComboboxTime()
         {
-            // TODO: Verificar se esta conforme TimeService
             var timeService = new TimeService();
 
             var times = timeService.ObterTodos();
@@ -91,17 +90,9 @@ namespace Sistema.Views.Grupos
 
             var torneio = comboBoxTorneio.SelectedItem as Torneio;
 
-            // TODO: Verificar apos models feitos
             var grupo = new Grupo();
             grupo.Time = time;
             grupo.Torneio = torneio;
-
-            //if (grupo.Transmissao.Id == grupo.Torneio.Id)
-            //{
-            //    var transmissao = grupo.Transmissao.NomeLive as Transmissao;
-
-            //    grupo.Transmissao = transmissao;
-            //}
 
             var grupoService = new GrupoService();
 
