@@ -73,6 +73,10 @@
     <Compile Include="Service\Controle.cs" />
     <Compile Include="Service\GrupoService.cs" />
     <Compile Include="Service\IGrupoService.cs" />
+    <Compile Include="Service\ITimeService.cs" />
+    <Compile Include="Service\ITorneioService.cs" />
+    <Compile Include="Service\TimeService.cs" />
+    <Compile Include="Service\TorneioService.cs" />
     <Compile Include="Service\UsuarioCadastrados.cs" />
     <Compile Include="Views\Campeonato\CampeonatoCadastroForm.cs">
       <SubType>Form</SubType>
@@ -86,16 +90,16 @@
     <Compile Include="Views\Campeonato\CampeonatoListagemForm.Designer.cs">
       <DependentUpon>CampeonatoListagemForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Grupo\GrupoCadastroEdicaoForm.cs">
+    <Compile Include="Views\Grupos\GrupoCadastroEdicaoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Grupo\GrupoCadastroEdicaoForm.Designer.cs">
+    <Compile Include="Views\Grupos\GrupoCadastroEdicaoForm.Designer.cs">
       <DependentUpon>GrupoCadastroEdicaoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Grupo\GrupoListagemForm.cs">
+    <Compile Include="Views\Grupos\GrupoListagemForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Grupo\GrupoListagemForm.Designer.cs">
+    <Compile Include="Views\Grupos\GrupoListagemForm.Designer.cs">
       <DependentUpon>GrupoListagemForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Login\CadastroForm.cs">
@@ -131,10 +135,10 @@
     <EmbeddedResource Include="Views\Campeonato\CampeonatoListagemForm.resx">
       <DependentUpon>CampeonatoListagemForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Grupo\GrupoCadastroEdicaoForm.resx">
+    <EmbeddedResource Include="Views\Grupos\GrupoCadastroEdicaoForm.resx">
       <DependentUpon>GrupoCadastroEdicaoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Grupo\GrupoListagemForm.resx">
+    <EmbeddedResource Include="Views\Grupos\GrupoListagemForm.resx">
       <DependentUpon>GrupoListagemForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login\CadastroForm.resx">
