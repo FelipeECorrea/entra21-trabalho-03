@@ -10,5 +10,6 @@ namespace Sistema.Service
         void Editar(Partida partida);
         Partida ObterPorId(int id);
         void Apagar(int id);
+        void ApagarMapas(int id);
     }
 }

@@ -24,6 +24,26 @@ WHERE id = @ID";
             conexao.Close();
         }
 
+        public void ApagarMapas(int id)
+        {
+            var conexao = new Conexao().Conectar();
+
+            var comando = conexao.CreateCommand();
+
+            comando.CommandText = @"UPDATE partidas SET
+partida_sorteada = @PARTIDA_SORTEADA,
+mapa_1 = '',
+mapa_2 = '',
+mapa_3 = ''
+WHERE id = @ID";
+
+            comando.Parameters.AddWithValue("@ID", id);
+
+            comando.ExecuteNonQuery();
+
+            conexao.Close();
+        }
+
         public void Cadastrar(Partida partida)
         {
             var conexao = new Conexao().Conectar();

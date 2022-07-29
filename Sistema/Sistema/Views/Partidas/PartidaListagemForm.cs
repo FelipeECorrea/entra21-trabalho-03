@@ -1,7 +1,4 @@
-﻿using Sistema.Models;
-using Sistema.Service;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Sistema.Views.Partidas

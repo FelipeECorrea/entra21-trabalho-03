@@ -30,6 +30,9 @@ namespace Sistema.Views.Partidas
             {
                 var partida = partidas[i];
 
+                if (partida.Mapa1 == "")
+                    return;
+
                 dataGridView1.Rows.Add(new object[]
                 {
                     partida.PartidaSorteada,
@@ -121,21 +124,18 @@ namespace Sistema.Views.Partidas
                     i++;
                 }
             }
-            var partida = new Partida();
+            var partida = comboBoxPartidas.SelectedItem as Partida;
 
             // TODO: Kauã Verificar se vai funcionar o editar
-            if (comboBoxPartidas.SelectedText == partida.PartidaSorteada)
-            {
-                partida.Mapa1 = mapa1;
-                partida.Mapa2 = mapa2;
-                partida.Mapa3 = mapa3;
+            partida.Mapa1 = mapa1;
+            partida.Mapa2 = mapa2;
+            partida.Mapa3 = mapa3;
 
-                _partidaService.Editar(partida);
+            _partidaService.Editar(partida);
 
-                MessageBox.Show("Mapas cadastrados com cucesso!");
+            MessageBox.Show("Mapas cadastrados com cucesso!");
 
-                PreencherDataGridView();
-            }
+            PreencherDataGridView();
         }
 
         private void buttonJogar_Click(object sender, EventArgs e)
@@ -161,7 +161,7 @@ namespace Sistema.Views.Partidas
 
             var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            _partidaService.Apagar(id);
+            _partidaService.ApagarMapas(id);
 
             PreencherDataGridView();
 
