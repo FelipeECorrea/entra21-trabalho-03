@@ -75,6 +75,12 @@
     <Compile Include="Service\GrupoService.cs" />
     <Compile Include="Service\ICampeonatoService.cs" />
     <Compile Include="Service\IGrupoService.cs" />
+    <Compile Include="Service\IPartidaService.cs" />
+    <Compile Include="Service\ITimeService.cs" />
+    <Compile Include="Service\ITorneioService.cs" />
+    <Compile Include="Service\PartidaService.cs" />
+    <Compile Include="Service\TimeService.cs" />
+    <Compile Include="Service\TorneioService.cs" />
     <Compile Include="Service\UsuarioCadastrados.cs" />
     <Compile Include="Views\Campeonato\CampeonatoCadastroForm.cs">
       <SubType>Form</SubType>
@@ -88,16 +94,16 @@
     <Compile Include="Views\Campeonato\CampeonatoListagemForm.Designer.cs">
       <DependentUpon>CampeonatoListagemForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Grupo\GrupoCadastroEdicaoForm.cs">
+    <Compile Include="Views\Grupos\GrupoCadastroEdicaoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Grupo\GrupoCadastroEdicaoForm.Designer.cs">
+    <Compile Include="Views\Grupos\GrupoCadastroEdicaoForm.Designer.cs">
       <DependentUpon>GrupoCadastroEdicaoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Grupo\GrupoListagemForm.cs">
+    <Compile Include="Views\Grupos\GrupoListagemForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Grupo\GrupoListagemForm.Designer.cs">
+    <Compile Include="Views\Grupos\GrupoListagemForm.Designer.cs">
       <DependentUpon>GrupoListagemForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Login\CadastroForm.cs">
@@ -118,6 +124,18 @@
     <Compile Include="Views\MenuPrincipalForm.Designer.cs">
       <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Partidas\MapasCadastroEdicaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Partidas\MapasCadastroEdicaoForm.Designer.cs">
+      <DependentUpon>MapasCadastroEdicaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Partidas\PartidaListagemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Partidas\PartidaListagemForm.Designer.cs">
+      <DependentUpon>PartidaListagemForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -133,11 +151,8 @@
     <EmbeddedResource Include="Views\Campeonato\CampeonatoListagemForm.resx">
       <DependentUpon>CampeonatoListagemForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Grupo\GrupoCadastroEdicaoForm.resx">
+    <EmbeddedResource Include="Views\Grupos\GrupoCadastroEdicaoForm.resx">
       <DependentUpon>GrupoCadastroEdicaoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Grupo\GrupoListagemForm.resx">
-      <DependentUpon>GrupoListagemForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login\CadastroForm.resx">
       <DependentUpon>CadastroForm.cs</DependentUpon>
@@ -147,6 +162,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MenuPrincipalForm.resx">
       <DependentUpon>MenuPrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Partidas\MapasCadastroEdicaoForm.resx">
+      <DependentUpon>MapasCadastroEdicaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Partidas\PartidaListagemForm.resx">
+      <DependentUpon>PartidaListagemForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

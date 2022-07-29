@@ -4,12 +4,8 @@
     {
         public int Id { get; set; }
         public string PartidaSorteada { get; set; }
-        public bool MapaMirage { get; set; }
-        public bool MapaDust2 { get; set; }
-        public bool MapaOverpass { get; set; }
-        public bool MapaVertigo { get; set; }
-        public bool MapaNuke { get; set; }
-        public bool MapaInferno { get; set; }
-        public bool MapaTrain { get; set; }
+        public string Mapa1 { get; set; }
+        public string Mapa2 { get; set; }
+        public string Mapa3 { get; set; }
     }
 }
