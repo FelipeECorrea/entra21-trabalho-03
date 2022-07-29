@@ -31,6 +31,12 @@ namespace Sistema.Views.Partidas
 
         private void buttonSortearMapa_Click(object sender, EventArgs e)
         {
+            if (comboBoxPartidas.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione uma partida!");
+                return;
+            }
+
             Random random = new Random();
 
             List<string> nomeMapa = new List<string>();
@@ -52,22 +58,60 @@ namespace Sistema.Views.Partidas
             mapaTime1.Add(radioButtonMapaVertigo1.Checked);
 
             List<bool> mapaTime2 = new List<bool>();
-            mapaTime1.Add(radioButtonMapaAncient2.Checked);
-            mapaTime1.Add(radioButtonMapaDust22.Checked);
-            mapaTime1.Add(radioButtonMapaInferno2.Checked);
-            mapaTime1.Add(radioButtonMapaMirage2.Checked);
-            mapaTime1.Add(radioButtonMapaNuke2.Checked);
-            mapaTime1.Add(radioButtonMapaOverpass2.Checked);
-            mapaTime1.Add(radioButtonMapaVertigo2.Checked);
+            mapaTime2.Add(radioButtonMapaAncient2.Checked);
+            mapaTime2.Add(radioButtonMapaDust22.Checked);
+            mapaTime2.Add(radioButtonMapaInferno2.Checked);
+            mapaTime2.Add(radioButtonMapaMirage2.Checked);
+            mapaTime2.Add(radioButtonMapaNuke2.Checked);
+            mapaTime2.Add(radioButtonMapaOverpass2.Checked);
+            mapaTime2.Add(radioButtonMapaVertigo2.Checked);
 
             var numeroMinimo = 1;
             var numeroMaximo = 8;
 
-            var sorteio = random.Next(numeroMinimo, numeroMaximo);
+            var mapa1 = "";
+            var mapa2 = "";
+            var mapa3 = "";
 
-            if (mapaTime1[sorteio - 1] == false || mapaTime2[sorteio - 1] == false)
+            var i = 0;
+
+            while (i == 0)
             {
-                
+                var sorteio = random.Next(numeroMinimo, numeroMaximo);
+
+                if (mapaTime1[sorteio - 1] == false && mapaTime2[sorteio - 1] == false)
+                {
+                    mapa3 = nomeMapa[sorteio - 1];
+
+                    for (int j = 0; j < 7; j++)
+                    {
+                        if (mapaTime1[j] == true)
+                        {
+                            mapa1 = nomeMapa[j];
+                        }
+
+                        if (mapaTime2[j] == true)
+                        {
+                            mapa2 = nomeMapa[j];
+                        }
+                    }
+                    i++;
+                }
+            }
+            var partida = new Partida();
+
+            // TODO: Kauã Verificar se vai funcionar o editar
+            if (comboBoxPartidas.SelectedText == partida.PartidaSorteada)
+            {
+            partida.Mapa1 = mapa1;
+            partida.Mapa2 = mapa2;
+            partida.Mapa3 = mapa3;
+
+            var partidaService = new PartidaService();
+
+            partidaService.Editar(partida);
+
+            MessageBox.Show("Mapas cadastrados com cucesso!");
             }
         }
 
@@ -75,7 +119,7 @@ namespace Sistema.Views.Partidas
         {
             if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione a partida que deseja jogar!");
+                MessageBox.Show("Selecione a partida da telinha para jogar!");
                 return;
             }
 

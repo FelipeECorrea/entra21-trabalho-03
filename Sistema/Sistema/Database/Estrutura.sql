@@ -47,15 +47,9 @@ CREATE TABLE grupos (
 CREATE TABLE partidas (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	partida_sorteada VARCHAR(100),
-	mapa_mirage BIT,
-	mapa_dust2 BIT,
-	mapa_overpass BIT,
-	mapa_vertigo BIT,
-	mapa_nuke BIT,
-	mapa_inferno BIT,
-	mapa_ancient BIT
-	
-	FOREIGN KEY(id_grupos) REFERENCES grupos(id));
+	mapa_1 VARCHAR(25),
+	mapa_2 VARCHAR(25),
+	mapa_3 VARCHAR(25));
 	
 CREATE TABLE contas (
 	usuario VARCHAR(15),

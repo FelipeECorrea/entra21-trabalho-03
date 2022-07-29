@@ -32,31 +32,43 @@ WHERE id = @ID";
 
             comando.CommandText = @"INSERT INTO partidas
 (partida_sorteada,
-mapa_mirage,
-mapa_dust2,
-mapa_overpass,
-mapa_vertigo,
-mapa_nuke,
-mapa_inferno,
-mapa_ancient)
+mapa_1,
+mapa_2,
+mapa_3,)
 VALUES
 (@PARTIDA_SORTEADA,
-@MAPA_MIRAGE,
-@MAPA_DUST2,
-@MAPA_OVERPASS,
-@MAPA_VERTIGO,
-@MAPA_NUKE,
-@MAPA_INFERNO,
-@MAPA_ANCIENT);";
+@MAPA_1,
+@MAPA_2,
+@MAPA_3,);";
 
             comando.Parameters.AddWithValue("@PARTIDA_SORTEADA", partida.PartidaSorteada);
-            comando.Parameters.AddWithValue("@MAPA_MIRAGE", partida.MapaMirage);
-            comando.Parameters.AddWithValue("@MAPA_DUST2", partida.MapaDust2);
-            comando.Parameters.AddWithValue("@MAPA_OVERPASS", partida.MapaOverpass);
-            comando.Parameters.AddWithValue("@MAPA_VERTIGO", partida.MapaVertigo);
-            comando.Parameters.AddWithValue("@MAPA_NUKE", partida.MapaNuke);
-            comando.Parameters.AddWithValue("@MAPA_INFERNO", partida.MapaInferno);
-            comando.Parameters.AddWithValue("@MAPA_ANCIENT", partida.MapaAncient);
+            comando.Parameters.AddWithValue("@MAPA_1", partida.Mapa1);
+            comando.Parameters.AddWithValue("@MAPA_2", partida.Mapa2);
+            comando.Parameters.AddWithValue("@MAPA_3", partida.Mapa3);
+
+            comando.ExecuteNonQuery();
+
+            conexao.Close();
+        }
+
+        public void Editar(Partida partida)
+        {
+            var conexao = new Conexao().Conectar();
+
+            var comando = conexao.CreateCommand();
+
+            comando.CommandText = @"UPDATE partidas SET
+partida_sorteada = @PARTIDA_SORTEADA,
+mapa_1 = @MAPA_1,
+mapa_2 = @MAPA_2,
+mapa_3 = @MAPA_3
+WHERE id = @ID";
+
+            comando.Parameters.AddWithValue("@PARTIDA_SORTEADA", partida.PartidaSorteada);
+            comando.Parameters.AddWithValue("@MAPA_1", partida.Mapa1);
+            comando.Parameters.AddWithValue("@MAPA_2", partida.Mapa2);
+            comando.Parameters.AddWithValue("@MAPA_3", partida.Mapa3);
+            comando.Parameters.AddWithValue("@ID", partida.Id);
 
             comando.ExecuteNonQuery();
 
@@ -72,14 +84,9 @@ VALUES
             comando.CommandText = @"SELECT
 id,
 partida_sorteada,
-mapa_mirage,
-mapa_dust2,
-mapa_overpass,
-mapa_vertigo,
-mapa_nuke,
-mapa_inferno,
-mapa_ancient,
-FROM partidas
+mapa_1,
+mapa_2,
+mapa_3,
 WHERE id = @ID";
 
             comando.Parameters.AddWithValue("@ID", id);
@@ -96,14 +103,10 @@ WHERE id = @ID";
             var partida = new Partida();
             partida.Id = Convert.ToInt32(registro["id"]);
             partida.PartidaSorteada = registro["partida_sorteada"].ToString();
-            partida.MapaMirage = Convert.ToBoolean(registro["mapa_mirage"]);
-            partida.MapaDust2 = Convert.ToBoolean(registro["mapa_dust2"]);
-            partida.MapaOverpass = Convert.ToBoolean(registro["mapa_overpass"]);
-            partida.MapaVertigo = Convert.ToBoolean(registro["mapa_vertigo"]);
-            partida.MapaNuke = Convert.ToBoolean(registro["mapa_nuke"]);
-            partida.MapaInferno = Convert.ToBoolean(registro["mapa_inferno"]);
-            partida.MapaAncient = Convert.ToBoolean(registro["mapa_ancient"]);
-
+            partida.Mapa1 = registro["mapa_1"].ToString();
+            partida.Mapa2= registro["mapa_2"].ToString();
+            partida.Mapa3= registro["mapa_3"].ToString();
+            
             conexao.Close();
 
             return partida;
@@ -118,13 +121,9 @@ WHERE id = @ID";
             comando.CommandText = @"SELECT
 partidas.id AS 'id',
 partidas.partida_sorteada AS 'partida_sorteada',
-partidas.mapa_mirage AS 'mirage',
-partidas.mapa_dust2 AS 'dust2',
-partidas.mapa_overpass AS 'overpass',
-partidas.mapa_vertigo AS 'vertigo',
-partidas.mapa_nuke AS 'nuke',
-partidas.mapa_inferno AS 'inferno',
-partidas.mapa_ancient AS 'ancient',
+partidas.mapa_1 AS 'mapa_1',
+partidas.mapa_2 AS 'mapa_2',
+partidas.mapa_3 AS 'mapa_3',
 FROM partidas)";
 
             var tabelaEmMemoria = new DataTable();
@@ -140,14 +139,10 @@ FROM partidas)";
                 var partida = new Partida();
                 partida.Id = Convert.ToInt32(registro["id"]);
                 partida.PartidaSorteada = registro["partida_sorteada"].ToString();
-                partida.MapaMirage = Convert.ToBoolean(registro["mirage"]);
-                partida.MapaDust2 = Convert.ToBoolean(registro["dust2"]);
-                partida.MapaOverpass = Convert.ToBoolean(registro["overpass"]);
-                partida.MapaVertigo = Convert.ToBoolean(registro["vertigo"]);
-                partida.MapaNuke = Convert.ToBoolean(registro["nuke"]);
-                partida.MapaInferno = Convert.ToBoolean(registro["inferno"]);
-                partida.MapaAncient = Convert.ToBoolean(registro["ancient"]);
-
+                partida.Mapa1 = registro["mapa_1"].ToString();
+                partida.Mapa2 = registro["mapa_2"].ToString();
+                partida.Mapa3 = registro["mapa_3"].ToString();
+                
                 partidas.Add(partida);
             }
             conexao.Close();

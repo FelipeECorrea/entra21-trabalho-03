@@ -7,6 +7,7 @@ namespace Sistema.Service
     {
         void Cadastrar(Partida partida);
         List<Partida> ObterTodos();
+        void Editar(Partida partida);
         Partida ObterPorId(int id);
         void Apagar(int id);
     }
