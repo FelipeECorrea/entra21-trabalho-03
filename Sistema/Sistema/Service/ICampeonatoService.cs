@@ -1,17 +1,14 @@
-﻿using System;
+﻿using Sistema.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sistema.Service
 {
     internal interface ICampeonatoService
     {
-        void Cadastrar(CampeonatoService campeonatoService);
-        List<CampeonatoService> ObterTodos();
-        void Editar(CampeonatoService campeonatoService);
-        CampeonatoService ObterPorId(int id);
+        List<Torneio> ObterTodos();
+        Torneio ObterPorId(int id);
+        void Cadastrar(Torneio torneio);
+        void Editar(Torneio torneio);
         void Apagar(int id);
     }
 }

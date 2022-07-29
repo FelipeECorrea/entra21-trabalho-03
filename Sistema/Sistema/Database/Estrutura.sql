@@ -1,10 +1,12 @@
 ﻿CREATE TABLE torneios (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(25),
-	modo_presencial BIT,
+	modo_jogo VARCHAR(50),
+	modo_presencial VARCHAR(50),
 	data_inicio DATETIME2,
 	data_termino DATETIME2,
-	premiacao DECIMAL(10,2));
+	categoria VARCHAR(20),
+	premiacao VARCHAR(100));
 
 CREATE TABLE transmissoes (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
@@ -60,4 +62,5 @@ CREATE TABLE contas (
 INSERT INTO contas VALUES
 	('Felipe Corrêa','pessoal.fec@gmail.com', '1998');
 
-SELECT * FROM contas;
+SELECT * FROM torneios;
+

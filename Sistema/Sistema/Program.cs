@@ -1,4 +1,5 @@
 ﻿using Sistema.Views;
+using Sistema.Views.Campeonato;
 using System;
 using System.Windows.Forms;
 
@@ -14,7 +15,7 @@ namespace Sistema
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new CampeonatoListagemForm());
         }
     }
 }
