@@ -27,6 +27,19 @@ namespace Sistema.Views.Campeonato
             _idParaEditar = -1;
 
             textBoxNomeCamp.Text = torneio.Nome;
+            if (rButtonMJ1.Checked)
+            {
+                rButtonMJ1.Checked = true;
+            }
+            else if (rButtonMJ2.Checked)
+            {
+                rButtonMJ2.Checked = true;
+            }
+            else if (rButtonMJ3.Checked)
+            {
+                rButtonMJ3.Checked = true;
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
