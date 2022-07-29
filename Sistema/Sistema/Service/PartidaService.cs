@@ -154,55 +154,5 @@ FROM partidas)";
 
             return partidas;
         }
-
-        public void SortearGrupo(Partida partida)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SortearMapa(Partida partida)
-        {
-            //Random sortearMapa = new Random();
-
-            //var nMin = 1;
-            //var nMax = 8;
-
-            //var partida = new Partida();
-
-            //List<string> mapaSorteado = new List<string>();
-
-            //mapaSorteado.Add("Mirage");
-            //mapaSorteado.Add("Dust 2");
-            //mapaSorteado.Add("Overpass");
-
-            //var mapaJogo = "";
-
-            //var i = 0;
-            //var j = 0;
-
-            //var numeroJogo = 0;
-
-            //while (i == 0)
-            //{
-            //    while (j == 0)
-            //    {
-            //        var numeroSorteado = sortearMapa.Next(nMin, nMax);
-
-            //        if (mapas[numeroSorteado] == false)
-            //        {
-            //            numeroJogo = numeroSorteado;
-
-            //            mapaJogo = mapaSorteado[numeroSorteado];
-
-            //            j = +1;
-            //        }
-            //    }
-            //    i = +1;
-            //}
-
-            //Console.WriteLine($"3° Mapa {numeroJogo} = {mapaJogo}");
-        }
-
-        
     }
 }

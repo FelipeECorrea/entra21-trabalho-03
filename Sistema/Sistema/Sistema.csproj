@@ -128,12 +128,6 @@
     <Compile Include="Views\Partidas\MapasCadastroEdicaoForm.Designer.cs">
       <DependentUpon>MapasCadastroEdicaoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Partidas\PartidaJogar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Partidas\PartidaJogar.Designer.cs">
-      <DependentUpon>PartidaJogar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Partidas\PartidaListagemForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,9 +163,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Partidas\MapasCadastroEdicaoForm.resx">
       <DependentUpon>MapasCadastroEdicaoForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Partidas\PartidaJogar.resx">
-      <DependentUpon>PartidaJogar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Partidas\PartidaListagemForm.resx">
       <DependentUpon>PartidaListagemForm.cs</DependentUpon>
