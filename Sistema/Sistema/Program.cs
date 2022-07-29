@@ -15,7 +15,7 @@ namespace Sistema
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CampeonatoListagemForm());
+            Application.Run(new MenuPrincipalForm());
         }
     }
 }

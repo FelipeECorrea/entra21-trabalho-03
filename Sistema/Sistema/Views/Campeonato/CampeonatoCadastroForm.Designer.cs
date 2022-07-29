@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CampeonatoCadastroForm));
             this.labelMJ = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rButtonMJ1 = new System.Windows.Forms.RadioButton();
@@ -45,8 +46,6 @@
             this.comboBoxCatRank = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNomeCamp = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonCadastrarTorneio = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,9 +53,10 @@
             this.radioButtonP2 = new System.Windows.Forms.RadioButton();
             this.radioButtonP3 = new System.Windows.Forms.RadioButton();
             this.radioButtonP4 = new System.Windows.Forms.RadioButton();
+            this.pictureBoxFechar = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // labelMJ
@@ -234,26 +234,6 @@
             this.textBoxNomeCamp.Size = new System.Drawing.Size(242, 27);
             this.textBoxNomeCamp.TabIndex = 16;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(681, 54);
-            this.panel1.TabIndex = 17;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(629, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 42);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -265,7 +245,7 @@
             // buttonCadastrarTorneio
             // 
             this.buttonCadastrarTorneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCadastrarTorneio.Location = new System.Drawing.Point(74, 595);
+            this.buttonCadastrarTorneio.Location = new System.Drawing.Point(74, 567);
             this.buttonCadastrarTorneio.Name = "buttonCadastrarTorneio";
             this.buttonCadastrarTorneio.Size = new System.Drawing.Size(198, 46);
             this.buttonCadastrarTorneio.TabIndex = 19;
@@ -331,11 +311,24 @@
             this.radioButtonP4.Text = "750.000 - 1.000,000";
             this.radioButtonP4.UseVisualStyleBackColor = true;
             // 
+            // pictureBoxFechar
+            // 
+            this.pictureBoxFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxFechar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFechar.Image")));
+            this.pictureBoxFechar.Location = new System.Drawing.Point(639, 12);
+            this.pictureBoxFechar.Name = "pictureBoxFechar";
+            this.pictureBoxFechar.Size = new System.Drawing.Size(30, 29);
+            this.pictureBoxFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFechar.TabIndex = 25;
+            this.pictureBoxFechar.TabStop = false;
+            this.pictureBoxFechar.Click += new System.EventHandler(this.pictureBoxFechar_Click);
+            // 
             // CampeonatoCadastroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 668);
+            this.Controls.Add(this.pictureBoxFechar);
             this.Controls.Add(this.radioButtonP4);
             this.Controls.Add(this.radioButtonP3);
             this.Controls.Add(this.radioButtonP2);
@@ -343,7 +336,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.buttonCadastrarTorneio);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxNomeCamp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxCatRank);
@@ -363,7 +355,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,8 +380,6 @@
         private System.Windows.Forms.ComboBox comboBoxCatRank;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxNomeCamp;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button buttonCadastrarTorneio;
         private System.Windows.Forms.Label label6;
@@ -397,5 +387,6 @@
         private System.Windows.Forms.RadioButton radioButtonP2;
         private System.Windows.Forms.RadioButton radioButtonP3;
         private System.Windows.Forms.RadioButton radioButtonP4;
+        private System.Windows.Forms.PictureBox pictureBoxFechar;
     }
 }
