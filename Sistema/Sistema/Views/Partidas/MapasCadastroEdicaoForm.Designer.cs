@@ -248,6 +248,7 @@
             this.buttonApagarMapas.TabIndex = 6;
             this.buttonApagarMapas.Text = "Apagar Mapas";
             this.buttonApagarMapas.UseVisualStyleBackColor = true;
+            this.buttonApagarMapas.Click += new System.EventHandler(this.buttonApagarMapas_Click);
             // 
             // comboBoxPartidas
             // 

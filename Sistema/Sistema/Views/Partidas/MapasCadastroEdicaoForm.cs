@@ -8,18 +8,41 @@ namespace Sistema.Views.Partidas
 {
     public partial class MapasCadastroEdicaoForm : Form
     {
+        private readonly PartidaService _partidaService;
         public MapasCadastroEdicaoForm()
         {
             InitializeComponent();
 
+            _partidaService = new PartidaService();
+
             PreencherComboBox();
+
+            PreencherDataGridView();
+        }
+
+        private void PreencherDataGridView()
+        {
+            var partidas = _partidaService.ObterTodos();
+
+            dataGridView1.Rows.Clear();
+
+            for (int i = 0; i < partidas.Count; i++)
+            {
+                var partida = partidas[i];
+
+                dataGridView1.Rows.Add(new object[]
+                {
+                    partida.PartidaSorteada,
+                    partida.Mapa1,
+                    partida.Mapa2,
+                    partida.Mapa3
+                });
+            }
         }
 
         private void PreencherComboBox()
         {
-            var partidaService = new PartidaService();
-
-            var partidas = partidaService.ObterTodos();
+            var partidas = _partidaService.ObterTodos();
 
             for (int i = 0; i < partidas.Count; i++)
             {
@@ -103,15 +126,15 @@ namespace Sistema.Views.Partidas
             // TODO: Kauã Verificar se vai funcionar o editar
             if (comboBoxPartidas.SelectedText == partida.PartidaSorteada)
             {
-            partida.Mapa1 = mapa1;
-            partida.Mapa2 = mapa2;
-            partida.Mapa3 = mapa3;
+                partida.Mapa1 = mapa1;
+                partida.Mapa2 = mapa2;
+                partida.Mapa3 = mapa3;
 
-            var partidaService = new PartidaService();
+                _partidaService.Editar(partida);
 
-            partidaService.Editar(partida);
+                MessageBox.Show("Mapas cadastrados com cucesso!");
 
-            MessageBox.Show("Mapas cadastrados com cucesso!");
+                PreencherDataGridView();
             }
         }
 
@@ -124,6 +147,25 @@ namespace Sistema.Views.Partidas
             }
 
             System.Diagnostics.Process.Start("csgo.exe");
+        }
+
+        private void buttonApagarMapas_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma partida da tabela!");
+                return;
+            }
+
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            _partidaService.Apagar(id);
+
+            PreencherDataGridView();
+
+            MessageBox.Show("Mapas removidos com sucesso!");
         }
     }
 }
