@@ -1,62 +1,154 @@
-﻿using System;
+﻿using Sistema.Models;
+using Sistema.Service;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Sistema.Views.Partidas
 {
     public partial class PartidaListagemForm : Form
     {
-        //private GrupoService _grupoService;
-        //private PartidaService _partidaoService;
+        private GrupoService _grupoService;
+        private PartidaService _partidaService;
 
         public PartidaListagemForm()
         {
             InitializeComponent();
 
-            //_grupoService = new GrupoService();
+            _grupoService = new GrupoService();
 
-            //_partidaoService = new PartidaService();
+            _partidaService = new PartidaService();
 
-            //PreencherDataGridView();
+            PreencherComboBox();
+
+            PreencherDataGridView();
         }
 
         private void PreencherDataGridView()
         {
-            //var grupos = _grupoService.ObterTodos();
+            var partidas = _partidaService.ObterTodos();
 
-            //dataGridView1.Rows.Clear();
+            dataGridView1.Rows.Clear();
 
-            //Random sortearGrupo = new Random();
+            for (int i = 0; i < partidas.Count; i++)
+            {
+                var partida = partidas[i];
 
-            //var numeroMinimo = 1;
-            //var numeroMaximo = grupos.Count;
+                dataGridView1.Rows.Add(new object[]
+                {
+                    partida.Id,
+                    partida.PartidaEscolhida
+                });
+            }
+        }
 
-            //List<string> mapas = new List<string>();
-            //mapas.Add("Ancient");
-            //mapas.Add("Dust 2");
-            //mapas.Add("Inferno");
-            //mapas.Add("Mirage");
-            //mapas.Add("Nuke");
-            //mapas.Add("Overpass");
-            //mapas.Add("Vertigo");
+        private void PreencherComboBox()
+        {
+            var grupos = _grupoService.ObterTodos();
 
-            //var i = 0;
-            //var j = 0;
+            for (int i = 0; i < grupos.Count; i++)
+            {
+                var grupo = grupos[i];
 
-            //while (i == 0)
-            //{
-            //    while (j == 0)
-            //    {
-            //        var sorteio = sortearGrupo.Next(numeroMinimo, numeroMaximo);
+                comboBoxTime1.Items.Add(grupo.Time);
+            }
 
-            //        if (sorteio == grupos)
-            //    }
-            //}
+            for (int i = 0; i < grupos.Count; i++)
+            {
+                var grupo = grupos[i];
+
+                comboBoxTime2.Items.Add(grupo.Time);
+            }
         }
 
         private void buttonMapas_Click(object sender, EventArgs e)
         {
             var mapaForm = new MapasCadastroEdicaoForm();
             mapaForm.ShowDialog();
+        }
+
+        private void buttonApagar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Cadastre uma Partida!");
+                return;
+            }
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma partida da tabela!");
+                return;
+            }
+
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            _partidaService.Apagar(id);
+
+            PreencherDataGridView();
+
+            MessageBox.Show("Partida removida com sucesso!");
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Cadastre uma Partida!");
+                return;
+            }
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma partida da tabela!");
+                return;
+            }
+            if (comboBoxTime1.SelectedIndex == comboBoxTime2.SelectedIndex)
+            {
+                MessageBox.Show("Não é permitido time igual!");
+                return;
+            }
+
+            var partidaEscolhida = comboBoxTime1.SelectedItem.ToString() + " VS " + comboBoxTime2.SelectedItem.ToString();
+
+            var partida = new Partida();
+            partida.PartidaEscolhida = partidaEscolhida;
+
+            _partidaService.Editar(partida);
+
+            MessageBox.Show("Partida alterada com sucesso!");
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            if (comboBoxTime1.SelectedIndex == -1 || comboBoxTime2.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione um time!");
+                return;
+            }
+            if (comboBoxTime1.SelectedIndex == comboBoxTime2.SelectedIndex)
+            {
+                MessageBox.Show("Não é permitido time igual!");
+                return;
+            }
+
+            var partidaEscolhida = comboBoxTime1.SelectedItem.ToString() + " VS " + comboBoxTime2.SelectedItem.ToString();
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                if (dataGridView1.Rows[i].Cells[1].Value.ToString() == partidaEscolhida)
+                {
+                    MessageBox.Show("Cadastros iguais não é permitido!");
+                    return;
+                }
+            }
+
+            var partida = new Partida();
+            partida.PartidaEscolhida = partidaEscolhida;
+
+            _partidaService.Cadastrar(partida);
+
+            MessageBox.Show("Partida cadastrada com sucesso!");
         }
     }
 }

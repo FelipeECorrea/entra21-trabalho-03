@@ -31,7 +31,7 @@ WHERE id = @ID";
             var comando = conexao.CreateCommand();
 
             comando.CommandText = @"UPDATE partidas SET
-partida_sorteada = @PARTIDA_SORTEADA,
+partida_escolhida = @PARTIDA_SORTEADA,
 mapa_1 = '',
 mapa_2 = '',
 mapa_3 = ''
@@ -51,17 +51,17 @@ WHERE id = @ID";
             var comando = conexao.CreateCommand();
 
             comando.CommandText = @"INSERT INTO partidas
-(partida_sorteada,
+(partida_escolhida,
 mapa_1,
 mapa_2,
 mapa_3,)
 VALUES
-(@PARTIDA_SORTEADA,
+(@PARTIDA_ESCOLHIDA,
 @MAPA_1,
 @MAPA_2,
 @MAPA_3,);";
 
-            comando.Parameters.AddWithValue("@PARTIDA_SORTEADA", partida.PartidaSorteada);
+            comando.Parameters.AddWithValue("@PARTIDA_ESCOLHIDA", partida.PartidaEscolhida);
             comando.Parameters.AddWithValue("@MAPA_1", partida.Mapa1);
             comando.Parameters.AddWithValue("@MAPA_2", partida.Mapa2);
             comando.Parameters.AddWithValue("@MAPA_3", partida.Mapa3);
@@ -78,13 +78,13 @@ VALUES
             var comando = conexao.CreateCommand();
 
             comando.CommandText = @"UPDATE partidas SET
-partida_sorteada = @PARTIDA_SORTEADA,
+partida_escolhida = @PARTIDA_ESCOLHIDA,
 mapa_1 = @MAPA_1,
 mapa_2 = @MAPA_2,
 mapa_3 = @MAPA_3
 WHERE id = @ID";
 
-            comando.Parameters.AddWithValue("@PARTIDA_SORTEADA", partida.PartidaSorteada);
+            comando.Parameters.AddWithValue("@PARTIDA_ESCOLHIDA", partida.PartidaEscolhida);
             comando.Parameters.AddWithValue("@MAPA_1", partida.Mapa1);
             comando.Parameters.AddWithValue("@MAPA_2", partida.Mapa2);
             comando.Parameters.AddWithValue("@MAPA_3", partida.Mapa3);
@@ -103,7 +103,7 @@ WHERE id = @ID";
 
             comando.CommandText = @"SELECT
 id,
-partida_sorteada,
+partida_escolhida,
 mapa_1,
 mapa_2,
 mapa_3,
@@ -122,7 +122,7 @@ WHERE id = @ID";
 
             var partida = new Partida();
             partida.Id = Convert.ToInt32(registro["id"]);
-            partida.PartidaSorteada = registro["partida_sorteada"].ToString();
+            partida.PartidaEscolhida = registro["partida_escolhida"].ToString();
             partida.Mapa1 = registro["mapa_1"].ToString();
             partida.Mapa2= registro["mapa_2"].ToString();
             partida.Mapa3= registro["mapa_3"].ToString();
@@ -140,7 +140,7 @@ WHERE id = @ID";
 
             comando.CommandText = @"SELECT
 partidas.id AS 'id',
-partidas.partida_sorteada AS 'partida_sorteada',
+partidas.partida_escolhida AS 'partida_escolhida',
 partidas.mapa_1 AS 'mapa_1',
 partidas.mapa_2 AS 'mapa_2',
 partidas.mapa_3 AS 'mapa_3',
@@ -158,7 +158,7 @@ FROM partidas)";
 
                 var partida = new Partida();
                 partida.Id = Convert.ToInt32(registro["id"]);
-                partida.PartidaSorteada = registro["partida_sorteada"].ToString();
+                partida.PartidaEscolhida = registro["partida_escolhida"].ToString();
                 partida.Mapa1 = registro["mapa_1"].ToString();
                 partida.Mapa2 = registro["mapa_2"].ToString();
                 partida.Mapa3 = registro["mapa_3"].ToString();
