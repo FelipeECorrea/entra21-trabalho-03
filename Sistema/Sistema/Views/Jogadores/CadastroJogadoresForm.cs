@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema.Views.Jogadores
+namespace Sistema.Views.Times
 {
     public partial class CadastroJogadoresForm : Form
     {

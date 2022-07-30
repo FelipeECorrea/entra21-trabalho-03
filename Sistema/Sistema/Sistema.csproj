@@ -105,11 +105,11 @@
     <Compile Include="Views\Grupos\GrupoListagemForm.Designer.cs">
       <DependentUpon>GrupoListagemForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Jogadores\CadastroJogadoresForm.cs">
+    <Compile Include="Views\Times\CadastroTimesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Jogadores\CadastroJogadoresForm.Designer.cs">
-      <DependentUpon>CadastroJogadoresForm.cs</DependentUpon>
+    <Compile Include="Views\Times\CadastroTimesForm.Designer.cs">
+      <DependentUpon>CadastroTimesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Login\CadastroForm.cs">
       <SubType>Form</SubType>
@@ -147,11 +147,11 @@
     <Compile Include="Views\Partidas\PartidaListagemForm.Designer.cs">
       <DependentUpon>PartidaListagemForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Times\CadastroTimesForm.cs">
+    <Compile Include="Views\Jogadores\CadastroJogadoresForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Times\CadastroTimesForm.Designer.cs">
-      <DependentUpon>CadastroTimesForm.cs</DependentUpon>
+    <Compile Include="Views\Jogadores\CadastroJogadoresForm.Designer.cs">
+      <DependentUpon>CadastroJogadoresForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Transmissao\TransmissaoCadastroEdicaoForm.cs">
       <SubType>Form</SubType>
@@ -180,6 +180,9 @@
     <EmbeddedResource Include="Views\Grupos\GrupoListagemForm.resx">
       <DependentUpon>GrupoListagemForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Times\CadastroTimesForm.resx">
+      <DependentUpon>CadastroTimesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login\CadastroForm.resx">
       <DependentUpon>CadastroForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Partidas\PartidaListagemForm.resx">
       <DependentUpon>PartidaListagemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Jogadores\CadastroJogadoresForm.resx">
+      <DependentUpon>CadastroJogadoresForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Transmissao\TransmissaoCadastroEdicaoForm.resx">
       <DependentUpon>TransmissaoCadastroEdicaoForm.cs</DependentUpon>
