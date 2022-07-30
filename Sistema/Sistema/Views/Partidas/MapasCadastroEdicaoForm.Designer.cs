@@ -252,6 +252,7 @@
             // 
             // comboBoxPartidas
             // 
+            this.comboBoxPartidas.DisplayMember = "PartidaEscolhida";
             this.comboBoxPartidas.FormattingEnabled = true;
             this.comboBoxPartidas.Location = new System.Drawing.Point(634, 286);
             this.comboBoxPartidas.Name = "comboBoxPartidas";

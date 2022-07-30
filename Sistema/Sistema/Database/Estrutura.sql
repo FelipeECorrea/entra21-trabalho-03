@@ -62,6 +62,14 @@ CREATE TABLE contas (
 
 INSERT INTO contas VALUES
 	('Felipe Corrêa','pessoal.fec@gmail.com', '1998');
+	
+INSERT INTO grupos VALUES
+	('4','3', '1');
 
 SELECT * FROM contas;
+SELECT * FROM torneios;
+SELECT * FROM times;
+SELECT * FROM transmissoes;
+SELECT * FROM grupos;
+SELECT * FROM partidas;
 

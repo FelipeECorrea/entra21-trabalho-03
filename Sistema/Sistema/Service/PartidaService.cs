@@ -54,12 +54,12 @@ WHERE id = @ID";
 (partida_escolhida,
 mapa_1,
 mapa_2,
-mapa_3,)
+mapa_3)
 VALUES
 (@PARTIDA_ESCOLHIDA,
 @MAPA_1,
 @MAPA_2,
-@MAPA_3,);";
+@MAPA_3);";
 
             comando.Parameters.AddWithValue("@PARTIDA_ESCOLHIDA", partida.PartidaEscolhida);
             comando.Parameters.AddWithValue("@MAPA_1", partida.Mapa1);
@@ -106,7 +106,7 @@ id,
 partida_escolhida,
 mapa_1,
 mapa_2,
-mapa_3,
+mapa_3
 WHERE id = @ID";
 
             comando.Parameters.AddWithValue("@ID", id);
@@ -139,12 +139,12 @@ WHERE id = @ID";
             var comando = conexao.CreateCommand();
 
             comando.CommandText = @"SELECT
-partidas.id AS 'id',
-partidas.partida_escolhida AS 'partida_escolhida',
-partidas.mapa_1 AS 'mapa_1',
-partidas.mapa_2 AS 'mapa_2',
-partidas.mapa_3 AS 'mapa_3',
-FROM partidas)";
+id,
+partida_escolhida,
+mapa_1,
+mapa_2,
+mapa_3
+FROM partidas";
 
             var tabelaEmMemoria = new DataTable();
 
