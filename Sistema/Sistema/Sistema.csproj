@@ -117,6 +117,12 @@
     <Compile Include="Views\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\MenuParaTestesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuParaTestesForm.Designer.cs">
+      <DependentUpon>MenuParaTestesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\MenuPrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,11 +165,17 @@
     <EmbeddedResource Include="Views\Grupos\GrupoCadastroEdicaoForm.resx">
       <DependentUpon>GrupoCadastroEdicaoForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Grupos\GrupoListagemForm.resx">
+      <DependentUpon>GrupoListagemForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login\CadastroForm.resx">
       <DependentUpon>CadastroForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MenuParaTestesForm.resx">
+      <DependentUpon>MenuParaTestesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MenuPrincipalForm.resx">
       <DependentUpon>MenuPrincipalForm.cs</DependentUpon>

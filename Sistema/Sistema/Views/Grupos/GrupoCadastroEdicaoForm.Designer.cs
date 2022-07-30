@@ -38,6 +38,7 @@
             // 
             // comboBoxTime
             // 
+            this.comboBoxTime.DisplayMember = "Nome";
             this.comboBoxTime.FormattingEnabled = true;
             this.comboBoxTime.Location = new System.Drawing.Point(12, 51);
             this.comboBoxTime.Name = "comboBoxTime";
@@ -46,6 +47,7 @@
             // 
             // comboBoxTorneio
             // 
+            this.comboBoxTorneio.DisplayMember = "Nome";
             this.comboBoxTorneio.FormattingEnabled = true;
             this.comboBoxTorneio.Location = new System.Drawing.Point(12, 143);
             this.comboBoxTorneio.Name = "comboBoxTorneio";

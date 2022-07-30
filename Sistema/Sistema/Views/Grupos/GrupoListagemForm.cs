@@ -29,9 +29,10 @@ namespace Sistema.Views.Grupos
                 // TODO: Kauã Verificar na hora de testar se vai estar correto as transmissoes
                 dataGridView1.Rows.Add(new object[]
                 {
+                    grupo.Id,
                     grupo.Time.Nome,
                     grupo.Torneio.Nome,
-                    grupo.Transmissao.Torneio.Nome
+                    grupo.Transmissao.NomeLive
                 });
             }
         }

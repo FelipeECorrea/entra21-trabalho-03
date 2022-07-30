@@ -36,7 +36,6 @@
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.comboBoxTime1 = new System.Windows.Forms.ComboBox();
             this.comboBoxTime2 = new System.Windows.Forms.ComboBox();
-            this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonApagar = new System.Windows.Forms.Button();
             this.labelTime1 = new System.Windows.Forms.Label();
             this.labelTime2 = new System.Windows.Forms.Label();
@@ -65,6 +64,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(305, 393);
             this.dataGridView1.TabIndex = 2;
             // 
@@ -94,14 +94,15 @@
             // 
             this.buttonSalvar.Location = new System.Drawing.Point(337, 178);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(206, 23);
+            this.buttonSalvar.Size = new System.Drawing.Size(206, 36);
             this.buttonSalvar.TabIndex = 5;
-            this.buttonSalvar.Text = "Salvar";
+            this.buttonSalvar.Text = "Cadastrar Partida";
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // comboBoxTime1
             // 
+            this.comboBoxTime1.DisplayMember = "Nome";
             this.comboBoxTime1.FormattingEnabled = true;
             this.comboBoxTime1.Location = new System.Drawing.Point(337, 29);
             this.comboBoxTime1.Name = "comboBoxTime1";
@@ -110,27 +111,18 @@
             // 
             // comboBoxTime2
             // 
+            this.comboBoxTime2.DisplayMember = "Nome";
             this.comboBoxTime2.FormattingEnabled = true;
             this.comboBoxTime2.Location = new System.Drawing.Point(337, 131);
             this.comboBoxTime2.Name = "comboBoxTime2";
             this.comboBoxTime2.Size = new System.Drawing.Size(206, 21);
             this.comboBoxTime2.TabIndex = 6;
             // 
-            // buttonEditar
-            // 
-            this.buttonEditar.Location = new System.Drawing.Point(337, 207);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(206, 23);
-            this.buttonEditar.TabIndex = 5;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = true;
-            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
-            // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(337, 236);
+            this.buttonApagar.Location = new System.Drawing.Point(337, 220);
             this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(206, 23);
+            this.buttonApagar.Size = new System.Drawing.Size(206, 39);
             this.buttonApagar.TabIndex = 5;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
@@ -174,7 +166,6 @@
             this.Controls.Add(this.comboBoxTime2);
             this.Controls.Add(this.comboBoxTime1);
             this.Controls.Add(this.buttonApagar);
-            this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonMapas);
@@ -193,15 +184,14 @@
         private System.Windows.Forms.Button buttonMapas;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPartida;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.ComboBox comboBoxTime1;
         private System.Windows.Forms.ComboBox comboBoxTime2;
-        private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.Button buttonApagar;
         private System.Windows.Forms.Label labelTime1;
         private System.Windows.Forms.Label labelTime2;
         private System.Windows.Forms.Label labelVs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPartida;
     }
 }

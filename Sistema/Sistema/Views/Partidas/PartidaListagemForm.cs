@@ -91,34 +91,6 @@ namespace Sistema.Views.Partidas
             MessageBox.Show("Partida removida com sucesso!");
         }
 
-        private void buttonEditar_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.Rows.Count == 0)
-            {
-                MessageBox.Show("Cadastre uma Partida!");
-                return;
-            }
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Selecione uma partida da tabela!");
-                return;
-            }
-            if (comboBoxTime1.SelectedIndex == comboBoxTime2.SelectedIndex)
-            {
-                MessageBox.Show("Não é permitido time igual!");
-                return;
-            }
-
-            var partidaEscolhida = comboBoxTime1.SelectedItem.ToString() + " VS " + comboBoxTime2.SelectedItem.ToString();
-
-            var partida = new Partida();
-            partida.PartidaEscolhida = partidaEscolhida;
-
-            _partidaService.Editar(partida);
-
-            MessageBox.Show("Partida alterada com sucesso!");
-        }
-
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             if (comboBoxTime1.SelectedIndex == -1 || comboBoxTime2.SelectedIndex == -1)
@@ -132,11 +104,11 @@ namespace Sistema.Views.Partidas
                 return;
             }
 
-            var partidaEscolhida = comboBoxTime1.SelectedItem.ToString() + " VS " + comboBoxTime2.SelectedItem.ToString();
+            var partidaEscolhida = comboBoxTime1.Text + " VS " + comboBoxTime2.Text;
 
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                if (dataGridView1.Rows[i].Cells[1].Value.ToString() == partidaEscolhida)
+                if (dataGridView1.Rows[i].Cells[1].Value.ToString().Contains(partidaEscolhida))
                 {
                     MessageBox.Show("Cadastros iguais não é permitido!");
                     return;
@@ -145,10 +117,15 @@ namespace Sistema.Views.Partidas
 
             var partida = new Partida();
             partida.PartidaEscolhida = partidaEscolhida;
+            partida.Mapa1 = "";
+            partida.Mapa2 = "";
+            partida.Mapa3 = "";
 
             _partidaService.Cadastrar(partida);
 
             MessageBox.Show("Partida cadastrada com sucesso!");
+
+            PreencherDataGridView();
         }
     }
 }
