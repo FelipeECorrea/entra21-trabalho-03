@@ -62,6 +62,7 @@ namespace Sistema.Views.Campeonato
             var torneio = _campeonatoService.ObterPorId(id);
 
             var campeonatoCadastroForm = new CampeonatoCadastroForm(torneio);
+
             campeonatoCadastroForm.ShowDialog();
 
             PreencherDataGridViewComTorneios();

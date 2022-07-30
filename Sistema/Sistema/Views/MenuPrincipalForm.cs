@@ -74,5 +74,10 @@ namespace Sistema.Views
         {
             AbrirFormEmPainel(new CampeonatoCadastroForm());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirFormEmPainel(new CampeonatoListagemForm());
+        }
     }
 }

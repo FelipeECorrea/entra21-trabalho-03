@@ -60,9 +60,9 @@ namespace Sistema.Views.Grupos
 
         private void PreencherComboboxTorneio()
         {
-            var torneioService = new TorneioService();
+            var campeonatoService = new CampeonatoService();
 
-            var torneios = torneioService.ObterTodos();
+            var torneios = campeonatoService.ObterTodos();
 
             for (int i = 0; i < torneios.Count; i++)
             {

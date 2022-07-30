@@ -30,33 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipalForm));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.buttonListaCamp = new System.Windows.Forms.Button();
+            this.buttonCadastroCamp = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pictureBoxRestaurar = new System.Windows.Forms.PictureBox();
             this.pictureBoxMinimizar = new System.Windows.Forms.PictureBox();
             this.pictureBoxMinimizador = new System.Windows.Forms.PictureBox();
             this.pictureBoxFechar = new System.Windows.Forms.PictureBox();
             this.btnslide = new System.Windows.Forms.PictureBox();
             this.panelConteudo = new System.Windows.Forms.Panel();
-            this.pictureBoxRestaurar = new System.Windows.Forms.PictureBox();
-            this.buttonCadastroCamp = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnslide)).BeginInit();
-            this.panelConteudo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRestaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -66,7 +61,7 @@
             this.MenuVertical.Controls.Add(this.button4);
             this.MenuVertical.Controls.Add(this.button5);
             this.MenuVertical.Controls.Add(this.button2);
-            this.MenuVertical.Controls.Add(this.button1);
+            this.MenuVertical.Controls.Add(this.buttonListaCamp);
             this.MenuVertical.Controls.Add(this.buttonCadastroCamp);
             this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -74,154 +69,6 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(297, 666);
             this.MenuVertical.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 57);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // BarraTitulo
-            // 
-            this.BarraTitulo.Controls.Add(this.pictureBoxRestaurar);
-            this.BarraTitulo.Controls.Add(this.pictureBoxMinimizar);
-            this.BarraTitulo.Controls.Add(this.pictureBoxMinimizador);
-            this.BarraTitulo.Controls.Add(this.pictureBoxFechar);
-            this.BarraTitulo.Controls.Add(this.btnslide);
-            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.Location = new System.Drawing.Point(297, 0);
-            this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1115, 50);
-            this.BarraTitulo.TabIndex = 1;
-            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            // 
-            // pictureBoxMinimizar
-            // 
-            this.pictureBoxMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMinimizar.Image")));
-            this.pictureBoxMinimizar.Location = new System.Drawing.Point(1054, 9);
-            this.pictureBoxMinimizar.Name = "pictureBoxMinimizar";
-            this.pictureBoxMinimizar.Size = new System.Drawing.Size(24, 22);
-            this.pictureBoxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxMinimizar.TabIndex = 3;
-            this.pictureBoxMinimizar.TabStop = false;
-            this.pictureBoxMinimizar.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBoxMinimizador
-            // 
-            this.pictureBoxMinimizador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxMinimizador.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMinimizador.Image")));
-            this.pictureBoxMinimizador.Location = new System.Drawing.Point(1024, 9);
-            this.pictureBoxMinimizador.Name = "pictureBoxMinimizador";
-            this.pictureBoxMinimizador.Size = new System.Drawing.Size(24, 22);
-            this.pictureBoxMinimizador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxMinimizador.TabIndex = 2;
-            this.pictureBoxMinimizador.TabStop = false;
-            this.pictureBoxMinimizador.Click += new System.EventHandler(this.pictureBoxMinimizador_Click);
-            // 
-            // pictureBoxFechar
-            // 
-            this.pictureBoxFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxFechar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFechar.Image")));
-            this.pictureBoxFechar.Location = new System.Drawing.Point(1084, 9);
-            this.pictureBoxFechar.Name = "pictureBoxFechar";
-            this.pictureBoxFechar.Size = new System.Drawing.Size(24, 22);
-            this.pictureBoxFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxFechar.TabIndex = 1;
-            this.pictureBoxFechar.TabStop = false;
-            this.pictureBoxFechar.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // btnslide
-            // 
-            this.btnslide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnslide.Image = ((System.Drawing.Image)(resources.GetObject("btnslide.Image")));
-            this.btnslide.Location = new System.Drawing.Point(6, 9);
-            this.btnslide.Name = "btnslide";
-            this.btnslide.Size = new System.Drawing.Size(35, 35);
-            this.btnslide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnslide.TabIndex = 0;
-            this.btnslide.TabStop = false;
-            this.btnslide.Click += new System.EventHandler(this.btnslide_Click);
-            // 
-            // panelConteudo
-            // 
-            this.panelConteudo.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelConteudo.Controls.Add(this.pictureBox2);
-            this.panelConteudo.Controls.Add(this.pictureBox3);
-            this.panelConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelConteudo.Location = new System.Drawing.Point(297, 50);
-            this.panelConteudo.Name = "panelConteudo";
-            this.panelConteudo.Size = new System.Drawing.Size(1115, 616);
-            this.panelConteudo.TabIndex = 2;
-            // 
-            // pictureBoxRestaurar
-            // 
-            this.pictureBoxRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRestaurar.Image")));
-            this.pictureBoxRestaurar.Location = new System.Drawing.Point(1054, 9);
-            this.pictureBoxRestaurar.Name = "pictureBoxRestaurar";
-            this.pictureBoxRestaurar.Size = new System.Drawing.Size(24, 22);
-            this.pictureBoxRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxRestaurar.TabIndex = 4;
-            this.pictureBoxRestaurar.TabStop = false;
-            this.pictureBoxRestaurar.Visible = false;
-            this.pictureBoxRestaurar.Click += new System.EventHandler(this.pictureBoxRestaurar_Click);
-            // 
-            // buttonCadastroCamp
-            // 
-            this.buttonCadastroCamp.BackColor = System.Drawing.Color.Gainsboro;
-            this.buttonCadastroCamp.FlatAppearance.BorderSize = 0;
-            this.buttonCadastroCamp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.buttonCadastroCamp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCadastroCamp.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCadastroCamp.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastroCamp.Image")));
-            this.buttonCadastroCamp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCadastroCamp.Location = new System.Drawing.Point(0, 142);
-            this.buttonCadastroCamp.Name = "buttonCadastroCamp";
-            this.buttonCadastroCamp.Size = new System.Drawing.Size(296, 57);
-            this.buttonCadastroCamp.TabIndex = 1;
-            this.buttonCadastroCamp.Text = "Cadastro Campeonato";
-            this.buttonCadastroCamp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCadastroCamp.UseVisualStyleBackColor = false;
-            this.buttonCadastroCamp.Click += new System.EventHandler(this.buttonCadastroCamp_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 199);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(296, 57);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cadastro Campeonato";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Gainsboro;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 256);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(296, 57);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cadastro Campeonato";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -274,30 +121,156 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
+            // button2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.button2.BackColor = System.Drawing.Color.Gainsboro;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 256);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(296, 57);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Cadastro Campeonato";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // buttonListaCamp
+            // 
+            this.buttonListaCamp.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonListaCamp.FlatAppearance.BorderSize = 0;
+            this.buttonListaCamp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonListaCamp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonListaCamp.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListaCamp.Image = ((System.Drawing.Image)(resources.GetObject("buttonListaCamp.Image")));
+            this.buttonListaCamp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonListaCamp.Location = new System.Drawing.Point(0, 199);
+            this.buttonListaCamp.Name = "buttonListaCamp";
+            this.buttonListaCamp.Size = new System.Drawing.Size(296, 57);
+            this.buttonListaCamp.TabIndex = 2;
+            this.buttonListaCamp.Text = "Listagem Campeonato";
+            this.buttonListaCamp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonListaCamp.UseVisualStyleBackColor = false;
+            this.buttonListaCamp.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonCadastroCamp
+            // 
+            this.buttonCadastroCamp.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonCadastroCamp.FlatAppearance.BorderSize = 0;
+            this.buttonCadastroCamp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonCadastroCamp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCadastroCamp.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCadastroCamp.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastroCamp.Image")));
+            this.buttonCadastroCamp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCadastroCamp.Location = new System.Drawing.Point(0, 142);
+            this.buttonCadastroCamp.Name = "buttonCadastroCamp";
+            this.buttonCadastroCamp.Size = new System.Drawing.Size(296, 57);
+            this.buttonCadastroCamp.TabIndex = 1;
+            this.buttonCadastroCamp.Text = "Cadastro Campeonato";
+            this.buttonCadastroCamp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCadastroCamp.UseVisualStyleBackColor = false;
+            this.buttonCadastroCamp.Click += new System.EventHandler(this.buttonCadastroCamp_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(2, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(302, 57);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // BarraTitulo
+            // 
+            this.BarraTitulo.Controls.Add(this.pictureBoxRestaurar);
+            this.BarraTitulo.Controls.Add(this.pictureBoxMinimizar);
+            this.BarraTitulo.Controls.Add(this.pictureBoxMinimizador);
+            this.BarraTitulo.Controls.Add(this.pictureBoxFechar);
+            this.BarraTitulo.Controls.Add(this.btnslide);
+            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTitulo.Location = new System.Drawing.Point(297, 0);
+            this.BarraTitulo.Name = "BarraTitulo";
+            this.BarraTitulo.Size = new System.Drawing.Size(1115, 50);
+            this.BarraTitulo.TabIndex = 1;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // pictureBoxRestaurar
+            // 
+            this.pictureBoxRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRestaurar.Image")));
+            this.pictureBoxRestaurar.Location = new System.Drawing.Point(1054, 9);
+            this.pictureBoxRestaurar.Name = "pictureBoxRestaurar";
+            this.pictureBoxRestaurar.Size = new System.Drawing.Size(24, 22);
+            this.pictureBoxRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxRestaurar.TabIndex = 4;
+            this.pictureBoxRestaurar.TabStop = false;
+            this.pictureBoxRestaurar.Visible = false;
+            this.pictureBoxRestaurar.Click += new System.EventHandler(this.pictureBoxRestaurar_Click);
+            // 
+            // pictureBoxMinimizar
+            // 
+            this.pictureBoxMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMinimizar.Image")));
+            this.pictureBoxMinimizar.Location = new System.Drawing.Point(1054, 9);
+            this.pictureBoxMinimizar.Name = "pictureBoxMinimizar";
+            this.pictureBoxMinimizar.Size = new System.Drawing.Size(24, 22);
+            this.pictureBoxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMinimizar.TabIndex = 3;
+            this.pictureBoxMinimizar.TabStop = false;
+            this.pictureBoxMinimizar.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBoxMinimizador
+            // 
+            this.pictureBoxMinimizador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxMinimizador.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMinimizador.Image")));
+            this.pictureBoxMinimizador.Location = new System.Drawing.Point(1024, 9);
+            this.pictureBoxMinimizador.Name = "pictureBoxMinimizador";
+            this.pictureBoxMinimizador.Size = new System.Drawing.Size(24, 22);
+            this.pictureBoxMinimizador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMinimizador.TabIndex = 2;
+            this.pictureBoxMinimizador.TabStop = false;
+            this.pictureBoxMinimizador.Click += new System.EventHandler(this.pictureBoxMinimizador_Click);
+            // 
+            // pictureBoxFechar
+            // 
+            this.pictureBoxFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxFechar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFechar.Image")));
+            this.pictureBoxFechar.Location = new System.Drawing.Point(1084, 9);
+            this.pictureBoxFechar.Name = "pictureBoxFechar";
+            this.pictureBoxFechar.Size = new System.Drawing.Size(24, 22);
+            this.pictureBoxFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFechar.TabIndex = 1;
+            this.pictureBoxFechar.TabStop = false;
+            this.pictureBoxFechar.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // btnslide
+            // 
+            this.btnslide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnslide.Image = ((System.Drawing.Image)(resources.GetObject("btnslide.Image")));
+            this.btnslide.Location = new System.Drawing.Point(6, 9);
+            this.btnslide.Name = "btnslide";
+            this.btnslide.Size = new System.Drawing.Size(35, 35);
+            this.btnslide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnslide.TabIndex = 0;
+            this.btnslide.TabStop = false;
+            this.btnslide.Click += new System.EventHandler(this.btnslide_Click);
+            // 
+            // panelConteudo
+            // 
+            this.panelConteudo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(170, 290);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(749, 326);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(114, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(805, 290);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.panelConteudo.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelConteudo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelConteudo.BackgroundImage")));
+            this.panelConteudo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelConteudo.Location = new System.Drawing.Point(297, 50);
+            this.panelConteudo.Name = "panelConteudo";
+            this.panelConteudo.Size = new System.Drawing.Size(1115, 616);
+            this.panelConteudo.TabIndex = 2;
             // 
             // MenuPrincipalForm
             // 
@@ -314,14 +287,11 @@
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMinimizador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnslide)).EndInit();
-            this.panelConteudo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRestaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -342,8 +312,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button buttonListaCamp;
     }
 }

@@ -8,7 +8,7 @@ namespace Sistema.Service
         public bool validar = false;
         public string aviso = "";
         Conexao acessar = new Conexao();
-        SqlDataReader dr; 
+        SqlDataReader dr;
         public bool verificarCadastro(string email, string senha)
         {
             var conexao = new Conexao().Conectar();
@@ -17,20 +17,26 @@ namespace Sistema.Service
             comando.Parameters.AddWithValue("@EMAIL", email);
             comando.Parameters.AddWithValue("@SENHA", senha);
 
-            try
+            if (validar == false)
             {
-                comando.Connection = acessar.Conectar();
-                dr = comando.ExecuteReader();
-                if (dr.HasRows)
+                try
                 {
-                    validar = true;
+                    comando.Connection = acessar.Conectar();
+                    dr = comando.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        validar = true;
+                    }
+                    else
+                        validar = false;
+
+                    comando.Connection.Close();
+                    dr.Close();
                 }
-                comando.Connection.Close();
-                dr.Close();
-            }
-            catch (SqlException)
-            {
-                this.aviso = "Erro com banco de Dados!";
+                catch (SqlException)
+                {
+                    this.aviso = "Erro com banco de Dados!";
+                }
             }
 
             return validar;
@@ -42,8 +48,18 @@ namespace Sistema.Service
             var comando = conexao.CreateCommand();
 
             validar = false;
+            var emailEsenha = false;
 
-            if (senha.Equals(csenha))
+            if (usuario == "" && email == "")
+            {
+                emailEsenha = false;
+            }
+            else
+            {
+                emailEsenha = true;
+            }
+
+            if (emailEsenha == true && senha.Equals(csenha))
             {
                 comando.CommandText = "INSERT INTO contas VALUES (@USUARIO,@EMAIL,@SENHA);";
                 comando.Parameters.AddWithValue("@USUARIO", usuario);
@@ -51,14 +67,14 @@ namespace Sistema.Service
                 comando.Parameters.AddWithValue("@SENHA", senha);
 
                 try
-                {
+                {  
+                    this.aviso = "Usuario cadastrado com sucesso!";
+                    validar = true;
                     comando.Connection = acessar.Conectar();
-
                     comando.ExecuteNonQuery();
 
                     comando.Connection.Close();
-                    this.aviso = "Usuario cadastrado com sucesso!";
-                    validar = true;
+
                 }
                 catch (SqlException)
                 {
@@ -69,9 +85,6 @@ namespace Sistema.Service
             {
                 this.aviso = "Senhas não correspondem!";
             }
-
-            comando.CommandText = "";
-
             return aviso;
         }
     }

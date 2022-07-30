@@ -1,5 +1,6 @@
 ﻿using Sistema.Views;
 using Sistema.Views.Campeonato;
+using Sistema.Views.Transmissao;
 using System;
 using System.Windows.Forms;
 
@@ -15,7 +16,7 @@ namespace Sistema
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuPrincipalForm());
+            Application.Run(new TransmissaoCadastroEdicaoForm());
         }
     }
 }

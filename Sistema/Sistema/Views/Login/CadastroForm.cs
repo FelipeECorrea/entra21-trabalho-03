@@ -26,11 +26,11 @@ namespace Sistema.Views.Login
         private void buttonNewCadastro_Click(object sender, EventArgs e)
         {
             Controle controle = new Controle();
-            string aviso = controle.Cadastrar(textBoxUsuario.Text,textBoxEmail.Text, textBoxSenha.Text, textBoxCSenha.Text);
+            string aviso = controle.Cadastrar(textBoxUsuario.Text, textBoxEmail.Text, textBoxSenha.Text, textBoxCSenha.Text);
 
             if (controle.validar)
             {
-                MessageBox.Show(aviso, "Cadastro", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show(aviso, "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

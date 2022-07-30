@@ -29,7 +29,7 @@ namespace Sistema.Views
             controle.AcessarProg(textBoxEmail.Text, textBoxSenha.Text);
             if (controle.validar)
             {
-                MessageBox.Show("Seja Bem Vindo","Entrando",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Seja Bem Vindo","Entrando...",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 var abrirMenu = new MenuPrincipalForm();
                 abrirMenu.Show();
                 this.Visible = false;
@@ -37,6 +37,8 @@ namespace Sistema.Views
             else
             {
                 MessageBox.Show("Login não encontrado, Verifique E-mail e Senha", "ERROR!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                textBoxSenha.Text = "";
+                textBoxSenha.Focus();
             }
         }
     }

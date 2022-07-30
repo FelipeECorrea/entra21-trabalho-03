@@ -132,15 +132,15 @@ namespace Sistema.Views.Campeonato
             {
                 selectPremio = "10.000 a 50.000";
             }
-            else if (radioButtonP1.Checked)
+            else if (radioButtonP2.Checked)
             {
                 selectPremio = "50.000 a 250.000";
             }
-            else if (radioButtonP1.Checked)
+            else if (radioButtonP3.Checked)
             {
                 selectPremio = "250.000 a 750.000";
             }
-            else if (radioButtonP1.Checked)
+            else if (radioButtonP4.Checked)
             {
                 selectPremio = "750.000 a 1.000,000";
             }
