@@ -30,9 +30,12 @@ namespace Sistema.Views.Partidas
             {
                 var partida = partidas[i];
 
+                if (partida.Mapa1 == "")
+                    return;
+
                 dataGridView1.Rows.Add(new object[]
                 {
-                    partida.PartidaSorteada,
+                    partida.PartidaEscolhida,
                     partida.Mapa1,
                     partida.Mapa2,
                     partida.Mapa3
@@ -48,7 +51,7 @@ namespace Sistema.Views.Partidas
             {
                 var partida = partidas[i];
 
-                comboBoxPartidas.Items.Add(partida.PartidaSorteada);
+                comboBoxPartidas.Items.Add(partida.PartidaEscolhida);
             }
         }
 
@@ -121,36 +124,51 @@ namespace Sistema.Views.Partidas
                     i++;
                 }
             }
-            var partida = new Partida();
+            var partida = comboBoxPartidas.SelectedItem as Partida;
 
             // TODO: Kauã Verificar se vai funcionar o editar
-            if (comboBoxPartidas.SelectedText == partida.PartidaSorteada)
-            {
-                partida.Mapa1 = mapa1;
-                partida.Mapa2 = mapa2;
-                partida.Mapa3 = mapa3;
+            partida.Mapa1 = mapa1;
+            partida.Mapa2 = mapa2;
+            partida.Mapa3 = mapa3;
 
-                _partidaService.Editar(partida);
+            _partidaService.Editar(partida);
 
-                MessageBox.Show("Mapas cadastrados com cucesso!");
+            MessageBox.Show("Mapas cadastrados com cucesso!");
 
-                PreencherDataGridView();
-            }
+            PreencherDataGridView();
         }
 
         private void buttonJogar_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Cadastre mapas a uma partida!");
+                return;
+            }
             if (dataGridView1.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione a partida da telinha para jogar!");
                 return;
             }
 
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            _partidaService.Apagar(id);
+
+            PreencherDataGridView();
+
             System.Diagnostics.Process.Start("csgo.exe");
         }
 
         private void buttonApagarMapas_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Cadastre mapas a uma partida!");
+                return;
+            }
             if (dataGridView1.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione uma partida da tabela!");
@@ -161,7 +179,7 @@ namespace Sistema.Views.Partidas
 
             var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            _partidaService.Apagar(id);
+            _partidaService.ApagarMapas(id);
 
             PreencherDataGridView();
 

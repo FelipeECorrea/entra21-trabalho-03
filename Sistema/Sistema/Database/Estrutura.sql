@@ -48,7 +48,7 @@ CREATE TABLE grupos (
 
 CREATE TABLE partidas (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
-	partida_sorteada VARCHAR(100),
+	partida_escolhida VARCHAR(100),
 	mapa_1 VARCHAR(25),
 	mapa_2 VARCHAR(25),
 	mapa_3 VARCHAR(25));
