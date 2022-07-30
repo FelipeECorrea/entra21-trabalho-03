@@ -54,13 +54,14 @@ CREATE TABLE partidas (
 	mapa_3 VARCHAR(25));
 	
 CREATE TABLE contas (
-	usuario VARCHAR(15),
-	email VARCHAR(50),
-	senha VARCHAR(15)
+	id INTEGER PRIMARY KEY IDENTITY(1,1),
+	usuario VARCHAR(15) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	senha VARCHAR(20) NOT NULL
 );
 
 INSERT INTO contas VALUES
 	('Felipe Corrêa','pessoal.fec@gmail.com', '1998');
 
-SELECT * FROM torneios;
+SELECT * FROM contas;
 
