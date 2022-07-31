@@ -15,8 +15,6 @@ namespace Sistema.Views.Partidas
 
             _partidaService = new PartidaService();
 
-            PreencherComboBox();
-
             PreencherDataGridView();
         }
 
@@ -30,11 +28,9 @@ namespace Sistema.Views.Partidas
             {
                 var partida = partidas[i];
 
-                if (partida.Mapa1 == "")
-                    return;
-
                 dataGridView1.Rows.Add(new object[]
                 {
+                    partida.Id,
                     partida.PartidaEscolhida,
                     partida.Mapa1,
                     partida.Mapa2,
@@ -43,26 +39,8 @@ namespace Sistema.Views.Partidas
             }
         }
 
-        private void PreencherComboBox()
-        {
-            var partidas = _partidaService.ObterTodos();
-
-            for (int i = 0; i < partidas.Count; i++)
-            {
-                var partida = partidas[i];
-
-                comboBoxPartidas.Items.Add(partida.PartidaEscolhida);
-            }
-        }
-
         private void buttonSortearMapa_Click(object sender, EventArgs e)
         {
-            if (comboBoxPartidas.SelectedIndex == -1)
-            {
-                MessageBox.Show("Selecione uma partida!");
-                return;
-            }
-
             Random random = new Random();
 
             List<string> nomeMapa = new List<string>();
@@ -124,9 +102,31 @@ namespace Sistema.Views.Partidas
                     i++;
                 }
             }
-            var partida = comboBoxPartidas.SelectedItem as Partida;
+
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Cadastre uma Partida!");
+                return;
+            }
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma partida da tabela!");
+                return;
+            }
+
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+
+            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            var partida = new Partida();
+
+            var partidas = _partidaService.ObterPorId(id);
+
+            var partidaSelecionada = linhaSelecionada.Cells[1].Value.ToString();
 
             // TODO: Kauã Verificar se vai funcionar o editar
+            partida.Id = id;
+            partida.PartidaEscolhida = partidaSelecionada;
             partida.Mapa1 = mapa1;
             partida.Mapa2 = mapa2;
             partida.Mapa3 = mapa3;
@@ -155,18 +155,16 @@ namespace Sistema.Views.Partidas
 
             var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            _partidaService.Apagar(id);
-
             PreencherDataGridView();
 
-            System.Diagnostics.Process.Start("csgo.exe");
+            System.Diagnostics.Process.Start(@"D:\Downloads\Steam\steam.exe");
         }
 
         private void buttonApagarMapas_Click(object sender, EventArgs e)
         {
             if (dataGridView1.Rows.Count == 0)
             {
-                MessageBox.Show("Cadastre mapas a uma partida!");
+                MessageBox.Show("Cadastre uma Partida!");
                 return;
             }
             if (dataGridView1.SelectedRows.Count == 0)
@@ -179,7 +177,17 @@ namespace Sistema.Views.Partidas
 
             var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            _partidaService.ApagarMapas(id);
+            var partidaSelecionada = linhaSelecionada.Cells[1].Value.ToString();
+
+            var partida = new Partida();
+
+            partida.Id = id;
+            partida.PartidaEscolhida = partidaSelecionada;
+            partida.Mapa1 = "";
+            partida.Mapa2 = "";
+            partida.Mapa3 = "";
+
+            _partidaService.ApagarMapas(partida);
 
             PreencherDataGridView();
 

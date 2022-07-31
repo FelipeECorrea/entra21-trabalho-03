@@ -24,20 +24,24 @@ WHERE id = @ID";
             conexao.Close();
         }
 
-        public void ApagarMapas(int id)
+        public void ApagarMapas(Partida partida)
         {
             var conexao = new Conexao().Conectar();
 
             var comando = conexao.CreateCommand();
 
             comando.CommandText = @"UPDATE partidas SET
-partida_escolhida = @PARTIDA_SORTEADA,
-mapa_1 = '',
-mapa_2 = '',
-mapa_3 = ''
+partida_escolhida = @PARTIDA_ESCOLHIDA,
+mapa_1 = @MAPA_1,
+mapa_2 = @MAPA_2,
+mapa_3 = @MAPA_3
 WHERE id = @ID";
 
-            comando.Parameters.AddWithValue("@ID", id);
+            comando.Parameters.AddWithValue("@PARTIDA_ESCOLHIDA", partida.PartidaEscolhida);
+            comando.Parameters.AddWithValue("@MAPA_1", partida.Mapa1);
+            comando.Parameters.AddWithValue("@MAPA_2", partida.Mapa2);
+            comando.Parameters.AddWithValue("@MAPA_3", partida.Mapa3);
+            comando.Parameters.AddWithValue("@ID", partida.Id);
 
             comando.ExecuteNonQuery();
 
@@ -107,6 +111,7 @@ partida_escolhida,
 mapa_1,
 mapa_2,
 mapa_3
+FROM partidas
 WHERE id = @ID";
 
             comando.Parameters.AddWithValue("@ID", id);
@@ -124,8 +129,8 @@ WHERE id = @ID";
             partida.Id = Convert.ToInt32(registro["id"]);
             partida.PartidaEscolhida = registro["partida_escolhida"].ToString();
             partida.Mapa1 = registro["mapa_1"].ToString();
-            partida.Mapa2= registro["mapa_2"].ToString();
-            partida.Mapa3= registro["mapa_3"].ToString();
+            partida.Mapa2 = registro["mapa_2"].ToString();
+            partida.Mapa3 = registro["mapa_3"].ToString();
             
             conexao.Close();
 
