@@ -76,8 +76,10 @@
     <Compile Include="Service\GrupoService.cs" />
     <Compile Include="Service\ICampeonatoService.cs" />
     <Compile Include="Service\IGrupoService.cs" />
+    <Compile Include="Service\IJogadorServiceBase.cs" />
     <Compile Include="Service\IPartidaService.cs" />
     <Compile Include="Service\ITimeService.cs" />
+    <Compile Include="Service\JogadorService.cs" />
     <Compile Include="Service\PartidaService.cs" />
     <Compile Include="Service\TimeService.cs" />
     <Compile Include="Service\UsuarioCadastrados.cs" />
