@@ -30,7 +30,6 @@
         {
             this.labelTime2 = new System.Windows.Forms.Label();
             this.buttonSortearMapa = new System.Windows.Forms.Button();
-            this.labelTime1 = new System.Windows.Forms.Label();
             this.radioButtonMapaAncient1 = new System.Windows.Forms.RadioButton();
             this.radioButtonMapaDust21 = new System.Windows.Forms.RadioButton();
             this.radioButtonMapaInferno1 = new System.Windows.Forms.RadioButton();
@@ -46,8 +45,6 @@
             this.radioButtonMapaOverpass2 = new System.Windows.Forms.RadioButton();
             this.radioButtonMapaVertigo2 = new System.Windows.Forms.RadioButton();
             this.buttonApagarMapas = new System.Windows.Forms.Button();
-            this.comboBoxPartidas = new System.Windows.Forms.ComboBox();
-            this.labelSelecionePartida = new System.Windows.Forms.Label();
             this.buttonJogar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +52,11 @@
             this.ColumnMapa1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMapa2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMapa3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelTime1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTime2
@@ -69,7 +70,7 @@
             // 
             // buttonSortearMapa
             // 
-            this.buttonSortearMapa.Location = new System.Drawing.Point(634, 313);
+            this.buttonSortearMapa.Location = new System.Drawing.Point(634, 227);
             this.buttonSortearMapa.Name = "buttonSortearMapa";
             this.buttonSortearMapa.Size = new System.Drawing.Size(300, 51);
             this.buttonSortearMapa.TabIndex = 6;
@@ -77,19 +78,10 @@
             this.buttonSortearMapa.UseVisualStyleBackColor = true;
             this.buttonSortearMapa.Click += new System.EventHandler(this.buttonSortearMapa_Click);
             // 
-            // labelTime1
-            // 
-            this.labelTime1.AutoSize = true;
-            this.labelTime1.Location = new System.Drawing.Point(666, 15);
-            this.labelTime1.Name = "labelTime1";
-            this.labelTime1.Size = new System.Drawing.Size(39, 13);
-            this.labelTime1.TabIndex = 8;
-            this.labelTime1.Text = "Time 1";
-            // 
             // radioButtonMapaAncient1
             // 
             this.radioButtonMapaAncient1.AutoSize = true;
-            this.radioButtonMapaAncient1.Location = new System.Drawing.Point(650, 45);
+            this.radioButtonMapaAncient1.Location = new System.Drawing.Point(10, 14);
             this.radioButtonMapaAncient1.Name = "radioButtonMapaAncient1";
             this.radioButtonMapaAncient1.Size = new System.Drawing.Size(61, 17);
             this.radioButtonMapaAncient1.TabIndex = 9;
@@ -100,7 +92,7 @@
             // radioButtonMapaDust21
             // 
             this.radioButtonMapaDust21.AutoSize = true;
-            this.radioButtonMapaDust21.Location = new System.Drawing.Point(650, 68);
+            this.radioButtonMapaDust21.Location = new System.Drawing.Point(10, 37);
             this.radioButtonMapaDust21.Name = "radioButtonMapaDust21";
             this.radioButtonMapaDust21.Size = new System.Drawing.Size(56, 17);
             this.radioButtonMapaDust21.TabIndex = 9;
@@ -111,7 +103,7 @@
             // radioButtonMapaInferno1
             // 
             this.radioButtonMapaInferno1.AutoSize = true;
-            this.radioButtonMapaInferno1.Location = new System.Drawing.Point(650, 91);
+            this.radioButtonMapaInferno1.Location = new System.Drawing.Point(10, 60);
             this.radioButtonMapaInferno1.Name = "radioButtonMapaInferno1";
             this.radioButtonMapaInferno1.Size = new System.Drawing.Size(58, 17);
             this.radioButtonMapaInferno1.TabIndex = 9;
@@ -122,7 +114,7 @@
             // radioButtonMapaMirage1
             // 
             this.radioButtonMapaMirage1.AutoSize = true;
-            this.radioButtonMapaMirage1.Location = new System.Drawing.Point(650, 114);
+            this.radioButtonMapaMirage1.Location = new System.Drawing.Point(10, 83);
             this.radioButtonMapaMirage1.Name = "radioButtonMapaMirage1";
             this.radioButtonMapaMirage1.Size = new System.Drawing.Size(57, 17);
             this.radioButtonMapaMirage1.TabIndex = 9;
@@ -133,7 +125,7 @@
             // radioButtonMapaNuke1
             // 
             this.radioButtonMapaNuke1.AutoSize = true;
-            this.radioButtonMapaNuke1.Location = new System.Drawing.Point(650, 137);
+            this.radioButtonMapaNuke1.Location = new System.Drawing.Point(10, 106);
             this.radioButtonMapaNuke1.Name = "radioButtonMapaNuke1";
             this.radioButtonMapaNuke1.Size = new System.Drawing.Size(51, 17);
             this.radioButtonMapaNuke1.TabIndex = 9;
@@ -144,7 +136,7 @@
             // radioButtonMapaOverpass1
             // 
             this.radioButtonMapaOverpass1.AutoSize = true;
-            this.radioButtonMapaOverpass1.Location = new System.Drawing.Point(650, 160);
+            this.radioButtonMapaOverpass1.Location = new System.Drawing.Point(10, 129);
             this.radioButtonMapaOverpass1.Name = "radioButtonMapaOverpass1";
             this.radioButtonMapaOverpass1.Size = new System.Drawing.Size(70, 17);
             this.radioButtonMapaOverpass1.TabIndex = 9;
@@ -155,7 +147,7 @@
             // radioButtonMapaVertigo1
             // 
             this.radioButtonMapaVertigo1.AutoSize = true;
-            this.radioButtonMapaVertigo1.Location = new System.Drawing.Point(650, 183);
+            this.radioButtonMapaVertigo1.Location = new System.Drawing.Point(10, 152);
             this.radioButtonMapaVertigo1.Name = "radioButtonMapaVertigo1";
             this.radioButtonMapaVertigo1.Size = new System.Drawing.Size(58, 17);
             this.radioButtonMapaVertigo1.TabIndex = 9;
@@ -250,29 +242,11 @@
             this.buttonApagarMapas.UseVisualStyleBackColor = true;
             this.buttonApagarMapas.Click += new System.EventHandler(this.buttonApagarMapas_Click);
             // 
-            // comboBoxPartidas
-            // 
-            this.comboBoxPartidas.DisplayMember = "PartidaEscolhida";
-            this.comboBoxPartidas.FormattingEnabled = true;
-            this.comboBoxPartidas.Location = new System.Drawing.Point(634, 286);
-            this.comboBoxPartidas.Name = "comboBoxPartidas";
-            this.comboBoxPartidas.Size = new System.Drawing.Size(300, 21);
-            this.comboBoxPartidas.TabIndex = 10;
-            // 
-            // labelSelecionePartida
-            // 
-            this.labelSelecionePartida.AutoSize = true;
-            this.labelSelecionePartida.Location = new System.Drawing.Point(735, 267);
-            this.labelSelecionePartida.Name = "labelSelecionePartida";
-            this.labelSelecionePartida.Size = new System.Drawing.Size(98, 13);
-            this.labelSelecionePartida.TabIndex = 11;
-            this.labelSelecionePartida.Text = "Selecione a partida";
-            // 
             // buttonJogar
             // 
-            this.buttonJogar.Location = new System.Drawing.Point(634, 456);
+            this.buttonJogar.Location = new System.Drawing.Point(634, 350);
             this.buttonJogar.Name = "buttonJogar";
-            this.buttonJogar.Size = new System.Drawing.Size(300, 55);
+            this.buttonJogar.Size = new System.Drawing.Size(300, 161);
             this.buttonJogar.TabIndex = 13;
             this.buttonJogar.Text = "Jogar";
             this.buttonJogar.UseVisualStyleBackColor = true;
@@ -292,6 +266,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 15);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(607, 426);
             this.dataGridView1.TabIndex = 12;
             // 
@@ -326,36 +301,63 @@
             this.ColumnMapa3.Name = "ColumnMapa3";
             this.ColumnMapa3.ReadOnly = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButtonMapaVertigo1);
+            this.groupBox1.Controls.Add(this.radioButtonMapaAncient1);
+            this.groupBox1.Controls.Add(this.radioButtonMapaOverpass1);
+            this.groupBox1.Controls.Add(this.radioButtonMapaDust21);
+            this.groupBox1.Controls.Add(this.radioButtonMapaNuke1);
+            this.groupBox1.Controls.Add(this.radioButtonMapaInferno1);
+            this.groupBox1.Controls.Add(this.radioButtonMapaMirage1);
+            this.groupBox1.Location = new System.Drawing.Point(634, 31);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(100, 176);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            // 
+            // labelTime1
+            // 
+            this.labelTime1.AutoSize = true;
+            this.labelTime1.Location = new System.Drawing.Point(666, 15);
+            this.labelTime1.Name = "labelTime1";
+            this.labelTime1.Size = new System.Drawing.Size(39, 13);
+            this.labelTime1.TabIndex = 8;
+            this.labelTime1.Text = "Time 1";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(834, 31);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(100, 176);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            // 
             // MapasCadastroEdicaoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 523);
+            this.Controls.Add(this.radioButtonMapaAncient2);
             this.Controls.Add(this.buttonJogar);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.labelSelecionePartida);
-            this.Controls.Add(this.comboBoxPartidas);
             this.Controls.Add(this.radioButtonMapaVertigo2);
-            this.Controls.Add(this.radioButtonMapaVertigo1);
             this.Controls.Add(this.radioButtonMapaOverpass2);
-            this.Controls.Add(this.radioButtonMapaOverpass1);
             this.Controls.Add(this.radioButtonMapaNuke2);
-            this.Controls.Add(this.radioButtonMapaNuke1);
             this.Controls.Add(this.radioButtonMapaMirage2);
-            this.Controls.Add(this.radioButtonMapaMirage1);
             this.Controls.Add(this.radioButtonMapaInferno2);
             this.Controls.Add(this.radioButtonMapaDust22);
-            this.Controls.Add(this.radioButtonMapaInferno1);
-            this.Controls.Add(this.radioButtonMapaAncient2);
-            this.Controls.Add(this.radioButtonMapaDust21);
-            this.Controls.Add(this.radioButtonMapaAncient1);
             this.Controls.Add(this.labelTime1);
             this.Controls.Add(this.labelTime2);
             this.Controls.Add(this.buttonApagarMapas);
             this.Controls.Add(this.buttonSortearMapa);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Name = "MapasCadastroEdicaoForm";
             this.Text = "Escolha de Mapas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +366,6 @@
         #endregion
         private System.Windows.Forms.Label labelTime2;
         private System.Windows.Forms.Button buttonSortearMapa;
-        private System.Windows.Forms.Label labelTime1;
         private System.Windows.Forms.RadioButton radioButtonMapaAncient1;
         private System.Windows.Forms.RadioButton radioButtonMapaDust21;
         private System.Windows.Forms.RadioButton radioButtonMapaInferno1;
@@ -380,8 +381,6 @@
         private System.Windows.Forms.RadioButton radioButtonMapaOverpass2;
         private System.Windows.Forms.RadioButton radioButtonMapaVertigo2;
         private System.Windows.Forms.Button buttonApagarMapas;
-        private System.Windows.Forms.ComboBox comboBoxPartidas;
-        private System.Windows.Forms.Label labelSelecionePartida;
         private System.Windows.Forms.Button buttonJogar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
@@ -389,5 +388,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMapa1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMapa2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMapa3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label labelTime1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
