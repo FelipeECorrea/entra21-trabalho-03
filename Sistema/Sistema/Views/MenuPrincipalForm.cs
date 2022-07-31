@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Sistema.Views.Campeonato;
+using Sistema.Views.Times;
+using Sistema.Views.Jogadores;
 
 namespace Sistema.Views
 {
@@ -78,6 +80,16 @@ namespace Sistema.Views
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormEmPainel(new CampeonatoListagemForm());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirFormEmPainel(new CadastroTimesForm());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AbrirFormEmPainel(new TimesListagemForm());
         }
     }
 }

@@ -28,120 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDataCriacao = new System.Windows.Forms.DateTimePicker();
             this.labelNome = new System.Windows.Forms.Label();
             this.labelPais = new System.Windows.Forms.Label();
             this.labelData = new System.Windows.Forms.Label();
             this.textBoxNome = new System.Windows.Forms.TextBox();
             this.textBoxPais = new System.Windows.Forms.TextBox();
             this.buttonCadastrar = new System.Windows.Forms.Button();
-            this.buttonApagar = new System.Windows.Forms.Button();
-            this.buttonEditar = new System.Windows.Forms.Button();
-            this.buttonSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dateTimePickerDataCriacao
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 144);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dateTimePickerDataCriacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDataCriacao.Location = new System.Drawing.Point(68, 204);
+            this.dateTimePickerDataCriacao.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerDataCriacao.Name = "dateTimePickerDataCriacao";
+            this.dateTimePickerDataCriacao.Size = new System.Drawing.Size(265, 22);
+            this.dateTimePickerDataCriacao.TabIndex = 0;
             // 
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(12, 9);
+            this.labelNome.Location = new System.Drawing.Point(68, 38);
+            this.labelNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(58, 13);
+            this.labelNome.Size = new System.Drawing.Size(100, 16);
             this.labelNome.TabIndex = 1;
-            this.labelNome.Text = "Nickname:";
+            this.labelNome.Text = "Nome do Time:";
             // 
             // labelPais
             // 
             this.labelPais.AutoSize = true;
-            this.labelPais.Location = new System.Drawing.Point(12, 63);
+            this.labelPais.Location = new System.Drawing.Point(68, 105);
+            this.labelPais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPais.Name = "labelPais";
-            this.labelPais.Size = new System.Drawing.Size(32, 13);
+            this.labelPais.Size = new System.Drawing.Size(99, 16);
             this.labelPais.TabIndex = 2;
-            this.labelPais.Text = "País:";
+            this.labelPais.Text = "Nacionalidade:";
             // 
             // labelData
             // 
             this.labelData.AutoSize = true;
-            this.labelData.Location = new System.Drawing.Point(12, 116);
+            this.labelData.Location = new System.Drawing.Point(65, 184);
+            this.labelData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelData.Name = "labelData";
-            this.labelData.Size = new System.Drawing.Size(72, 13);
+            this.labelData.Size = new System.Drawing.Size(89, 16);
             this.labelData.TabIndex = 4;
             this.labelData.Text = "Data Criação:";
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(12, 25);
+            this.textBoxNome.Location = new System.Drawing.Point(68, 58);
+            this.textBoxNome.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNome.Size = new System.Drawing.Size(265, 22);
             this.textBoxNome.TabIndex = 5;
             // 
             // textBoxPais
             // 
-            this.textBoxPais.Location = new System.Drawing.Point(12, 79);
+            this.textBoxPais.Location = new System.Drawing.Point(68, 124);
+            this.textBoxPais.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPais.Name = "textBoxPais";
-            this.textBoxPais.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPais.Size = new System.Drawing.Size(265, 22);
             this.textBoxPais.TabIndex = 6;
             // 
             // buttonCadastrar
             // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(190, 291);
+            this.buttonCadastrar.Location = new System.Drawing.Point(92, 306);
+            this.buttonCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastrar.Size = new System.Drawing.Size(200, 47);
             this.buttonCadastrar.TabIndex = 7;
             this.buttonCadastrar.Text = "Cadastrar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
-            // 
-            // buttonApagar
-            // 
-            this.buttonApagar.Location = new System.Drawing.Point(190, 9);
-            this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(75, 23);
-            this.buttonApagar.TabIndex = 8;
-            this.buttonApagar.Text = "Excluir";
-            this.buttonApagar.UseVisualStyleBackColor = true;
-            // 
-            // buttonEditar
-            // 
-            this.buttonEditar.Location = new System.Drawing.Point(271, 291);
-            this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
-            this.buttonEditar.TabIndex = 9;
-            this.buttonEditar.Text = "Editar";
-            this.buttonEditar.UseVisualStyleBackColor = true;
-            // 
-            // buttonSair
-            // 
-            this.buttonSair.Location = new System.Drawing.Point(271, 9);
-            this.buttonSair.Name = "buttonSair";
-            this.buttonSair.Size = new System.Drawing.Size(75, 23);
-            this.buttonSair.TabIndex = 10;
-            this.buttonSair.Text = "Sair";
-            this.buttonSair.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // CadastroTimesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 326);
-            this.Controls.Add(this.buttonSair);
-            this.Controls.Add(this.buttonEditar);
-            this.Controls.Add(this.buttonApagar);
+            this.ClientSize = new System.Drawing.Size(399, 449);
             this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.textBoxPais);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.labelData);
             this.Controls.Add(this.labelPais);
             this.Controls.Add(this.labelNome);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerDataCriacao);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadastroTimesForm";
-            this.Text = "CadastroJogadoresForm";
+            this.Text = "CadastroTimesForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,15 +126,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDataCriacao;
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Label labelPais;
         private System.Windows.Forms.Label labelData;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.TextBox textBoxPais;
         private System.Windows.Forms.Button buttonCadastrar;
-        private System.Windows.Forms.Button buttonApagar;
-        private System.Windows.Forms.Button buttonEditar;
-        private System.Windows.Forms.Button buttonSair;
     }
 }

@@ -117,9 +117,10 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(296, 57);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Cadastro Campeonato";
+            this.button5.Text = "Listagem Times";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button2
             // 
@@ -134,9 +135,10 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(296, 57);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Cadastro Campeonato";
+            this.button2.Text = "Cadastro Times";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonListaCamp
             // 
