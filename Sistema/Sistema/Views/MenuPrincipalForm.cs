@@ -4,6 +4,8 @@ using System.Runtime.InteropServices;
 using Sistema.Views.Campeonato;
 using Sistema.Views.Times;
 using Sistema.Views.Jogadores;
+using Sistema.Views.Grupos;
+using Sistema.Views.Partidas;
 
 namespace Sistema.Views
 {
@@ -90,6 +92,16 @@ namespace Sistema.Views
         private void button5_Click(object sender, EventArgs e)
         {
             AbrirFormEmPainel(new TimesListagemForm());
+        }
+
+        private void buttonCadastroGrupos_Click(object sender, EventArgs e)
+        {
+            AbrirFormEmPainel(new GrupoListagemForm());
+        }
+
+        private void buttonPartidas_Click(object sender, EventArgs e)
+        {
+            AbrirFormEmPainel(new PartidaListagemForm());
         }
     }
 }

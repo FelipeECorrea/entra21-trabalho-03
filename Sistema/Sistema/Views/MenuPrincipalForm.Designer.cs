@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipalForm));
             this.MenuVertical = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonPartidas = new System.Windows.Forms.Button();
+            this.buttonCadastroGrupos = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonListaCamp = new System.Windows.Forms.Button();
@@ -57,8 +57,8 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.MenuVertical.Controls.Add(this.button3);
-            this.MenuVertical.Controls.Add(this.button4);
+            this.MenuVertical.Controls.Add(this.buttonPartidas);
+            this.MenuVertical.Controls.Add(this.buttonCadastroGrupos);
             this.MenuVertical.Controls.Add(this.button5);
             this.MenuVertical.Controls.Add(this.button2);
             this.MenuVertical.Controls.Add(this.buttonListaCamp);
@@ -66,43 +66,48 @@
             this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
+            this.MenuVertical.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(297, 666);
+            this.MenuVertical.Size = new System.Drawing.Size(223, 541);
             this.MenuVertical.TabIndex = 0;
             // 
-            // button3
+            // buttonPartidas
             // 
-            this.button3.BackColor = System.Drawing.Color.Gainsboro;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 427);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(296, 57);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Cadastro Campeonato";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonPartidas.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonPartidas.FlatAppearance.BorderSize = 0;
+            this.buttonPartidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonPartidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPartidas.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPartidas.Image = ((System.Drawing.Image)(resources.GetObject("buttonPartidas.Image")));
+            this.buttonPartidas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPartidas.Location = new System.Drawing.Point(0, 347);
+            this.buttonPartidas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonPartidas.Name = "buttonPartidas";
+            this.buttonPartidas.Size = new System.Drawing.Size(222, 46);
+            this.buttonPartidas.TabIndex = 6;
+            this.buttonPartidas.Text = "Partidas";
+            this.buttonPartidas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPartidas.UseVisualStyleBackColor = false;
+            this.buttonPartidas.Click += new System.EventHandler(this.buttonPartidas_Click);
             // 
-            // button4
+            // buttonCadastroGrupos
             // 
-            this.button4.BackColor = System.Drawing.Color.Gainsboro;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 370);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(296, 57);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Cadastro Campeonato";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonCadastroGrupos.BackColor = System.Drawing.Color.Gainsboro;
+            this.buttonCadastroGrupos.FlatAppearance.BorderSize = 0;
+            this.buttonCadastroGrupos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonCadastroGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCadastroGrupos.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCadastroGrupos.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastroGrupos.Image")));
+            this.buttonCadastroGrupos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCadastroGrupos.Location = new System.Drawing.Point(0, 301);
+            this.buttonCadastroGrupos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCadastroGrupos.Name = "buttonCadastroGrupos";
+            this.buttonCadastroGrupos.Size = new System.Drawing.Size(222, 46);
+            this.buttonCadastroGrupos.TabIndex = 5;
+            this.buttonCadastroGrupos.Text = "Cadastro Grupos";
+            this.buttonCadastroGrupos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCadastroGrupos.UseVisualStyleBackColor = false;
+            this.buttonCadastroGrupos.Click += new System.EventHandler(this.buttonCadastroGrupos_Click);
             // 
             // button5
             // 
@@ -113,9 +118,10 @@
             this.button5.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 313);
+            this.button5.Location = new System.Drawing.Point(0, 254);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(296, 57);
+            this.button5.Size = new System.Drawing.Size(222, 46);
             this.button5.TabIndex = 4;
             this.button5.Text = "Listagem Times";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -131,9 +137,10 @@
             this.button2.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 256);
+            this.button2.Location = new System.Drawing.Point(0, 208);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(296, 57);
+            this.button2.Size = new System.Drawing.Size(222, 46);
             this.button2.TabIndex = 3;
             this.button2.Text = "Cadastro Times";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -149,9 +156,10 @@
             this.buttonListaCamp.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonListaCamp.Image = ((System.Drawing.Image)(resources.GetObject("buttonListaCamp.Image")));
             this.buttonListaCamp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonListaCamp.Location = new System.Drawing.Point(0, 199);
+            this.buttonListaCamp.Location = new System.Drawing.Point(0, 162);
+            this.buttonListaCamp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonListaCamp.Name = "buttonListaCamp";
-            this.buttonListaCamp.Size = new System.Drawing.Size(296, 57);
+            this.buttonListaCamp.Size = new System.Drawing.Size(222, 46);
             this.buttonListaCamp.TabIndex = 2;
             this.buttonListaCamp.Text = "Listagem Campeonato";
             this.buttonListaCamp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -167,9 +175,10 @@
             this.buttonCadastroCamp.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCadastroCamp.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastroCamp.Image")));
             this.buttonCadastroCamp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCadastroCamp.Location = new System.Drawing.Point(0, 142);
+            this.buttonCadastroCamp.Location = new System.Drawing.Point(0, 115);
+            this.buttonCadastroCamp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCadastroCamp.Name = "buttonCadastroCamp";
-            this.buttonCadastroCamp.Size = new System.Drawing.Size(296, 57);
+            this.buttonCadastroCamp.Size = new System.Drawing.Size(222, 46);
             this.buttonCadastroCamp.TabIndex = 1;
             this.buttonCadastroCamp.Text = "Cadastro Campeonato";
             this.buttonCadastroCamp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -179,9 +188,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 57);
+            this.pictureBox1.Size = new System.Drawing.Size(226, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -194,9 +204,10 @@
             this.BarraTitulo.Controls.Add(this.pictureBoxFechar);
             this.BarraTitulo.Controls.Add(this.btnslide);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.Location = new System.Drawing.Point(297, 0);
+            this.BarraTitulo.Location = new System.Drawing.Point(223, 0);
+            this.BarraTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1115, 50);
+            this.BarraTitulo.Size = new System.Drawing.Size(836, 41);
             this.BarraTitulo.TabIndex = 1;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
@@ -204,9 +215,10 @@
             // 
             this.pictureBoxRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRestaurar.Image")));
-            this.pictureBoxRestaurar.Location = new System.Drawing.Point(1054, 9);
+            this.pictureBoxRestaurar.Location = new System.Drawing.Point(790, 7);
+            this.pictureBoxRestaurar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxRestaurar.Name = "pictureBoxRestaurar";
-            this.pictureBoxRestaurar.Size = new System.Drawing.Size(24, 22);
+            this.pictureBoxRestaurar.Size = new System.Drawing.Size(18, 18);
             this.pictureBoxRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxRestaurar.TabIndex = 4;
             this.pictureBoxRestaurar.TabStop = false;
@@ -217,9 +229,10 @@
             // 
             this.pictureBoxMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMinimizar.Image")));
-            this.pictureBoxMinimizar.Location = new System.Drawing.Point(1054, 9);
+            this.pictureBoxMinimizar.Location = new System.Drawing.Point(790, 7);
+            this.pictureBoxMinimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxMinimizar.Name = "pictureBoxMinimizar";
-            this.pictureBoxMinimizar.Size = new System.Drawing.Size(24, 22);
+            this.pictureBoxMinimizar.Size = new System.Drawing.Size(18, 18);
             this.pictureBoxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMinimizar.TabIndex = 3;
             this.pictureBoxMinimizar.TabStop = false;
@@ -229,9 +242,10 @@
             // 
             this.pictureBoxMinimizador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxMinimizador.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMinimizador.Image")));
-            this.pictureBoxMinimizador.Location = new System.Drawing.Point(1024, 9);
+            this.pictureBoxMinimizador.Location = new System.Drawing.Point(768, 7);
+            this.pictureBoxMinimizador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxMinimizador.Name = "pictureBoxMinimizador";
-            this.pictureBoxMinimizador.Size = new System.Drawing.Size(24, 22);
+            this.pictureBoxMinimizador.Size = new System.Drawing.Size(18, 18);
             this.pictureBoxMinimizador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMinimizador.TabIndex = 2;
             this.pictureBoxMinimizador.TabStop = false;
@@ -241,9 +255,10 @@
             // 
             this.pictureBoxFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxFechar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFechar.Image")));
-            this.pictureBoxFechar.Location = new System.Drawing.Point(1084, 9);
+            this.pictureBoxFechar.Location = new System.Drawing.Point(813, 7);
+            this.pictureBoxFechar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxFechar.Name = "pictureBoxFechar";
-            this.pictureBoxFechar.Size = new System.Drawing.Size(24, 22);
+            this.pictureBoxFechar.Size = new System.Drawing.Size(18, 18);
             this.pictureBoxFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFechar.TabIndex = 1;
             this.pictureBoxFechar.TabStop = false;
@@ -253,9 +268,10 @@
             // 
             this.btnslide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnslide.Image = ((System.Drawing.Image)(resources.GetObject("btnslide.Image")));
-            this.btnslide.Location = new System.Drawing.Point(6, 9);
+            this.btnslide.Location = new System.Drawing.Point(4, 7);
+            this.btnslide.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnslide.Name = "btnslide";
-            this.btnslide.Size = new System.Drawing.Size(35, 35);
+            this.btnslide.Size = new System.Drawing.Size(26, 28);
             this.btnslide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnslide.TabIndex = 0;
             this.btnslide.TabStop = false;
@@ -269,20 +285,22 @@
             this.panelConteudo.BackColor = System.Drawing.Color.Gainsboro;
             this.panelConteudo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelConteudo.BackgroundImage")));
             this.panelConteudo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelConteudo.Location = new System.Drawing.Point(297, 50);
+            this.panelConteudo.Location = new System.Drawing.Point(223, 41);
+            this.panelConteudo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelConteudo.Name = "panelConteudo";
-            this.panelConteudo.Size = new System.Drawing.Size(1115, 616);
+            this.panelConteudo.Size = new System.Drawing.Size(836, 500);
             this.panelConteudo.TabIndex = 2;
             // 
             // MenuPrincipalForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1412, 666);
+            this.ClientSize = new System.Drawing.Size(1059, 541);
             this.Controls.Add(this.panelConteudo);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuPrincipalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENU PRINCIPAL";
@@ -310,8 +328,8 @@
         private System.Windows.Forms.PictureBox pictureBoxFechar;
         private System.Windows.Forms.PictureBox pictureBoxRestaurar;
         private System.Windows.Forms.Button buttonCadastroCamp;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonPartidas;
+        private System.Windows.Forms.Button buttonCadastroGrupos;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonListaCamp;

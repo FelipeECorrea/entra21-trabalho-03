@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTorneio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTransmissao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonCadastrar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.buttonApagar = new System.Windows.Forms.Button();
+            this.ColumnCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTorneio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,39 +46,13 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCodigo,
             this.ColumnTime,
-            this.ColumnTorneio,
-            this.ColumnTransmissao});
+            this.ColumnTorneio});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(607, 426);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ColumnCodigo
-            // 
-            this.ColumnCodigo.HeaderText = "Codigo";
-            this.ColumnCodigo.Name = "ColumnCodigo";
-            this.ColumnCodigo.ReadOnly = true;
-            this.ColumnCodigo.Visible = false;
-            // 
-            // ColumnTime
-            // 
-            this.ColumnTime.HeaderText = "Time";
-            this.ColumnTime.Name = "ColumnTime";
-            this.ColumnTime.ReadOnly = true;
-            // 
-            // ColumnTorneio
-            // 
-            this.ColumnTorneio.HeaderText = "Torneio";
-            this.ColumnTorneio.Name = "ColumnTorneio";
-            this.ColumnTorneio.ReadOnly = true;
-            // 
-            // ColumnTransmissao
-            // 
-            this.ColumnTransmissao.HeaderText = "Transmissão";
-            this.ColumnTransmissao.Name = "ColumnTransmissao";
-            this.ColumnTransmissao.ReadOnly = true;
             // 
             // buttonCadastrar
             // 
@@ -111,6 +84,25 @@
             this.buttonApagar.UseVisualStyleBackColor = true;
             this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
+            // ColumnCodigo
+            // 
+            this.ColumnCodigo.HeaderText = "Codigo";
+            this.ColumnCodigo.Name = "ColumnCodigo";
+            this.ColumnCodigo.ReadOnly = true;
+            this.ColumnCodigo.Visible = false;
+            // 
+            // ColumnTime
+            // 
+            this.ColumnTime.HeaderText = "Time";
+            this.ColumnTime.Name = "ColumnTime";
+            this.ColumnTime.ReadOnly = true;
+            // 
+            // ColumnTorneio
+            // 
+            this.ColumnTorneio.HeaderText = "Torneio";
+            this.ColumnTorneio.Name = "ColumnTorneio";
+            this.ColumnTorneio.ReadOnly = true;
+            // 
             // GrupoListagemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,6 +129,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTorneio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTransmissao;
     }
 }

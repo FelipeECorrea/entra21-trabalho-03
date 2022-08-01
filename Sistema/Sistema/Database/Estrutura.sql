@@ -40,11 +40,9 @@ CREATE TABLE grupos (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	id_time INTEGER,
 	id_torneio INTEGER,
-	id_transmissao INTEGER,
 
 	FOREIGN KEY(id_time) REFERENCES times(id),
-	FOREIGN KEY(id_torneio) REFERENCES torneios(id),
-	FOREIGN KEY(id_transmissao) REFERENCES transmissoes(id));
+	FOREIGN KEY(id_torneio) REFERENCES torneios(id));
 
 CREATE TABLE partidas (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
@@ -65,6 +63,8 @@ INSERT INTO contas VALUES
 	
 INSERT INTO grupos VALUES
 	('4','3', '1');
+
+DROP TABLE grupos;
 
 SELECT * FROM contas;
 SELECT * FROM torneios;

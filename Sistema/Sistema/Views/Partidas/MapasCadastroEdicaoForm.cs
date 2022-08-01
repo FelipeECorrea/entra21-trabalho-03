@@ -103,17 +103,6 @@ namespace Sistema.Views.Partidas
                 }
             }
 
-            if (dataGridView1.Rows.Count == 0)
-            {
-                MessageBox.Show("Cadastre uma Partida!");
-                return;
-            }
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Selecione uma partida da tabela!");
-                return;
-            }
-
             var linhaSelecionada = dataGridView1.SelectedRows[0];
 
             var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
@@ -124,7 +113,22 @@ namespace Sistema.Views.Partidas
 
             var partidaSelecionada = linhaSelecionada.Cells[1].Value.ToString();
 
-            // TODO: Kauã Verificar se vai funcionar o editar
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Cadastre uma Partida!");
+                return;
+            }
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma partida da tabela!");
+                return;
+            }
+            if (linhaSelecionada.Cells[2].Value.ToString() != "")
+            {
+                MessageBox.Show("Partida ja cadastrada!");
+                return;
+            }
+
             partida.Id = id;
             partida.PartidaEscolhida = partidaSelecionada;
             partida.Mapa1 = mapa1;

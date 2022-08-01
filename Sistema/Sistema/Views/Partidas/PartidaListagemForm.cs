@@ -98,9 +98,9 @@ namespace Sistema.Views.Partidas
                 MessageBox.Show("Selecione um time!");
                 return;
             }
-            if (comboBoxTime1.SelectedIndex == comboBoxTime2.SelectedIndex)
+            if (comboBoxTime1.SelectedIndex == comboBoxTime2.SelectedIndex || comboBoxTime2.SelectedIndex == comboBoxTime1.SelectedIndex)
             {
-                MessageBox.Show("Não é permitido time igual!");
+                MessageBox.Show("Selecione um rival válido!");
                 return;
             }
 
