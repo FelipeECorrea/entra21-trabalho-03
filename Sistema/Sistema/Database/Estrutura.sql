@@ -14,10 +14,12 @@ CREATE TABLE transmissoes (
 	nome_live VARCHAR(50),
 	nome_narrador VARCHAR(50),
 	plataforma VARCHAR(25),
-	idioma_transmissao VARCHAR(25),
+	idioma_portugues BIT,
+	idioma_ingles BIT,
+	idioma_espanhol BIT,
 
 	FOREIGN KEY(id_torneio) REFERENCES torneios(id));
-	
+
 CREATE TABLE times (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(25),

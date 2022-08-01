@@ -50,25 +50,18 @@ namespace Sistema.Views.Campeonato
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridViewListaCampeonato.Rows.Count == 0)
-            {
-                MessageBox.Show("Cadastre algum Campeonato primeiro");
-                return;
-            }
-
             if (dataGridViewListaCampeonato.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um Campeonato");
+                MessageBox.Show("Selecione um Torneio");
                 return;
             }
 
             var linhaSelecionada = dataGridViewListaCampeonato.SelectedRows[0];
-
             var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            var torneios = _campeonatoService.ObterPorId(id);
+            var torneio = _campeonatoService.ObterPorId(id);
 
-            var campeonatoCadastroForm = new CampeonatoCadastroForm(torneios);
+            var campeonatoCadastroForm = new CampeonatoCadastroForm(torneio);
 
             campeonatoCadastroForm.ShowDialog();
 

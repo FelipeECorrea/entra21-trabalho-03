@@ -80,11 +80,11 @@
             this.button3.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 350);
+            this.button3.Location = new System.Drawing.Point(0, 427);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(296, 36);
+            this.button3.Size = new System.Drawing.Size(296, 57);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Listagem Transmissão";
+            this.button3.Text = "Cadastro Campeonato";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             this.buttonPartidas.BackColor = System.Drawing.Color.Gainsboro;
@@ -113,13 +113,14 @@
             this.button4.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 308);
+            this.button4.Location = new System.Drawing.Point(0, 370);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(296, 36);
+            this.button4.Size = new System.Drawing.Size(296, 57);
             this.button4.TabIndex = 5;
-            this.button4.Text = "Cadastro Transmissão";
+            this.button4.Text = "Cadastro Campeonato";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
             this.button4.Click += new System.EventHandler(this.button4_Click);
             this.buttonCadastroGrupos.BackColor = System.Drawing.Color.Gainsboro;
             this.buttonCadastroGrupos.FlatAppearance.BorderSize = 0;
@@ -137,6 +138,8 @@
             this.buttonCadastroGrupos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCadastroGrupos.UseVisualStyleBackColor = false;
             this.buttonCadastroGrupos.Click += new System.EventHandler(this.buttonCadastroGrupos_Click);
+=======
+>>>>>>> parent of 20bbc30 (Tela Transmissao)
             // 
             // button5
             // 
@@ -147,12 +150,18 @@
             this.button5.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.button5.Location = new System.Drawing.Point(0, 266);
             this.button5.Location = new System.Drawing.Point(0, 254);
             this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(296, 36);
             this.button5.Size = new System.Drawing.Size(222, 46);
+=======
+            this.button5.Location = new System.Drawing.Point(0, 313);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(296, 57);
+>>>>>>> parent of 20bbc30 (Tela Transmissao)
             this.button5.TabIndex = 4;
             this.button5.Text = "Listagem Times";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -168,12 +177,18 @@
             this.button2.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.button2.Location = new System.Drawing.Point(0, 225);
             this.button2.Location = new System.Drawing.Point(0, 208);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(296, 36);
             this.button2.Size = new System.Drawing.Size(222, 46);
+=======
+            this.button2.Location = new System.Drawing.Point(0, 256);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(296, 57);
+>>>>>>> parent of 20bbc30 (Tela Transmissao)
             this.button2.TabIndex = 3;
             this.button2.Text = "Cadastro Times";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -189,12 +204,18 @@
             this.buttonListaCamp.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonListaCamp.Image = ((System.Drawing.Image)(resources.GetObject("buttonListaCamp.Image")));
             this.buttonListaCamp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.buttonListaCamp.Location = new System.Drawing.Point(1, 184);
             this.buttonListaCamp.Location = new System.Drawing.Point(0, 162);
             this.buttonListaCamp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonListaCamp.Name = "buttonListaCamp";
             this.buttonListaCamp.Size = new System.Drawing.Size(296, 36);
             this.buttonListaCamp.Size = new System.Drawing.Size(222, 46);
+=======
+            this.buttonListaCamp.Location = new System.Drawing.Point(0, 199);
+            this.buttonListaCamp.Name = "buttonListaCamp";
+            this.buttonListaCamp.Size = new System.Drawing.Size(296, 57);
+>>>>>>> parent of 20bbc30 (Tela Transmissao)
             this.buttonListaCamp.TabIndex = 2;
             this.buttonListaCamp.Text = "Listagem Campeonato";
             this.buttonListaCamp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -213,8 +234,12 @@
             this.buttonCadastroCamp.Location = new System.Drawing.Point(0, 115);
             this.buttonCadastroCamp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCadastroCamp.Name = "buttonCadastroCamp";
+<<<<<<< HEAD
             this.buttonCadastroCamp.Size = new System.Drawing.Size(296, 36);
             this.buttonCadastroCamp.Size = new System.Drawing.Size(222, 46);
+=======
+            this.buttonCadastroCamp.Size = new System.Drawing.Size(296, 57);
+>>>>>>> parent of 20bbc30 (Tela Transmissao)
             this.buttonCadastroCamp.TabIndex = 1;
             this.buttonCadastroCamp.Text = "Cadastro Campeonato";
             this.buttonCadastroCamp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
