@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using Sistema.Views.Campeonato;
 using Sistema.Views.Times;
 using Sistema.Views.Jogadores;
+using Sistema.Views.Transmissao;
 
 namespace Sistema.Views
 {
@@ -90,6 +91,11 @@ namespace Sistema.Views
         private void button5_Click(object sender, EventArgs e)
         {
             AbrirFormEmPainel(new TimesListagemForm());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbrirFormEmPainel(new TransmissaoCadastroEdicaoForm());
         }
     }
 }

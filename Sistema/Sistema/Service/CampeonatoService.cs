@@ -15,8 +15,8 @@ namespace Sistema.Service
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = "DELETE FROM torneios WHERE id = @ID";
 
+            comando.CommandText = "DELETE FROM torneios WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
 
             comando.ExecuteNonQuery();
@@ -24,41 +24,40 @@ namespace Sistema.Service
             comando.Connection.Close();
         }
 
-        public void Cadastrar(Torneio torneios)
+        public void Cadastrar(Torneio torneio)
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
             comando.CommandText = @"INSERT INTO torneios (nome, modo_jogo, modo_presencial, data_inicio, data_termino, categoria, premiacao) VALUES
             (@NOME, @MODO_JOGO, @MODO_PRESENCIAL, @DATA_INICIO, @DATA_TERMINO, @CATEGORIA, @PREMIACAO);";
 
-            comando.Parameters.AddWithValue("@NOME", torneios.Nome);
-            comando.Parameters.AddWithValue("@MODO_JOGO", torneios.ModoJogo);
-            comando.Parameters.AddWithValue("@MODO_PRESENCIAL", torneios.ModoPresencial);
-            comando.Parameters.AddWithValue("@DATA_INICIO", torneios.DataInicio);
-            comando.Parameters.AddWithValue("@DATA_TERMINO", torneios.DataTermino);
-            comando.Parameters.AddWithValue("@CATEGORIA", torneios.Categoria);
-            comando.Parameters.AddWithValue("@PREMIACAO", torneios.Premiacao);
+            comando.Parameters.AddWithValue("@NOME", torneio.Nome);
+            comando.Parameters.AddWithValue("@MODO_JOGO", torneio.ModoJogo);
+            comando.Parameters.AddWithValue("@MODO_PRESENCIAL", torneio.ModoPresencial);
+            comando.Parameters.AddWithValue("@DATA_INICIO", torneio.DataInicio);
+            comando.Parameters.AddWithValue("@DATA_TERMINO", torneio.DataTermino);
+            comando.Parameters.AddWithValue("@CATEGORIA", torneio.Categoria);
+            comando.Parameters.AddWithValue("@PREMIACAO", torneio.Premiacao);
 
             comando.ExecuteNonQuery();
 
-            conexao.Close();
+            comando.Connection.Close();
         }
 
-        public void Editar(Torneio torneios)
+        public void Editar(Torneio torneio)
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
             comando.CommandText = @"UPDATE torneios SET nome = @NOME, modo_jogo = @MODO_JOGO, modo_presencial = @MODO_PRESENCIAL, 
                                     data_inicio = @DATA_INICIO, data_termino = @DATA_TERMINO, categoria = @CATEGORIA, premiacao = @PREMIACAO WHERE id = @ID";
-
-            comando.Parameters.AddWithValue("@ID", torneios.Id);
-            comando.Parameters.AddWithValue("@NOME", torneios.Nome);
-            comando.Parameters.AddWithValue("@MODO_JOGO", torneios.ModoJogo);
-            comando.Parameters.AddWithValue("@MODO_PRESENCIAL", torneios.ModoPresencial);
-            comando.Parameters.AddWithValue("@DATA_INICIO", torneios.DataInicio);
-            comando.Parameters.AddWithValue("@DATA_TERMINO", torneios.DataTermino);
-            comando.Parameters.AddWithValue("@CATEGORIA", torneios.Categoria);
-            comando.Parameters.AddWithValue("@PREMIACAO", torneios.Premiacao);
+            comando.Parameters.AddWithValue("@ID", torneio.Id);
+            comando.Parameters.AddWithValue("@NOME", torneio.Nome);
+            comando.Parameters.AddWithValue("@MODO_JOGO", torneio.ModoJogo);
+            comando.Parameters.AddWithValue("@MODO_PRESENCIAL", torneio.ModoPresencial);
+            comando.Parameters.AddWithValue("@DATA_INICIO", torneio.DataInicio);
+            comando.Parameters.AddWithValue("@DATA_TERMINO", torneio.DataTermino);
+            comando.Parameters.AddWithValue("@CATEGORIA", torneio.Categoria);
+            comando.Parameters.AddWithValue("@PREMIACAO", torneio.Premiacao);
 
             comando.ExecuteNonQuery();
 
@@ -81,21 +80,21 @@ namespace Sistema.Service
 
             var registro = tabelaEmMemoria.Rows[0];
 
-            var torneio = new Torneio();
+            var torneios = new Torneio();
 
-            torneio.Id = Convert.ToInt32(registro["id"]);
-            torneio.Nome = registro["nome"].ToString();
-            torneio.ModoJogo = registro["modo_jogo"].ToString();
-            torneio.ModoPresencial = registro["modo_presencial"].ToString();
-            torneio.DataInicio = Convert.ToDateTime(registro["data_inicio"]);
-            torneio.DataTermino = Convert.ToDateTime(registro["data_termino"]);
-            torneio.Categoria = registro["categoria"].ToString();
-            torneio.Premiacao = registro["premiacao"].ToString();
+            torneios.Id = Convert.ToInt32(registro["id"].ToString());
+            torneios.Nome = registro["nome"].ToString();
+            torneios.ModoJogo = registro["modo_jogo"].ToString();
+            torneios.ModoPresencial = registro["modo_presencial"].ToString();
+            torneios.DataInicio = Convert.ToDateTime(registro["data_inicio"].ToString());
+            torneios.DataTermino = Convert.ToDateTime(registro["data_termino"].ToString());
+            torneios.Categoria = registro["categoria"].ToString();
+            torneios.Premiacao = registro["premiacao"].ToString();
 
             // Fechar conexao
             comando.Connection.Close();
 
-            return torneio;
+            return torneios;
         }
 
         public List<Torneio> ObterTodos()
@@ -120,12 +119,12 @@ namespace Sistema.Service
                 //Instanciado o personagem populando com os dados do select
                 var torneio = new Torneio();
 
-                torneio.Id = Convert.ToInt32(registro["id"]);
+                torneio.Id = Convert.ToInt32(registro["id"].ToString());
                 torneio.Nome = registro["nome"].ToString();
                 torneio.ModoJogo = registro["modo_jogo"].ToString();
                 torneio.ModoPresencial = registro["modo_presencial"].ToString();
-                torneio.DataInicio = Convert.ToDateTime(registro["data_inicio"]);
-                torneio.DataTermino = Convert.ToDateTime(registro["data_termino"]);
+                torneio.DataInicio = Convert.ToDateTime(registro["data_inicio"].ToString());
+                torneio.DataTermino = Convert.ToDateTime(registro["data_termino"].ToString());
                 torneio.Categoria = registro["categoria"].ToString();
                 torneio.Premiacao = registro["premiacao"].ToString();
 

@@ -14,31 +14,26 @@ namespace Sistema.Views.Campeonato
 {
     public partial class CampeonatoCadastroForm : Form
     {
-        private readonly int _idParaEditar;
+        internal int _idEditar = -1;
+        private CampeonatoService campeonatoService;
         public CampeonatoCadastroForm()
         {
             InitializeComponent();
 
-            _idParaEditar = -1;
+            campeonatoService = new CampeonatoService();
         }
 
         public CampeonatoCadastroForm(Torneio torneio) : this()
         {
-            _idParaEditar = -1;
+            _idEditar = torneio.Id;
 
             textBoxNomeCamp.Text = torneio.Nome;
-            if (rButtonMJ1.Checked)
-            {
-                rButtonMJ1.Checked = true;
-            }
-            else if (rButtonMJ2.Checked)
-            {
-                rButtonMJ2.Checked = true;
-            }
-            else if (rButtonMJ3.Checked)
-            {
-                rButtonMJ3.Checked = true;
-            }
+            ValidarModoJogo();
+            ValidarModoCampeonato();
+            dateTimePickerInicio.Value = torneio.DataInicio;
+            dateTimePickerTermino.Value = torneio.DataTermino;
+            ValidarPremiacao();
+
 
         }
 
@@ -57,38 +52,37 @@ namespace Sistema.Views.Campeonato
             var nome = textBoxNomeCamp.Text.Trim();
             var modoJogo = modoJ.ToString();
             var modoPresencial = modoP.ToString();
-            var dataInicio = Convert.ToDateTime(dateTimePickerInicio.Value.Date.ToString("dd/MM/yyyy"));
-            var dataTermino = Convert.ToDateTime(dateTimePickerTermino.Value.Date.ToString("dd/MM/yyyy"));
+            var dataInicio = dateTimePickerInicio.Value.ToString("d");
+            var dataTermino = dateTimePickerTermino.Value.ToString("d");
             var premiacao = selectPremio.ToString();
             var categoria = comboBoxCatRank.SelectedItem.ToString();
 
-            var torneio = new Torneio();
-            torneio.Nome = nome;
-            torneio.ModoJogo = modoJogo;
-            torneio.ModoPresencial = modoPresencial;
-            torneio.DataInicio = dataInicio;
-            torneio.DataTermino = dataTermino;
-            torneio.Categoria = categoria;
-            torneio.Premiacao = premiacao;
+            var torneios = new Torneio();
+            torneios.Nome = nome;
+            torneios.ModoJogo = modoJogo;
+            torneios.ModoPresencial = modoPresencial;
+            torneios.DataInicio = Convert.ToDateTime(dataInicio);
+            torneios.DataTermino = Convert.ToDateTime(dataTermino);
+            torneios.Categoria = categoria;
+            torneios.Premiacao = premiacao;
 
             var campeonatoService = new CampeonatoService();
-            // Verificar se esta no modod de cadastro
-            if (_idParaEditar == -1)
+
+            if (_idEditar == -1)
             {
-                // Persistir o que o usuario escolheu na tabela de personagens
-                campeonatoService.Cadastrar(torneio);
+                campeonatoService.Cadastrar(torneios);
 
                 MessageBox.Show("Campeonato cadastrado com sucesso");
                 Close();
             }
-            else
-            {
-                // MODO DE EDIÇÃO
-                torneio.Id = _idParaEditar;
-                campeonatoService.Editar(torneio);
+
+                torneios.Id = _idEditar;
+
+                campeonatoService.Editar(torneios);
+
                 MessageBox.Show("Campeonato alterado com sucesso");
                 Close();
-            }
+
         }
 
         private string ValidarModoJogo()
