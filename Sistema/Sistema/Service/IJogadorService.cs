@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace Sistema.Service
 {
-    internal class IJogadorServiceBase
+    internal interface IJogadorService
     {
-        void Cadastrar(Jogador jogador);
         List<Jogador> ObterTodos();
-        void Apagar(int id);
         Jogador ObterPorId(int id);
-        void Editar(Jogador);
+        void Cadastrar(Jogador jogador);
+        void Apagar(int id);
+        void Editar(Jogador jogador);
     }
 }

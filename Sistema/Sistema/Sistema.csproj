@@ -75,7 +75,7 @@
     <Compile Include="Service\GrupoService.cs" />
     <Compile Include="Service\ICampeonatoService.cs" />
     <Compile Include="Service\IGrupoService.cs" />
-    <Compile Include="Service\IJogadorServiceBase.cs" />
+    <Compile Include="Service\IJogadorService.cs" />
     <Compile Include="Service\IPartidaService.cs" />
     <Compile Include="Service\ITimeService.cs" />
     <Compile Include="Service\ITransmissaoService.cs" />
@@ -176,6 +176,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\Campeonato\CampeonatoCadastroForm.resx">
       <DependentUpon>CampeonatoCadastroForm.cs</DependentUpon>
@@ -235,6 +236,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Database\Estrutura.sql" />
+    <None Include="Resources\menos.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\menu-aberto.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

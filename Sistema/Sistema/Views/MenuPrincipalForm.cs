@@ -6,6 +6,7 @@ using Sistema.Views.Times;
 using Sistema.Views.Jogadores;
 using Sistema.Views.Grupos;
 using Sistema.Views.Partidas;
+using Sistema.Views.Transmissao;
 
 namespace Sistema.Views
 {
@@ -102,6 +103,11 @@ namespace Sistema.Views
         private void buttonPartidas_Click(object sender, EventArgs e)
         {
             AbrirFormEmPainel(new PartidaListagemForm());
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormEmPainel(new TransmissaoCadastroEdicaoForm());
         }
     }
 }

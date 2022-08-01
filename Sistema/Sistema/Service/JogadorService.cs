@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Sistema.Service
 {
-    internal class JogadorService : IJogadorServiceBase
+    internal class JogadorService : IJogadorService
     {
         public void Apagar(int id)
         {
@@ -84,7 +84,7 @@ namespace Sistema.Service
             jogador.Email = registro["email"].ToString();
             jogador.Senha = registro["senha"].ToString();
             jogador.Patente = registro["patente"].ToString();
-         //   jogador.Time = Convert.ToInt32(registro["id_time"].ToString());
+            //   jogador.Time = Convert.ToInt32(registro["id_time"].ToString());
 
             comando.Connection.Close();
 
@@ -108,17 +108,17 @@ namespace Sistema.Service
             {
                 var linha = tabelaEmMemoria.Rows[i];
 
-                var jogador = new Jogador();
+                var jogadores = new Jogador();
 
-                jogador.Id = Convert.ToInt32(registro["id"]);
-                jogador.Nick = registro["nick"].ToString();
-                jogador.Email = registro["email"].ToString();
-                jogador.Senha = registro["senha"].ToString();
-                jogador.Patente = registro["patente"].ToString();
-                jogador.Time = registro["time"].ToString();
+                //jogadores.Id = Convert.ToInt32(registro["id"]);
+                //jogadores.Nick = registro["nick"].ToString();
+                //jogadores.Email = registro["email"].ToString();
+                //jogadores.Senha = registro["senha"].ToString();
+                //jogadores.Patente = registro["patente"].ToString();
+                //jogadores.Time = registro["time"].ToString();
 
 
-                jogador.Add(jogador);
+                //jogadores.Add(jogador);
             }
 
             comando.Connection.Close();

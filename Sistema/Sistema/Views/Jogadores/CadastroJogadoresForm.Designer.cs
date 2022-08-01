@@ -33,7 +33,7 @@
             this.labelEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNick = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.labelSenha = new System.Windows.Forms.Label();
             this.labelPatente = new System.Windows.Forms.Label();
             this.radioButtonPrata = new System.Windows.Forms.RadioButton();
@@ -53,7 +53,7 @@
             this.textBoxEMAIL.Location = new System.Drawing.Point(28, 132);
             this.textBoxEMAIL.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEMAIL.Name = "textBoxEMAIL";
-            this.textBoxEMAIL.Size = new System.Drawing.Size(254, 22);
+            this.textBoxEMAIL.Size = new System.Drawing.Size(254, 26);
             this.textBoxEMAIL.TabIndex = 0;
             // 
             // labelEmail
@@ -63,7 +63,7 @@
             this.labelEmail.Location = new System.Drawing.Point(24, 112);
             this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(38, 16);
+            this.labelEmail.Size = new System.Drawing.Size(49, 20);
             this.labelEmail.TabIndex = 1;
             this.labelEmail.Text = "Email:";
             // 
@@ -74,7 +74,7 @@
             this.label1.Location = new System.Drawing.Point(24, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nickname:";
             // 
@@ -83,17 +83,18 @@
             this.textBoxNick.Location = new System.Drawing.Point(28, 66);
             this.textBoxNick.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNick.Name = "textBoxNick";
-            this.textBoxNick.Size = new System.Drawing.Size(254, 22);
+            this.textBoxNick.Size = new System.Drawing.Size(254, 26);
             this.textBoxNick.TabIndex = 3;
             this.textBoxNick.TextChanged += new System.EventHandler(this.textBoxNick_TextChanged);
             // 
-            // textBox1
+            // textBoxSenha
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 194);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 22);
-            this.textBox1.TabIndex = 4;
+            this.textBoxSenha.Location = new System.Drawing.Point(28, 194);
+            this.textBoxSenha.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSenha.Name = "textBoxSenha";
+            this.textBoxSenha.Size = new System.Drawing.Size(254, 26);
+            this.textBoxSenha.TabIndex = 4;
+            this.textBoxSenha.TextChanged += new System.EventHandler(this.textBoxSenha_TextChanged);
             // 
             // labelSenha
             // 
@@ -102,7 +103,7 @@
             this.labelSenha.Location = new System.Drawing.Point(24, 174);
             this.labelSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSenha.Name = "labelSenha";
-            this.labelSenha.Size = new System.Drawing.Size(42, 16);
+            this.labelSenha.Size = new System.Drawing.Size(54, 20);
             this.labelSenha.TabIndex = 5;
             this.labelSenha.Text = "Senha:";
             // 
@@ -113,7 +114,7 @@
             this.labelPatente.Location = new System.Drawing.Point(23, 276);
             this.labelPatente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPatente.Name = "labelPatente";
-            this.labelPatente.Size = new System.Drawing.Size(50, 16);
+            this.labelPatente.Size = new System.Drawing.Size(64, 20);
             this.labelPatente.TabIndex = 6;
             this.labelPatente.Text = "Patente:";
             // 
@@ -124,7 +125,7 @@
             this.radioButtonPrata.Location = new System.Drawing.Point(27, 306);
             this.radioButtonPrata.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonPrata.Name = "radioButtonPrata";
-            this.radioButtonPrata.Size = new System.Drawing.Size(52, 20);
+            this.radioButtonPrata.Size = new System.Drawing.Size(65, 24);
             this.radioButtonPrata.TabIndex = 7;
             this.radioButtonPrata.TabStop = true;
             this.radioButtonPrata.Text = "Prata";
@@ -137,7 +138,7 @@
             this.radioButtonOuro.Location = new System.Drawing.Point(27, 346);
             this.radioButtonOuro.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonOuro.Name = "radioButtonOuro";
-            this.radioButtonOuro.Size = new System.Drawing.Size(52, 20);
+            this.radioButtonOuro.Size = new System.Drawing.Size(64, 24);
             this.radioButtonOuro.TabIndex = 8;
             this.radioButtonOuro.TabStop = true;
             this.radioButtonOuro.Text = "Ouro";
@@ -150,7 +151,7 @@
             this.radioButtonAK.Location = new System.Drawing.Point(27, 385);
             this.radioButtonAK.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonAK.Name = "radioButtonAK";
-            this.radioButtonAK.Size = new System.Drawing.Size(40, 20);
+            this.radioButtonAK.Size = new System.Drawing.Size(49, 24);
             this.radioButtonAK.TabIndex = 9;
             this.radioButtonAK.TabStop = true;
             this.radioButtonAK.Text = "AK";
@@ -163,7 +164,7 @@
             this.radioButtonXerife.Location = new System.Drawing.Point(27, 426);
             this.radioButtonXerife.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonXerife.Name = "radioButtonXerife";
-            this.radioButtonXerife.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonXerife.Size = new System.Drawing.Size(69, 24);
             this.radioButtonXerife.TabIndex = 10;
             this.radioButtonXerife.TabStop = true;
             this.radioButtonXerife.Text = "Xerife";
@@ -176,7 +177,7 @@
             this.radioButtonAguia.Location = new System.Drawing.Point(27, 468);
             this.radioButtonAguia.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonAguia.Name = "radioButtonAguia";
-            this.radioButtonAguia.Size = new System.Drawing.Size(56, 20);
+            this.radioButtonAguia.Size = new System.Drawing.Size(70, 24);
             this.radioButtonAguia.TabIndex = 11;
             this.radioButtonAguia.TabStop = true;
             this.radioButtonAguia.Text = "Águia";
@@ -190,7 +191,7 @@
             this.radioButtonGlobal.Location = new System.Drawing.Point(27, 507);
             this.radioButtonGlobal.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonGlobal.Name = "radioButtonGlobal";
-            this.radioButtonGlobal.Size = new System.Drawing.Size(59, 20);
+            this.radioButtonGlobal.Size = new System.Drawing.Size(74, 24);
             this.radioButtonGlobal.TabIndex = 12;
             this.radioButtonGlobal.TabStop = true;
             this.radioButtonGlobal.Text = "Global";
@@ -214,7 +215,7 @@
             this.labelTime.Location = new System.Drawing.Point(131, 276);
             this.labelTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(35, 16);
+            this.labelTime.Size = new System.Drawing.Size(45, 20);
             this.labelTime.TabIndex = 14;
             this.labelTime.Text = "Time:";
             // 
@@ -223,7 +224,7 @@
             this.textBoxTime.Location = new System.Drawing.Point(134, 303);
             this.textBoxTime.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTime.Name = "textBoxTime";
-            this.textBoxTime.Size = new System.Drawing.Size(148, 22);
+            this.textBoxTime.Size = new System.Drawing.Size(148, 26);
             this.textBoxTime.TabIndex = 15;
             // 
             // panelConteudoIII
@@ -236,7 +237,7 @@
             // 
             // CadastroJogadoresForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -254,7 +255,7 @@
             this.Controls.Add(this.radioButtonPrata);
             this.Controls.Add(this.labelPatente);
             this.Controls.Add(this.labelSenha);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxSenha);
             this.Controls.Add(this.textBoxNick);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelEmail);
@@ -276,7 +277,7 @@
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxNick;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxSenha;
         private System.Windows.Forms.Label labelSenha;
         private System.Windows.Forms.Label labelPatente;
         private System.Windows.Forms.RadioButton radioButtonPrata;

@@ -3,7 +3,6 @@ using Sistema.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
-
 namespace Sistema.Service
 {
     internal class GrupoService : IGrupoService
@@ -11,19 +10,13 @@ namespace Sistema.Service
         public void Apagar(int id)
         {
             var conexao = new Conexao().Conectar();
-
             var comando = conexao.CreateCommand();
-
             comando.CommandText = @"DELETE FROM grupos
 WHERE id = @ID";
-
             comando.Parameters.AddWithValue("@ID", id);
-
             comando.ExecuteNonQuery();
-
             conexao.Close();
         }
-
         public void Cadastrar(Grupo grupo)
         {
             var conexao = new Conexao().Conectar();
@@ -40,11 +33,9 @@ WHERE id = @ID";
 
             conexao.Close();
         }
-
         public void Editar(Grupo grupo)
         {
             var conexao = new Conexao().Conectar();
-
             var comando = conexao.CreateCommand();
 
             comando.CommandText = @"UPDATE grupos SET
@@ -57,10 +48,8 @@ WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", grupo.Id);
 
             comando.ExecuteNonQuery();
-
             conexao.Close();
         }
-
         public Grupo ObterPorId(int id)
         {
             var conexao = new Conexao().Conectar();
@@ -72,39 +61,26 @@ FROM grupos
 WHERE id = @ID";
 
             comando.Parameters.AddWithValue("ID", id);
-
             var dataTable = new DataTable();
-
             dataTable.Load(comando.ExecuteReader());
-
             if (dataTable.Rows.Count == 0)
                 return null;
-
             var registro = dataTable.Rows[0];
-
             var grupo = new Grupo();
             grupo.Id = Convert.ToInt32(registro["id"]);
-
             grupo.Time = new Time();
             grupo.Time.Id = Convert.ToInt32(registro["id_time"]);
-
             grupo.Torneio = new Torneio();
             grupo.Torneio.Id = Convert.ToInt32(registro["id_torneio"]);
-
-            grupo.Transmissao = new Live();
-            grupo.Transmissao.Id = Convert.ToInt32(registro["id_transmissao"]);
 
             conexao.Close();
 
             return grupo;
         }
-
         public List<Grupo> ObterTodos()
         {
             var conexao = new Conexao().Conectar();
-
             var comando = conexao.CreateCommand();
-
             comando.CommandText = @"SELECT
 grupos.id AS 'id',
 times.id AS 'time_id',
@@ -118,32 +94,22 @@ INNER JOIN torneios ON(grupos.id_torneio = torneios.id)";
             var tabelaEmMemoria = new DataTable();
 
             tabelaEmMemoria.Load(comando.ExecuteReader());
-
             var grupos = new List<Grupo>();
-
             for (int i = 0; i < tabelaEmMemoria.Rows.Count; i++)
             {
                 var registro = tabelaEmMemoria.Rows[i];
-
                 var grupo = new Grupo();
                 grupo.Id = Convert.ToInt32(registro["id"]);
-
                 grupo.Time = new Time();
                 grupo.Time.Id = Convert.ToInt32(registro["time_id"]);
                 grupo.Time.Nome = registro["time_nome"].ToString();
-
                 grupo.Torneio = new Torneio();
                 grupo.Torneio.Id = Convert.ToInt32(registro["torneio_id"]);
                 grupo.Torneio.Nome = registro["torneio_nome"].ToString();
 
-                grupo.Transmissao = new Live();
-                grupo.Transmissao.Id = Convert.ToInt32(registro["transmissoes_id"]);
-                grupo.Transmissao.NomeLive = registro["transmissoes_nome_live"].ToString();
-
                 grupos.Add(grupo);
             }
             conexao.Close();
-
             return grupos;
         }
     }

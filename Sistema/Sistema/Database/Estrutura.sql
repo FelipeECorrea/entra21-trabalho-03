@@ -7,23 +7,21 @@
 	data_termino DATETIME2,
 	categoria VARCHAR(20),
 	premiacao VARCHAR(100));
-
 CREATE TABLE transmissoes (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	id_torneio INTEGER,
 	nome_live VARCHAR(50),
 	nome_narrador VARCHAR(50),
 	plataforma VARCHAR(25),
-	idioma_transmissao VARCHAR(25),
-
+	idioma_portugues BIT,
+	idioma_ingles BIT,
+	idioma_espanhol BIT,
 	FOREIGN KEY(id_torneio) REFERENCES torneios(id));
-	
 CREATE TABLE times (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(25),
 	nacionalidade VARCHAR(20),
 	data_criacao DATETIME2);
-
 CREATE TABLE jogadores (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	id_time INTEGER,
@@ -33,7 +31,6 @@ CREATE TABLE jogadores (
 	patente VARCHAR(25),
 	
 	FOREIGN KEY(id_time) REFERENCES times(id));
-
 CREATE TABLE grupos (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	id_time INTEGER,
@@ -55,7 +52,6 @@ CREATE TABLE contas (
 	email VARCHAR(50) NOT NULL,
 	senha VARCHAR(20) NOT NULL
 );
-
 INSERT INTO contas VALUES
 	('Felipe Corrêa','pessoal.fec@gmail.com', '1998');
 	
@@ -70,4 +66,3 @@ SELECT * FROM times;
 SELECT * FROM transmissoes;
 SELECT * FROM grupos;
 SELECT * FROM partidas;
-
