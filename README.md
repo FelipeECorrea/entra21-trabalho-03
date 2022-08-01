@@ -34,8 +34,8 @@ dotnet --version
 * Caso apareça a versão `6.0` o download não é necessário. Da mesma maneira, caso seja necessário instalação, utilize o comando acima para verificar se a instalação foi bem sucedida.
 
 ## Autores :busts_in_silhouette:
-<b>[Felipe Corrêa](https://github.com/FelipeECorrea)</b>
-<b>[Kauã Amaral](https://github.com/KauaAmaral)</b>
+<b>[Felipe Corrêa - ](https://github.com/FelipeECorrea)</b>
+<b>[Kauã Amaral - ](https://github.com/KauaAmaral)</b>
 <b>[Juliana Forbici](https://github.com/JulianaForbici)</b>
 
 ### Contatos: :hammer:
