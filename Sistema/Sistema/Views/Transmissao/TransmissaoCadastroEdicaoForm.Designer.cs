@@ -34,24 +34,28 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNomeComentarista = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonMimo = new System.Windows.Forms.RadioButton();
-            this.radioButtonTwitch = new System.Windows.Forms.RadioButton();
             this.radioButtonFacebook = new System.Windows.Forms.RadioButton();
+            this.radioButtonTwitch = new System.Windows.Forms.RadioButton();
+            this.radioButtonMimo = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxIdioma = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.comboBoxCampeonatos = new System.Windows.Forms.ComboBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxFechar = new System.Windows.Forms.PictureBox();
+=======
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+>>>>>>> fb7dd9544338200617a94bdb25a60b4fe58c77ee
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxNomeTransmissao
             // 
-            this.textBoxNomeTransmissao.Location = new System.Drawing.Point(50, 117);
+            this.textBoxNomeTransmissao.Location = new System.Drawing.Point(50, 114);
             this.textBoxNomeTransmissao.Name = "textBoxNomeTransmissao";
             this.textBoxNomeTransmissao.Size = new System.Drawing.Size(306, 22);
             this.textBoxNomeTransmissao.TabIndex = 0;
@@ -59,26 +63,24 @@
             // labelNameLive
             // 
             this.labelNameLive.AutoSize = true;
-            this.labelNameLive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNameLive.Location = new System.Drawing.Point(35, 95);
             this.labelNameLive.Name = "labelNameLive";
-            this.labelNameLive.Size = new System.Drawing.Size(178, 20);
+            this.labelNameLive.Size = new System.Drawing.Size(145, 16);
             this.labelNameLive.TabIndex = 1;
             this.labelNameLive.Text = "Nome da Transmissão";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(35, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 20);
+            this.label1.Size = new System.Drawing.Size(159, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nome dos Comentaristas";
             // 
             // textBoxNomeComentarista
             // 
-            this.textBoxNomeComentarista.Location = new System.Drawing.Point(50, 187);
+            this.textBoxNomeComentarista.Location = new System.Drawing.Point(50, 184);
             this.textBoxNomeComentarista.Name = "textBoxNomeComentarista";
             this.textBoxNomeComentarista.Size = new System.Drawing.Size(306, 22);
             this.textBoxNomeComentarista.TabIndex = 2;
@@ -94,16 +96,16 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
-            // radioButtonMimo
+            // radioButtonFacebook
             // 
-            this.radioButtonMimo.AutoSize = true;
-            this.radioButtonMimo.Location = new System.Drawing.Point(180, 9);
-            this.radioButtonMimo.Name = "radioButtonMimo";
-            this.radioButtonMimo.Size = new System.Drawing.Size(61, 20);
-            this.radioButtonMimo.TabIndex = 2;
-            this.radioButtonMimo.TabStop = true;
-            this.radioButtonMimo.Text = "Mimo";
-            this.radioButtonMimo.UseVisualStyleBackColor = true;
+            this.radioButtonFacebook.AutoSize = true;
+            this.radioButtonFacebook.Location = new System.Drawing.Point(12, 9);
+            this.radioButtonFacebook.Name = "radioButtonFacebook";
+            this.radioButtonFacebook.Size = new System.Drawing.Size(90, 20);
+            this.radioButtonFacebook.TabIndex = 0;
+            this.radioButtonFacebook.TabStop = true;
+            this.radioButtonFacebook.Text = "Facebook";
+            this.radioButtonFacebook.UseVisualStyleBackColor = true;
             // 
             // radioButtonTwitch
             // 
@@ -116,62 +118,60 @@
             this.radioButtonTwitch.Text = "Twitch";
             this.radioButtonTwitch.UseVisualStyleBackColor = true;
             // 
-            // radioButtonFacebook
+            // radioButtonMimo
             // 
-            this.radioButtonFacebook.AutoSize = true;
-            this.radioButtonFacebook.Location = new System.Drawing.Point(12, 9);
-            this.radioButtonFacebook.Name = "radioButtonFacebook";
-            this.radioButtonFacebook.Size = new System.Drawing.Size(90, 20);
-            this.radioButtonFacebook.TabIndex = 0;
-            this.radioButtonFacebook.TabStop = true;
-            this.radioButtonFacebook.Text = "Facebook";
-            this.radioButtonFacebook.UseVisualStyleBackColor = true;
+            this.radioButtonMimo.AutoSize = true;
+            this.radioButtonMimo.Location = new System.Drawing.Point(180, 9);
+            this.radioButtonMimo.Name = "radioButtonMimo";
+            this.radioButtonMimo.Size = new System.Drawing.Size(61, 20);
+            this.radioButtonMimo.TabIndex = 2;
+            this.radioButtonMimo.TabStop = true;
+            this.radioButtonMimo.Text = "Mimo";
+            this.radioButtonMimo.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(35, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 20);
+            this.label2.Size = new System.Drawing.Size(173, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Plataforme de Transmissão";
             // 
-            // comboBoxIdioma
+            // comboBox1
             // 
-            this.comboBoxIdioma.FormattingEnabled = true;
-            this.comboBoxIdioma.Items.AddRange(new object[] {
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "-- Selecione o Idioma --",
             "Português",
             "Inglês"});
-            this.comboBoxIdioma.Location = new System.Drawing.Point(50, 347);
-            this.comboBoxIdioma.Name = "comboBoxIdioma";
-            this.comboBoxIdioma.Size = new System.Drawing.Size(306, 24);
-            this.comboBoxIdioma.TabIndex = 6;
-            this.comboBoxIdioma.Text = "-- Selecione o Idioma --";
+            this.comboBox1.Location = new System.Drawing.Point(50, 347);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(306, 24);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.Text = "-- Selecione o Idioma --";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(35, 319);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(275, 20);
+            this.label3.Size = new System.Drawing.Size(219, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Idioma Transmissão / Comentarista";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(35, 426);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 20);
+            this.label4.Size = new System.Drawing.Size(152, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Selecione o Camponato";
             // 
-            // comboBoxCampeonatos
+            // comboBox2
             // 
+<<<<<<< HEAD
             this.comboBoxCampeonatos.DisplayMember = "Nome";
             this.comboBoxCampeonatos.FormattingEnabled = true;
             this.comboBoxCampeonatos.Location = new System.Drawing.Point(50, 456);
@@ -196,6 +196,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(832, 580);
             this.panel1.TabIndex = 11;
+=======
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(50, 456);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(306, 24);
+            this.comboBox2.TabIndex = 9;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+>>>>>>> fb7dd9544338200617a94bdb25a60b4fe58c77ee
             // 
             // pictureBoxFechar
             // 
@@ -213,14 +221,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1247, 645);
             this.Controls.Add(this.pictureBoxFechar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.comboBoxCampeonatos);
+=======
+            this.ClientSize = new System.Drawing.Size(1247, 694);
+            this.Controls.Add(this.comboBox2);
+>>>>>>> fb7dd9544338200617a94bdb25a60b4fe58c77ee
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBoxIdioma);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -249,12 +262,16 @@
         private System.Windows.Forms.RadioButton radioButtonTwitch;
         private System.Windows.Forms.RadioButton radioButtonFacebook;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBoxIdioma;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+<<<<<<< HEAD
         private System.Windows.Forms.ComboBox comboBoxCampeonatos;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBoxFechar;
+=======
+        private System.Windows.Forms.ComboBox comboBox2;
+>>>>>>> fb7dd9544338200617a94bdb25a60b4fe58c77ee
     }
 }

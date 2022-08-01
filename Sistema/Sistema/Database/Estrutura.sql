@@ -16,7 +16,13 @@ CREATE TABLE transmissoes (
 	idioma_portugues BIT,
 	idioma_ingles BIT,
 	idioma_espanhol BIT,
+<<<<<<< HEAD
 	FOREIGN KEY(id_torneio) REFERENCES torneios(id));
+=======
+
+	FOREIGN KEY(id_torneio) REFERENCES torneios(id));
+
+>>>>>>> fb7dd9544338200617a94bdb25a60b4fe58c77ee
 CREATE TABLE times (
 	id INTEGER PRIMARY KEY IDENTITY(1,1),
 	nome VARCHAR(25),
