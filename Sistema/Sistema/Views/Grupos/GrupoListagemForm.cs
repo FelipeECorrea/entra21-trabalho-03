@@ -61,5 +61,10 @@ namespace Sistema.Views.Grupos
             PreencherDataGridView();
             MessageBox.Show("Registro removido com sucesso!");
         }
+
+        private void pictureBoxFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

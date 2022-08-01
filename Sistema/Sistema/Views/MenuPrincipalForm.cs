@@ -109,5 +109,10 @@ namespace Sistema.Views
         {
             AbrirFormEmPainel(new TransmissaoCadastroEdicaoForm());
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirFormEmPainel(new CadastroJogadoresForm());
+        }
     }
 }

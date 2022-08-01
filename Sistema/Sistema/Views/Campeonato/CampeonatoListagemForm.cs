@@ -93,5 +93,10 @@ namespace Sistema.Views.Campeonato
 
             MessageBox.Show("Registro removido com sucesso");
         }
+
+        private void pictureBoxFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

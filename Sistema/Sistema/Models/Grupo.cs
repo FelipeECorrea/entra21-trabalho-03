@@ -6,6 +6,5 @@
 
         public Time Time { get; set; }
         public Torneio Torneio { get; set; }
-        public Live Transmissao { get; set; }
     }
 }

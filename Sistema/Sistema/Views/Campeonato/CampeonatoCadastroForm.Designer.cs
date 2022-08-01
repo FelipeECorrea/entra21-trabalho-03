@@ -210,8 +210,8 @@
             this.comboBoxCatRank.Items.AddRange(new object[] {
             "AMADOR",
             "MEDIANO",
-            "PROFISSIONAL",
-            "SUB-PROFISSIONAL"});
+            "SUB-PROFISSIONAL",
+            "PROFISSIONAL"});
             this.comboBoxCatRank.Location = new System.Drawing.Point(51, 486);
             this.comboBoxCatRank.Name = "comboBoxCatRank";
             this.comboBoxCatRank.Size = new System.Drawing.Size(235, 24);

@@ -161,7 +161,7 @@ namespace Sistema.Views.Partidas
 
             PreencherDataGridView();
 
-            System.Diagnostics.Process.Start(@"D:\Downloads\Steam\steam.exe");
+            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Steam\steam.exe");
         }
 
         private void buttonApagarMapas_Click(object sender, EventArgs e)
@@ -196,6 +196,11 @@ namespace Sistema.Views.Partidas
             PreencherDataGridView();
 
             MessageBox.Show("Mapas removidos com sucesso!");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

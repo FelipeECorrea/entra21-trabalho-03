@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CampeonatoListagemForm));
             this.dataGridViewListaCampeonato = new System.Windows.Forms.DataGridView();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,9 +41,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBoxFechar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaCampeonato)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewListaCampeonato
@@ -98,7 +101,7 @@
             this.ColumnModoStreaming.MinimumWidth = 6;
             this.ColumnModoStreaming.Name = "ColumnModoStreaming";
             this.ColumnModoStreaming.ReadOnly = true;
-            this.ColumnModoStreaming.Width = 170;
+            this.ColumnModoStreaming.Width = 150;
             // 
             // ColumnDataIn
             // 
@@ -155,12 +158,25 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.pictureBoxFechar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 52);
             this.panel1.TabIndex = 4;
+            // 
+            // pictureBoxFechar
+            // 
+            this.pictureBoxFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxFechar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFechar.Image")));
+            this.pictureBoxFechar.Location = new System.Drawing.Point(1060, 14);
+            this.pictureBoxFechar.Name = "pictureBoxFechar";
+            this.pictureBoxFechar.Size = new System.Drawing.Size(30, 29);
+            this.pictureBoxFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFechar.TabIndex = 26;
+            this.pictureBoxFechar.TabStop = false;
+            this.pictureBoxFechar.Click += new System.EventHandler(this.pictureBoxFechar_Click);
             // 
             // label1
             // 
@@ -188,6 +204,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaCampeonato)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,5 +224,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataFim;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCat;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPremio;
+        private System.Windows.Forms.PictureBox pictureBoxFechar;
     }
 }

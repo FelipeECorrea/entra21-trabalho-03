@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransmissaoCadastroEdicaoForm));
             this.textBoxNomeTransmissao = new System.Windows.Forms.TextBox();
             this.labelNameLive = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +44,9 @@
             this.comboBoxCampeonatos = new System.Windows.Forms.ComboBox();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBoxFechar = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxNomeTransmissao
@@ -189,16 +192,29 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(393, 30);
+            this.panel1.Location = new System.Drawing.Point(393, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(842, 595);
+            this.panel1.Size = new System.Drawing.Size(832, 580);
             this.panel1.TabIndex = 11;
+            // 
+            // pictureBoxFechar
+            // 
+            this.pictureBoxFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxFechar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFechar.Image")));
+            this.pictureBoxFechar.Location = new System.Drawing.Point(1205, 10);
+            this.pictureBoxFechar.Name = "pictureBoxFechar";
+            this.pictureBoxFechar.Size = new System.Drawing.Size(30, 29);
+            this.pictureBoxFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFechar.TabIndex = 26;
+            this.pictureBoxFechar.TabStop = false;
+            this.pictureBoxFechar.Click += new System.EventHandler(this.pictureBoxFechar_Click);
             // 
             // TransmissaoCadastroEdicaoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 645);
+            this.Controls.Add(this.pictureBoxFechar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.comboBoxCampeonatos);
@@ -216,6 +232,7 @@
             this.Text = "TransmissaoCadastroEdicaoForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +255,6 @@
         private System.Windows.Forms.ComboBox comboBoxCampeonatos;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBoxFechar;
     }
 }

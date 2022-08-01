@@ -75,13 +75,16 @@ namespace Sistema.Views.Campeonato
                 MessageBox.Show("Campeonato cadastrado com sucesso");
                 Close();
             }
-
+            else
+            {
                 torneios.Id = _idEditar;
 
                 campeonatoService.Editar(torneios);
 
                 MessageBox.Show("Campeonato alterado com sucesso");
                 Close();
+
+            }
 
         }
 

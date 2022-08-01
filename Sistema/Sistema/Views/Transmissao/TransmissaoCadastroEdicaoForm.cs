@@ -113,5 +113,10 @@ namespace Sistema.Views.Transmissao
                 Close();
             }
         }
+
+        private void pictureBoxFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
