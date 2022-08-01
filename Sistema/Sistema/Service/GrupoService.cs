@@ -30,12 +30,11 @@ WHERE id = @ID";
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = @"INSERT INTO grupos (id_time, id_torneio, id_transmissao) VALUES
-            (@ID_TIME, @ID_TORNEIO, @ID_TRANSMISSAO);";
+            comando.CommandText = @"INSERT INTO grupos (id_time, id_torneio) VALUES
+            (@ID_TIME, @ID_TORNEIO);";
 
             comando.Parameters.AddWithValue("@ID_TIME", grupo.Time.Id);
             comando.Parameters.AddWithValue("@ID_TORNEIO", grupo.Torneio.Id);
-            comando.Parameters.AddWithValue("@ID_TRANSMISSAO", grupo.Transmissao.Id);
 
             comando.ExecuteNonQuery();
 
@@ -50,13 +49,11 @@ WHERE id = @ID";
 
             comando.CommandText = @"UPDATE grupos SET
             id_time = @ID_TIME,
-            id_torneio = @ID_TORNEIO,
-            id_transmissao = @ID_TRANSMISSAO
+            id_torneio = @ID_TORNEIO
             WHERE id = @ID";
 
             comando.Parameters.AddWithValue("@ID_TIME", grupo.Time.Id);
             comando.Parameters.AddWithValue("@ID_TORNEIO", grupo.Torneio.Id);
-            comando.Parameters.AddWithValue("@ID_TRANSMISSAO", grupo.Transmissao.Id);
             comando.Parameters.AddWithValue("@ID", grupo.Id);
 
             comando.ExecuteNonQuery();
@@ -70,7 +67,7 @@ WHERE id = @ID";
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = @"SELECT id, id_time, id_torneio, id_transmissao
+            comando.CommandText = @"SELECT id, id_time, id_torneio
 FROM grupos
 WHERE id = @ID";
 
@@ -113,13 +110,10 @@ grupos.id AS 'id',
 times.id AS 'time_id',
 times.nome AS 'time_nome',
 torneios.id AS 'torneio_id',
-torneios.nome AS 'torneio_nome',
-transmissoes.id AS 'transmissoes_id',
-transmissoes.nome_live AS 'transmissoes_nome_live'
+torneios.nome AS 'torneio_nome'
 FROM grupos
 INNER JOIN times ON(grupos.id_time = times.id)
-INNER JOIN torneios ON(grupos.id_torneio = torneios.id)
-INNER JOIN transmissoes ON(grupos.id_transmissao = transmissoes.id)";
+INNER JOIN torneios ON(grupos.id_torneio = torneios.id)";
 
             var tabelaEmMemoria = new DataTable();
 

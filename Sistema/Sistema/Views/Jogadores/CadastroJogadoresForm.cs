@@ -23,7 +23,8 @@ namespace Sistema.Views.Times
 
         }
 
-        private void buttonEditar_Click(object sender, EventArgs e)
+
+        private void textBoxNick_TextChanged(object sender, EventArgs e)
         {
 
         }
