@@ -73,6 +73,12 @@ WHERE id = @ID";
             grupo.Torneio = new Torneio();
             grupo.Torneio.Id = Convert.ToInt32(registro["id_torneio"]);
 
+<<<<<<< HEAD
+=======
+            grupo.Transmissao = new Transmissao();
+            grupo.Transmissao.Id = Convert.ToInt32(registro["id_transmissao"]);
+
+>>>>>>> fb7dd9544338200617a94bdb25a60b4fe58c77ee
             conexao.Close();
 
             return grupo;
@@ -107,6 +113,13 @@ INNER JOIN torneios ON(grupos.id_torneio = torneios.id)";
                 grupo.Torneio.Id = Convert.ToInt32(registro["torneio_id"]);
                 grupo.Torneio.Nome = registro["torneio_nome"].ToString();
 
+<<<<<<< HEAD
+=======
+                grupo.Transmissao = new Transmissao();
+                grupo.Transmissao.Id = Convert.ToInt32(registro["transmissoes_id"]);
+                grupo.Transmissao.NomeLive = registro["transmissoes_nome_live"].ToString();
+
+>>>>>>> fb7dd9544338200617a94bdb25a60b4fe58c77ee
                 grupos.Add(grupo);
             }
             conexao.Close();
