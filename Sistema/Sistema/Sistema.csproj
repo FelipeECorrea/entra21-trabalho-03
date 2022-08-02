@@ -79,11 +79,8 @@
     <Compile Include="Service\IJogadorService.cs" />
     <Compile Include="Service\IPartidaService.cs" />
     <Compile Include="Service\ITimeService.cs" />
-<<<<<<< HEAD
     <Compile Include="Service\ITransmissaoService.cs" />
     <Compile Include="Service\JogadorService.cs" />
-=======
->>>>>>> parent of 20bbc30 (Tela Transmissao)
     <Compile Include="Service\PartidaService.cs" />
     <Compile Include="Service\TimeService.cs" />
     <Compile Include="Service\UsuarioCadastrados.cs" />
