@@ -84,7 +84,7 @@ namespace Sistema.Service
             jogador.Email = registro["email"].ToString();
             jogador.Senha = registro["senha"].ToString();
             jogador.Patente = registro["patente"].ToString();
-            //   jogador.Time = Convert.ToInt32(registro["id_time"].ToString());
+            jogador.Time.Id = Convert.ToInt32(registro["id_time"].ToString());
 
             comando.Connection.Close();
 
@@ -96,34 +96,34 @@ namespace Sistema.Service
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "SELECT id, nick, email, senha, patente, time FROM jogador";
+            comando.CommandText = "SELECT id, nick, email, senha, patente, time FROM jogadores";
 
             var tabelaEmMemoria = new DataTable();
 
             tabelaEmMemoria.Load(comando.ExecuteReader());
 
-            var jogador = new List<Jogador>();
+            var jogadores = new List<Jogador>();
 
             for (int i = 0; i < tabelaEmMemoria.Rows.Count; i++)
             {
-                var linha = tabelaEmMemoria.Rows[i];
+                var registro = tabelaEmMemoria.Rows[i];
 
-                var jogadores = new Jogador();
+                var jogador = new Jogador();
 
-                //jogadores.Id = Convert.ToInt32(registro["id"]);
-                //jogadores.Nick = registro["nick"].ToString();
-                //jogadores.Email = registro["email"].ToString();
-                //jogadores.Senha = registro["senha"].ToString();
-                //jogadores.Patente = registro["patente"].ToString();
-                //jogadores.Time = registro["time"].ToString();
+                jogador.Id = Convert.ToInt32(registro["id"].ToString());
+                jogador.Nick = registro["nick"].ToString();
+                jogador.Email = registro["email"].ToString();
+                jogador.Senha = registro["senha"].ToString();
+                jogador.Patente = registro["patente"].ToString();
+                jogador.Time.Id = Convert.ToInt32(registro["time"].ToString());
 
 
-                //jogadores.Add(jogador);
+                jogadores.Add(jogador);
             }
 
             comando.Connection.Close();
 
-            return jogador;
+            return jogadores;
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipalForm));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonPartidas = new System.Windows.Forms.Button();
             this.buttonCadastroGrupos = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.pictureBoxFechar = new System.Windows.Forms.PictureBox();
             this.btnslide = new System.Windows.Forms.PictureBox();
             this.panelConteudo = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
@@ -75,6 +75,24 @@
             this.MenuVertical.Size = new System.Drawing.Size(297, 666);
             this.MenuVertical.TabIndex = 0;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Gainsboro;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 315);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(296, 40);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Cadastro de Jogador";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Gainsboro;
@@ -90,7 +108,6 @@
             this.button1.Size = new System.Drawing.Size(296, 40);
             this.button1.TabIndex = 7;
             this.button1.Text = "Cadastrar Transmissão";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -109,7 +126,6 @@
             this.buttonPartidas.Size = new System.Drawing.Size(296, 40);
             this.buttonPartidas.TabIndex = 6;
             this.buttonPartidas.Text = "Partidas";
-            this.buttonPartidas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonPartidas.UseVisualStyleBackColor = false;
             this.buttonPartidas.Click += new System.EventHandler(this.buttonPartidas_Click);
             // 
@@ -128,7 +144,6 @@
             this.buttonCadastroGrupos.Size = new System.Drawing.Size(296, 40);
             this.buttonCadastroGrupos.TabIndex = 5;
             this.buttonCadastroGrupos.Text = "Cadastro Grupos";
-            this.buttonCadastroGrupos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCadastroGrupos.UseVisualStyleBackColor = false;
             this.buttonCadastroGrupos.Click += new System.EventHandler(this.buttonCadastroGrupos_Click);
             // 
@@ -147,7 +162,6 @@
             this.button5.Size = new System.Drawing.Size(296, 40);
             this.button5.TabIndex = 4;
             this.button5.Text = "Listagem Times";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -166,7 +180,6 @@
             this.button2.Size = new System.Drawing.Size(296, 40);
             this.button2.TabIndex = 3;
             this.button2.Text = "Cadastro Times";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -185,7 +198,6 @@
             this.buttonListaCamp.Size = new System.Drawing.Size(296, 40);
             this.buttonListaCamp.TabIndex = 2;
             this.buttonListaCamp.Text = "Listagem Campeonato";
-            this.buttonListaCamp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonListaCamp.UseVisualStyleBackColor = false;
             this.buttonListaCamp.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -204,7 +216,6 @@
             this.buttonCadastroCamp.Size = new System.Drawing.Size(296, 40);
             this.buttonCadastroCamp.TabIndex = 1;
             this.buttonCadastroCamp.Text = "Cadastro Campeonato";
-            this.buttonCadastroCamp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCadastroCamp.UseVisualStyleBackColor = false;
             this.buttonCadastroCamp.Click += new System.EventHandler(this.buttonCadastroCamp_Click);
             // 
@@ -313,25 +324,6 @@
             this.panelConteudo.Name = "panelConteudo";
             this.panelConteudo.Size = new System.Drawing.Size(1115, 615);
             this.panelConteudo.TabIndex = 2;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Gainsboro;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 315);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(296, 40);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Cadastro de Jogador";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // MenuPrincipalForm
             // 

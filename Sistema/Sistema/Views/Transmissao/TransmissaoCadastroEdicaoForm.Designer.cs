@@ -45,7 +45,9 @@
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxFechar = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -192,6 +194,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(393, 45);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(832, 580);
@@ -208,6 +211,16 @@
             this.pictureBoxFechar.TabIndex = 26;
             this.pictureBoxFechar.TabStop = false;
             this.pictureBoxFechar.Click += new System.EventHandler(this.pictureBoxFechar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(243, 274);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(412, 46);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tela em Manutençao";
             // 
             // TransmissaoCadastroEdicaoForm
             // 
@@ -232,6 +245,8 @@
             this.Text = "TransmissaoCadastroEdicaoForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -256,5 +271,6 @@
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBoxFechar;
+        private System.Windows.Forms.Label label5;
     }
 }
