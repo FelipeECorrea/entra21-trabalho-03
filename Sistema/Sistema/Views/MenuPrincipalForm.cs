@@ -24,12 +24,12 @@ namespace Sistema.Views
 
         private void btnslide_Click(object sender, EventArgs e)
         {
-            if (MenuVertical.Width == 49)
+            if (MenuVertical.Width == 70)
             {
                 MenuVertical.Width = 220;
             }
             else
-                MenuVertical.Width = 49;
+                MenuVertical.Width = 70;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

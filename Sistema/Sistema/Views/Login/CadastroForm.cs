@@ -16,6 +16,7 @@ namespace Sistema.Views.Login
         public CadastrarForm()
         {
             InitializeComponent();
+            textBoxUsuario.Focus();
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -97,7 +97,7 @@ INSERT INTO contas VALUES
 	('Felipe Corrêa','pessoal.fec@gmail.com', '2022'),
 	('Juliana Forbici','juliana@gmail.com', '2022'),
 	('Kaua Amaral','kaua@gmail.com', '2022');
-
+	
 SELECT * FROM contas;
 SELECT * FROM torneios;
 SELECT * FROM times;

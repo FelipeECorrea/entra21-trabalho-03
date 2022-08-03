@@ -1,4 +1,6 @@
 ﻿using Sistema.Database;
+using Sistema.Models;
+using Sistema.Service;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,24 +10,108 @@ namespace Sistema.Views.Transmissao
 {
     public partial class TransmissaoCadastroEdicaoForm : Form
     {
+        private readonly int _idParaEditar;
         public TransmissaoCadastroEdicaoForm()
         {
             InitializeComponent();
+
+            PreencherComboBoxCampeonatos();
+            _idParaEditar = -1;
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        public TransmissaoCadastroEdicaoForm(Live transmissao)
         {
-            var conexao = new Conexao().Conectar();
-            var comando = conexao.CreateCommand();
-            comando.CommandText = "SELECT nome FROM torneios";
-            SqlDataReader ler = comando.ExecuteReader();
-            DataTable tabelaEmMemoria = new DataTable();
-            tabelaEmMemoria.Load(ler);
-            DataRow linha = tabelaEmMemoria.NewRow();
-            //TODO: FAZER CONEÇÃO COM O DB E LER OS DADOS
-            comando.ExecuteReader();
+            _idParaEditar = transmissao.Id;
+            textBoxNomeTransmissao.Text = transmissao.NomeLive;
+            textBoxNomeComentarista.Text = transmissao.NomeNarrador;
+            if (transmissao.Plataforma == "Facebook")
+            {
+                radioButtonFacebook.Checked = true;
+            }
+            else if (transmissao.Plataforma == "Twitch")
+            {
+                radioButtonTwitch.Checked = true;
+            }
+            else
+            {
+                radioButtonMimo.Checked = true;
+            }
 
-            comando.Connection.Close();
+            if (transmissao.IdiomaTransmissao == "Portugues")
+            {
+                comboBoxIdioma.TabIndex = 0;
+            }
+            else if (transmissao.IdiomaTransmissao == "Ingles")
+            {
+                comboBoxIdioma.TabIndex = 1;
+            }
+            else
+            {
+                comboBoxIdioma.TabIndex = 2;
+            }
+            PreencherComboBoxCampeonatos();
+
+        }
+        private void PreencherComboBoxCampeonatos()
+        {
+            var _campeonatoService = new CampeonatoService();
+            var campeonatos = _campeonatoService.ObterTodos();
+
+            if (campeonatos.Count == 0)
+            {
+                MessageBox.Show("Nenhum Campeonato cadastrado");
+                return;
+            }
+
+            for (int i = 0; i < campeonatos.Count; i++)
+            {
+                var campeonato = campeonatos[i];
+                comboBoxCampeonatos.Items.Add(campeonato);
+            }
+        }
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            if (comboBoxIdioma.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione um Idioma");
+                return;
+            }
+
+            if (comboBoxCampeonatos.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione um Campeonato");
+                return;
+            }
+
+            var nomeTransmissao = textBoxNomeTransmissao.Text.Trim();
+            var nomeNarrador = textBoxNomeComentarista.Text.Trim();
+            var idiomaLive = comboBoxIdioma.SelectedItem.ToString();
+            var torneios = comboBoxCampeonatos.SelectedItem as Torneio;
+
+            var transmissao = new Live();
+            transmissao.NomeLive = nomeTransmissao;
+            transmissao.NomeNarrador = nomeNarrador;
+            transmissao.IdiomaTransmissao = idiomaLive;
+            transmissao.Torneio = torneios;
+
+            var transmissaoService = new TransmissaoService();
+            // Verificar se esta no modod de cadastro
+            if (_idParaEditar == -1)
+            {
+                // Persistir o que o usuario escolheu na tabela de personagens
+                transmissaoService.Cadastrar(transmissao);
+
+                MessageBox.Show("Transmissao cadastrada com sucesso");
+                Close();
+            }
+            else
+            {
+                // MODO DE EDIÇÃO
+                transmissao.Id = _idParaEditar;
+                transmissaoService.Editar(transmissao);
+                MessageBox.Show("Transmissao alterada com sucesso");
+                Close();
+            }
         }
 
         private void pictureBoxFechar_Click(object sender, EventArgs e)
