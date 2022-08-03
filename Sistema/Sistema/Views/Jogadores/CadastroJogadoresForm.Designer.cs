@@ -47,6 +47,11 @@
             this.textBoxTime = new System.Windows.Forms.TextBox();
             this.panelConteudoIII = new System.Windows.Forms.Panel();
             this.pictureBoxFechar = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,7 +126,7 @@
             this.labelPatente.BackColor = System.Drawing.Color.Transparent;
             this.labelPatente.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPatente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelPatente.Location = new System.Drawing.Point(23, 276);
+            this.labelPatente.Location = new System.Drawing.Point(24, 253);
             this.labelPatente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPatente.Name = "labelPatente";
             this.labelPatente.Size = new System.Drawing.Size(64, 19);
@@ -134,7 +139,7 @@
             this.radioButtonPrata.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonPrata.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPrata.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButtonPrata.Location = new System.Drawing.Point(27, 306);
+            this.radioButtonPrata.Location = new System.Drawing.Point(28, 283);
             this.radioButtonPrata.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonPrata.Name = "radioButtonPrata";
             this.radioButtonPrata.Size = new System.Drawing.Size(66, 23);
@@ -149,7 +154,7 @@
             this.radioButtonOuro.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonOuro.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonOuro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButtonOuro.Location = new System.Drawing.Point(27, 346);
+            this.radioButtonOuro.Location = new System.Drawing.Point(28, 323);
             this.radioButtonOuro.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonOuro.Name = "radioButtonOuro";
             this.radioButtonOuro.Size = new System.Drawing.Size(64, 23);
@@ -164,7 +169,7 @@
             this.radioButtonAK.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonAK.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAK.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButtonAK.Location = new System.Drawing.Point(27, 385);
+            this.radioButtonAK.Location = new System.Drawing.Point(28, 362);
             this.radioButtonAK.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonAK.Name = "radioButtonAK";
             this.radioButtonAK.Size = new System.Drawing.Size(49, 23);
@@ -179,7 +184,7 @@
             this.radioButtonXerife.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonXerife.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonXerife.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButtonXerife.Location = new System.Drawing.Point(117, 306);
+            this.radioButtonXerife.Location = new System.Drawing.Point(118, 283);
             this.radioButtonXerife.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonXerife.Name = "radioButtonXerife";
             this.radioButtonXerife.Size = new System.Drawing.Size(70, 23);
@@ -194,7 +199,7 @@
             this.radioButtonAguia.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonAguia.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAguia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButtonAguia.Location = new System.Drawing.Point(117, 348);
+            this.radioButtonAguia.Location = new System.Drawing.Point(118, 325);
             this.radioButtonAguia.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonAguia.Name = "radioButtonAguia";
             this.radioButtonAguia.Size = new System.Drawing.Size(69, 23);
@@ -208,11 +213,12 @@
             // 
             this.radioButtonGlobal.AutoSize = true;
             this.radioButtonGlobal.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonGlobal.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonGlobal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.radioButtonGlobal.Location = new System.Drawing.Point(117, 387);
+            this.radioButtonGlobal.Location = new System.Drawing.Point(118, 364);
             this.radioButtonGlobal.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonGlobal.Name = "radioButtonGlobal";
-            this.radioButtonGlobal.Size = new System.Drawing.Size(74, 24);
+            this.radioButtonGlobal.Size = new System.Drawing.Size(74, 23);
             this.radioButtonGlobal.TabIndex = 12;
             this.radioButtonGlobal.TabStop = true;
             this.radioButtonGlobal.Text = "Global";
@@ -220,7 +226,7 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(91, 446);
+            this.buttonSalvar.Location = new System.Drawing.Point(64, 432);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(218, 60);
@@ -235,7 +241,7 @@
             this.labelTime.BackColor = System.Drawing.Color.Transparent;
             this.labelTime.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelTime.Location = new System.Drawing.Point(260, 279);
+            this.labelTime.Location = new System.Drawing.Point(225, 256);
             this.labelTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(46, 19);
@@ -244,7 +250,7 @@
             // 
             // textBoxTime
             // 
-            this.textBoxTime.Location = new System.Drawing.Point(263, 306);
+            this.textBoxTime.Location = new System.Drawing.Point(228, 283);
             this.textBoxTime.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTime.Name = "textBoxTime";
             this.textBoxTime.Size = new System.Drawing.Size(148, 26);
@@ -252,10 +258,11 @@
             // 
             // panelConteudoIII
             // 
+            this.panelConteudoIII.BackColor = System.Drawing.Color.White;
             this.panelConteudoIII.Location = new System.Drawing.Point(447, 36);
             this.panelConteudoIII.Margin = new System.Windows.Forms.Padding(2);
             this.panelConteudoIII.Name = "panelConteudoIII";
-            this.panelConteudoIII.Size = new System.Drawing.Size(572, 506);
+            this.panelConteudoIII.Size = new System.Drawing.Size(572, 484);
             this.panelConteudoIII.TabIndex = 20;
             this.panelConteudoIII.Visible = false;
             // 
@@ -271,14 +278,79 @@
             this.pictureBoxFechar.TabStop = false;
             this.pictureBoxFechar.Click += new System.EventHandler(this.pictureBoxFechar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(99, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 24);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(70, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(18, 24);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(70, 174);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(18, 24);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(86, 253);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(18, 24);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "*";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(267, 256);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(18, 24);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "*";
+            // 
             // CadastroJogadoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1044, 574);
+            this.ClientSize = new System.Drawing.Size(1044, 553);
             this.ControlBox = false;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBoxFechar);
             this.Controls.Add(this.panelConteudoIII);
             this.Controls.Add(this.textBoxTime);
@@ -297,6 +369,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.textBoxEMAIL);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -329,5 +405,10 @@
         private System.Windows.Forms.TextBox textBoxTime;
         private System.Windows.Forms.Panel panelConteudoIII;
         private System.Windows.Forms.PictureBox pictureBoxFechar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

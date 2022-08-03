@@ -51,12 +51,14 @@ CREATE TABLE partidas (
 	
 CREATE TABLE contas (
 	id INT PRIMARY KEY IDENTITY(1,1),
-	usuario VARCHAR(15) NOT NULL,
+	usuario VARCHAR(25) NOT NULL,
 	email VARCHAR(50) NOT NULL,
 	senha VARCHAR(20) NOT NULL
 );
 INSERT INTO contas VALUES
-	('Felipe Corrêa','pessoal.fec@gmail.com', '1998');
+	('Felipe Corrêa','pessoal.fec@gmail.com', '2022'),
+	('Juliana Forbici','juliana@gmail.com', '2022'),
+	('Kaua Amaral','kaua@gmail.com', '2022');
 	
 INSERT INTO grupos VALUES
 	('4','3', '1');
