@@ -47,13 +47,12 @@
             this.ColumnCodigo,
             this.ColumnTime,
             this.ColumnTorneio});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 41);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(809, 524);
+            this.dataGridView1.Size = new System.Drawing.Size(607, 426);
             this.dataGridView1.TabIndex = 0;
             // 
             // ColumnCodigo
@@ -83,10 +82,10 @@
             // 
             // buttonCadastrar
             // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(844, 74);
-            this.buttonCadastrar.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonCadastrar.Location = new System.Drawing.Point(633, 60);
             this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(204, 128);
+            this.buttonCadastrar.Size = new System.Drawing.Size(153, 104);
             this.buttonCadastrar.TabIndex = 1;
             this.buttonCadastrar.Text = "Cadastrar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
@@ -94,10 +93,10 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(844, 244);
-            this.buttonEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonEditar.Location = new System.Drawing.Point(633, 198);
             this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(204, 128);
+            this.buttonEditar.Size = new System.Drawing.Size(153, 104);
             this.buttonEditar.TabIndex = 1;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
@@ -105,10 +104,10 @@
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(844, 422);
-            this.buttonApagar.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonApagar.Location = new System.Drawing.Point(633, 343);
             this.buttonApagar.Name = "buttonApagar";
-            this.buttonApagar.Size = new System.Drawing.Size(204, 128);
+            this.buttonApagar.Size = new System.Drawing.Size(153, 104);
             this.buttonApagar.TabIndex = 1;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
@@ -118,9 +117,10 @@
             // 
             this.pictureBoxFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxFechar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFechar.Image")));
-            this.pictureBoxFechar.Location = new System.Drawing.Point(1049, 12);
+            this.pictureBoxFechar.Location = new System.Drawing.Point(787, 10);
+            this.pictureBoxFechar.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxFechar.Name = "pictureBoxFechar";
-            this.pictureBoxFechar.Size = new System.Drawing.Size(30, 29);
+            this.pictureBoxFechar.Size = new System.Drawing.Size(22, 24);
             this.pictureBoxFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFechar.TabIndex = 26;
             this.pictureBoxFechar.TabStop = false;
@@ -128,16 +128,15 @@
             // 
             // GrupoListagemForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 578);
+            this.ClientSize = new System.Drawing.Size(818, 470);
             this.Controls.Add(this.pictureBoxFechar);
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GrupoListagemForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grupos Listagem";

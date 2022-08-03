@@ -40,28 +40,26 @@
             // 
             this.comboBoxTime.DisplayMember = "Nome";
             this.comboBoxTime.FormattingEnabled = true;
-            this.comboBoxTime.Location = new System.Drawing.Point(16, 63);
-            this.comboBoxTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxTime.Location = new System.Drawing.Point(12, 51);
             this.comboBoxTime.Name = "comboBoxTime";
-            this.comboBoxTime.Size = new System.Drawing.Size(399, 24);
+            this.comboBoxTime.Size = new System.Drawing.Size(300, 21);
             this.comboBoxTime.TabIndex = 0;
             // 
             // comboBoxTorneio
             // 
             this.comboBoxTorneio.DisplayMember = "Nome";
             this.comboBoxTorneio.FormattingEnabled = true;
-            this.comboBoxTorneio.Location = new System.Drawing.Point(16, 176);
-            this.comboBoxTorneio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxTorneio.Location = new System.Drawing.Point(12, 143);
             this.comboBoxTorneio.Name = "comboBoxTorneio";
-            this.comboBoxTorneio.Size = new System.Drawing.Size(399, 24);
+            this.comboBoxTorneio.Size = new System.Drawing.Size(300, 21);
             this.comboBoxTorneio.TabIndex = 0;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(229, 255);
-            this.buttonSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonSalvar.Location = new System.Drawing.Point(172, 193);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(187, 28);
+            this.buttonSalvar.Size = new System.Drawing.Size(140, 37);
             this.buttonSalvar.TabIndex = 1;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
@@ -69,10 +67,10 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(16, 255);
-            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonCancelar.Location = new System.Drawing.Point(12, 193);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(187, 28);
+            this.buttonCancelar.Size = new System.Drawing.Size(140, 37);
             this.buttonCancelar.TabIndex = 1;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -81,28 +79,28 @@
             // labelTime
             // 
             this.labelTime.AutoSize = true;
-            this.labelTime.Location = new System.Drawing.Point(192, 30);
-            this.labelTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelTime.Location = new System.Drawing.Point(147, 22);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(38, 16);
+            this.labelTime.Size = new System.Drawing.Size(30, 13);
             this.labelTime.TabIndex = 2;
             this.labelTime.Text = "Time";
             // 
             // labelTorneio
             // 
             this.labelTorneio.AutoSize = true;
-            this.labelTorneio.Location = new System.Drawing.Point(192, 143);
-            this.labelTorneio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTorneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelTorneio.Location = new System.Drawing.Point(141, 114);
             this.labelTorneio.Name = "labelTorneio";
-            this.labelTorneio.Size = new System.Drawing.Size(54, 16);
+            this.labelTorneio.Size = new System.Drawing.Size(43, 13);
             this.labelTorneio.TabIndex = 2;
             this.labelTorneio.Text = "Torneio";
             // 
             // GrupoCadastroEdicaoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 306);
+            this.ClientSize = new System.Drawing.Size(324, 249);
             this.Controls.Add(this.labelTorneio);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.buttonCancelar);
@@ -110,7 +108,6 @@
             this.Controls.Add(this.comboBoxTorneio);
             this.Controls.Add(this.comboBoxTime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GrupoCadastroEdicaoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro / Ediçao";
