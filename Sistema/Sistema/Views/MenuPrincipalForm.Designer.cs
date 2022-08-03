@@ -79,7 +79,9 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Gainsboro;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
@@ -89,7 +91,8 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(297, 44);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Cadastro Campeonato";
+            this.button3.Text = "         Cadastro Jogador";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -97,7 +100,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Gainsboro;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
@@ -107,7 +112,8 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(297, 44);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Cadastrar Transmissão";
+            this.button1.Text = "         Cadastrar Transmissão";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -115,7 +121,9 @@
             // 
             this.buttonPartidas.BackColor = System.Drawing.Color.Gainsboro;
             this.buttonPartidas.FlatAppearance.BorderSize = 0;
-            this.buttonPartidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonPartidas.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonPartidas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.buttonPartidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.buttonPartidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPartidas.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPartidas.Image = ((System.Drawing.Image)(resources.GetObject("buttonPartidas.Image")));
@@ -125,7 +133,8 @@
             this.buttonPartidas.Name = "buttonPartidas";
             this.buttonPartidas.Size = new System.Drawing.Size(297, 44);
             this.buttonPartidas.TabIndex = 6;
-            this.buttonPartidas.Text = "Partidas";
+            this.buttonPartidas.Text = "         Partidas";
+            this.buttonPartidas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonPartidas.UseVisualStyleBackColor = false;
             this.buttonPartidas.Click += new System.EventHandler(this.buttonPartidas_Click);
             // 
@@ -133,7 +142,9 @@
             // 
             this.buttonCadastroGrupos.BackColor = System.Drawing.Color.Gainsboro;
             this.buttonCadastroGrupos.FlatAppearance.BorderSize = 0;
-            this.buttonCadastroGrupos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonCadastroGrupos.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonCadastroGrupos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.buttonCadastroGrupos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.buttonCadastroGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCadastroGrupos.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCadastroGrupos.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastroGrupos.Image")));
@@ -143,7 +154,8 @@
             this.buttonCadastroGrupos.Name = "buttonCadastroGrupos";
             this.buttonCadastroGrupos.Size = new System.Drawing.Size(297, 44);
             this.buttonCadastroGrupos.TabIndex = 5;
-            this.buttonCadastroGrupos.Text = "Cadastro Grupos";
+            this.buttonCadastroGrupos.Text = "         Cadastro Grupos";
+            this.buttonCadastroGrupos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCadastroGrupos.UseVisualStyleBackColor = false;
             this.buttonCadastroGrupos.Click += new System.EventHandler(this.buttonCadastroGrupos_Click);
             // 
@@ -151,7 +163,9 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Gainsboro;
             this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
@@ -161,7 +175,8 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(297, 44);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Listagem Times";
+            this.button5.Text = "         Listagem Times";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -169,7 +184,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Gainsboro;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -179,7 +196,8 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(297, 44);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Cadastro Times";
+            this.button2.Text = "         Cadastro Times";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -187,7 +205,9 @@
             // 
             this.buttonListaCamp.BackColor = System.Drawing.Color.Gainsboro;
             this.buttonListaCamp.FlatAppearance.BorderSize = 0;
-            this.buttonListaCamp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonListaCamp.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonListaCamp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.buttonListaCamp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.buttonListaCamp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonListaCamp.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonListaCamp.Image = ((System.Drawing.Image)(resources.GetObject("buttonListaCamp.Image")));
@@ -197,7 +217,8 @@
             this.buttonListaCamp.Name = "buttonListaCamp";
             this.buttonListaCamp.Size = new System.Drawing.Size(297, 44);
             this.buttonListaCamp.TabIndex = 2;
-            this.buttonListaCamp.Text = "Listagem Campeonato";
+            this.buttonListaCamp.Text = "         Listagem Campeonato";
+            this.buttonListaCamp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonListaCamp.UseVisualStyleBackColor = false;
             this.buttonListaCamp.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -205,7 +226,9 @@
             // 
             this.buttonCadastroCamp.BackColor = System.Drawing.Color.Gainsboro;
             this.buttonCadastroCamp.FlatAppearance.BorderSize = 0;
-            this.buttonCadastroCamp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.buttonCadastroCamp.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonCadastroCamp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.buttonCadastroCamp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.buttonCadastroCamp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCadastroCamp.Font = new System.Drawing.Font("Swis721 BlkCn BT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCadastroCamp.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastroCamp.Image")));
@@ -215,7 +238,8 @@
             this.buttonCadastroCamp.Name = "buttonCadastroCamp";
             this.buttonCadastroCamp.Size = new System.Drawing.Size(297, 44);
             this.buttonCadastroCamp.TabIndex = 1;
-            this.buttonCadastroCamp.Text = "Cadastro Campeonato";
+            this.buttonCadastroCamp.Text = "         Cadastro Campeonato";
+            this.buttonCadastroCamp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCadastroCamp.UseVisualStyleBackColor = false;
             this.buttonCadastroCamp.Click += new System.EventHandler(this.buttonCadastroCamp_Click);
             // 
