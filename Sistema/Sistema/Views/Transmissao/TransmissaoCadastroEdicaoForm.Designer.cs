@@ -190,7 +190,6 @@
             this.buttonSalvar.TabIndex = 10;
             this.buttonSalvar.Text = "Cadastrar Transmissão";
             this.buttonSalvar.UseVisualStyleBackColor = true;
-            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // panel1
             // 
