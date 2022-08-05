@@ -29,12 +29,13 @@ namespace Sistema.Service
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "INSERT INTO jogadores (nick, email, senha, patente, id_time) VALUES (@NICK, @EMAIL, @SENHA, @PATENTE, @IDTIME)";
+            comando.CommandText = @"INSERT INTO jogadores (nick, email, senha, patente, id_time) VALUES
+            (@NICK, @EMAIL, @SENHA, @PATENTE, @ID_TIME);";
             comando.Parameters.AddWithValue("@NICK", jogador.Nick);
             comando.Parameters.AddWithValue("@EMAIL", jogador.Email);
             comando.Parameters.AddWithValue("@SENHA", jogador.Senha);
             comando.Parameters.AddWithValue("@PATENTE", jogador.Patente);
-            comando.Parameters.AddWithValue("@IDTIME", jogador.Time.Id);
+            comando.Parameters.AddWithValue("@ID_TIME", jogador.Time.Id);
 
             comando.ExecuteNonQuery();
 
@@ -83,8 +84,8 @@ namespace Sistema.Service
             jogador.Email = registro["email"].ToString();
             jogador.Senha = registro["senha"].ToString();
             jogador.Patente = registro["patente"].ToString();
-            jogador = new Jogador();
-            jogador.Time.Id = Convert.ToInt32(registro["id_time"].ToString());
+            jogador.Time = new Time();
+            jogador.Time.Id = Convert.ToInt32(registro["id_time"]);
 
             comando.Connection.Close();
 
@@ -96,16 +97,16 @@ namespace Sistema.Service
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = @"SELECT 
-jogadores.id,
-jogadores.nick,
-jogadores.email,
-jogadores.senha,
-jogadores.patente,
-times.id_time,
-times.nome
-FROM jogadores
-INNER JOIN times ON(jogadores.id_time = times.id)";
+            comando.CommandText = @"	SELECT
+jgd.id,
+jgd.nick,
+jgd.email,
+jgd.senha,
+jgd.patente,
+times.id AS 'time_id',
+times.nome AS 'time_nome'
+FROM jogadores as jgd
+INNER JOIN times ON(jgd.id_time = times.id)";
 
             var tabelaEmMemoria = new DataTable();
 

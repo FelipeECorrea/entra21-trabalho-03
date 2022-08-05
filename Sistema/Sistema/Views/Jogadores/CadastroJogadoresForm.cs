@@ -31,16 +31,6 @@ namespace Sistema.Views.Times
             textBoxSenha.Text = jogador.Senha;
 
             ValidarPatenteSelecionada();
-
-            for (int i = 0; i < comboBoxTimes.Items.Count; i++)
-            {
-                var timespercorrido = comboBoxTimes.Items[i] as Jogador;
-
-                if (timespercorrido.Id == jogador.Time.Id)
-                {
-                    comboBoxTimes.SelectedItem = timespercorrido;
-                }
-            }
         }
 
         private string ValidarPatenteSelecionada()
@@ -144,6 +134,21 @@ namespace Sistema.Views.Times
         private void pictureBoxFechar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewJogadores.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione algum jogador");
+                return;
+            }
+            var linhaSelecionada = dataGridViewJogadores.SelectedRows[0];
+            var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+            var jogador = _jogadorService.ObterPorId(id);
+            var grupoCadastroEdicaoForm = new CadastroJogadoresForm(jogador);
+            grupoCadastroEdicaoForm.ShowDialog();
+            PreencherDataGridViewComJogadores();
         }
     }
 }

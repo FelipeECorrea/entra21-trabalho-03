@@ -50,14 +50,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewJogadores = new System.Windows.Forms.DataGridView();
+            this.comboBoxTimes = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNick = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPatente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBoxTimes = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.ColumnNomeTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJogadores)).BeginInit();
             this.SuspendLayout();
@@ -131,7 +133,7 @@
             this.labelPatente.BackColor = System.Drawing.Color.Transparent;
             this.labelPatente.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPatente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelPatente.Location = new System.Drawing.Point(23, 251);
+            this.labelPatente.Location = new System.Drawing.Point(34, 307);
             this.labelPatente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPatente.Name = "labelPatente";
             this.labelPatente.Size = new System.Drawing.Size(64, 19);
@@ -144,7 +146,7 @@
             this.radioButtonPrata.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonPrata.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPrata.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButtonPrata.Location = new System.Drawing.Point(27, 281);
+            this.radioButtonPrata.Location = new System.Drawing.Point(38, 337);
             this.radioButtonPrata.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonPrata.Name = "radioButtonPrata";
             this.radioButtonPrata.Size = new System.Drawing.Size(66, 23);
@@ -159,7 +161,7 @@
             this.radioButtonOuro.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonOuro.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonOuro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButtonOuro.Location = new System.Drawing.Point(27, 321);
+            this.radioButtonOuro.Location = new System.Drawing.Point(38, 377);
             this.radioButtonOuro.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonOuro.Name = "radioButtonOuro";
             this.radioButtonOuro.Size = new System.Drawing.Size(64, 23);
@@ -174,7 +176,7 @@
             this.radioButtonAK.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonAK.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButtonAK.Location = new System.Drawing.Point(27, 360);
+            this.radioButtonAK.Location = new System.Drawing.Point(38, 416);
             this.radioButtonAK.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonAK.Name = "radioButtonAK";
             this.radioButtonAK.Size = new System.Drawing.Size(49, 23);
@@ -189,7 +191,7 @@
             this.radioButtonXerife.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonXerife.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonXerife.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButtonXerife.Location = new System.Drawing.Point(117, 281);
+            this.radioButtonXerife.Location = new System.Drawing.Point(128, 337);
             this.radioButtonXerife.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonXerife.Name = "radioButtonXerife";
             this.radioButtonXerife.Size = new System.Drawing.Size(70, 23);
@@ -204,7 +206,7 @@
             this.radioButtonAguia.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonAguia.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonAguia.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButtonAguia.Location = new System.Drawing.Point(117, 323);
+            this.radioButtonAguia.Location = new System.Drawing.Point(128, 379);
             this.radioButtonAguia.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonAguia.Name = "radioButtonAguia";
             this.radioButtonAguia.Size = new System.Drawing.Size(69, 23);
@@ -220,7 +222,7 @@
             this.radioButtonGlobal.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonGlobal.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonGlobal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.radioButtonGlobal.Location = new System.Drawing.Point(117, 362);
+            this.radioButtonGlobal.Location = new System.Drawing.Point(128, 418);
             this.radioButtonGlobal.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonGlobal.Name = "radioButtonGlobal";
             this.radioButtonGlobal.Size = new System.Drawing.Size(74, 23);
@@ -231,7 +233,7 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(91, 446);
+            this.buttonSalvar.Location = new System.Drawing.Point(103, 484);
             this.buttonSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(218, 60);
@@ -246,7 +248,7 @@
             this.labelTime.BackColor = System.Drawing.Color.Transparent;
             this.labelTime.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelTime.Location = new System.Drawing.Point(222, 251);
+            this.labelTime.Location = new System.Drawing.Point(31, 238);
             this.labelTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(46, 19);
@@ -303,7 +305,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(264, 251);
+            this.label4.Location = new System.Drawing.Point(73, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(16, 20);
             this.label4.TabIndex = 30;
@@ -324,15 +326,36 @@
             this.ColumnEmail,
             this.ColumnSenha,
             this.ColumnPatente,
-            this.ColumnTime});
-            this.dataGridViewJogadores.Location = new System.Drawing.Point(441, 38);
+            this.ColumnTime,
+            this.ColumnNomeTime});
+            this.dataGridViewJogadores.Location = new System.Drawing.Point(349, 66);
             this.dataGridViewJogadores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewJogadores.Name = "dataGridViewJogadores";
             this.dataGridViewJogadores.ReadOnly = true;
             this.dataGridViewJogadores.RowHeadersWidth = 51;
             this.dataGridViewJogadores.RowTemplate.Height = 24;
-            this.dataGridViewJogadores.Size = new System.Drawing.Size(580, 519);
+            this.dataGridViewJogadores.Size = new System.Drawing.Size(672, 491);
             this.dataGridViewJogadores.TabIndex = 23;
+            // 
+            // comboBoxTimes
+            // 
+            this.comboBoxTimes.DisplayMember = "Nome";
+            this.comboBoxTimes.FormattingEnabled = true;
+            this.comboBoxTimes.Location = new System.Drawing.Point(35, 264);
+            this.comboBoxTimes.Name = "comboBoxTimes";
+            this.comboBoxTimes.Size = new System.Drawing.Size(193, 28);
+            this.comboBoxTimes.TabIndex = 31;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(99, 307);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 20);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "*";
             // 
             // ColumnId
             // 
@@ -377,26 +400,24 @@
             this.ColumnTime.MinimumWidth = 6;
             this.ColumnTime.Name = "ColumnTime";
             this.ColumnTime.ReadOnly = true;
+            this.ColumnTime.Visible = false;
             // 
-            // comboBoxTimes
+            // ColumnNomeTime
             // 
-            this.comboBoxTimes.DisplayMember = "Nome";
-            this.comboBoxTimes.FormattingEnabled = true;
-            this.comboBoxTimes.Location = new System.Drawing.Point(226, 277);
-            this.comboBoxTimes.Name = "comboBoxTimes";
-            this.comboBoxTimes.Size = new System.Drawing.Size(193, 28);
-            this.comboBoxTimes.TabIndex = 31;
+            this.ColumnNomeTime.HeaderText = "Nome Time";
+            this.ColumnNomeTime.MinimumWidth = 6;
+            this.ColumnNomeTime.Name = "ColumnNomeTime";
+            this.ColumnNomeTime.ReadOnly = true;
             // 
-            // label5
+            // buttonEditar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(88, 251);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 20);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "*";
+            this.buttonEditar.Location = new System.Drawing.Point(349, 21);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(116, 37);
+            this.buttonEditar.TabIndex = 33;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // CadastroJogadoresForm
             // 
@@ -406,6 +427,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 574);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.dataGridViewJogadores);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxTimes);
@@ -465,13 +487,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridViewJogadores;
+        private System.Windows.Forms.ComboBox comboBoxTimes;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNick;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSenha;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPatente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTime;
-        private System.Windows.Forms.ComboBox comboBoxTimes;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNomeTime;
+        private System.Windows.Forms.Button buttonEditar;
     }
 }
