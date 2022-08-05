@@ -50,6 +50,7 @@
             this.dataGridViewTimes.AllowUserToDeleteRows = false;
             this.dataGridViewTimes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridViewTimes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTimes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTimes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
@@ -71,7 +72,6 @@
             this.ColumnId.Name = "ColumnId";
             this.ColumnId.ReadOnly = true;
             this.ColumnId.Visible = false;
-            this.ColumnId.Width = 125;
             // 
             // ColumnNome
             // 
@@ -79,7 +79,6 @@
             this.ColumnNome.MinimumWidth = 6;
             this.ColumnNome.Name = "ColumnNome";
             this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 125;
             // 
             // ColumnNacionalidade
             // 
@@ -87,7 +86,6 @@
             this.ColumnNacionalidade.MinimumWidth = 6;
             this.ColumnNacionalidade.Name = "ColumnNacionalidade";
             this.ColumnNacionalidade.ReadOnly = true;
-            this.ColumnNacionalidade.Width = 125;
             // 
             // ColumnDataCriacao
             // 
@@ -95,7 +93,6 @@
             this.ColumnDataCriacao.MinimumWidth = 6;
             this.ColumnDataCriacao.Name = "ColumnDataCriacao";
             this.ColumnDataCriacao.ReadOnly = true;
-            this.ColumnDataCriacao.Width = 125;
             // 
             // buttonCadastrar
             // 

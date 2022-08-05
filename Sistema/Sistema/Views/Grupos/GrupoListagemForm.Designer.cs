@@ -42,6 +42,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCodigo,
@@ -63,7 +64,6 @@
             this.ColumnCodigo.Name = "ColumnCodigo";
             this.ColumnCodigo.ReadOnly = true;
             this.ColumnCodigo.Visible = false;
-            this.ColumnCodigo.Width = 125;
             // 
             // ColumnTime
             // 
@@ -71,7 +71,6 @@
             this.ColumnTime.MinimumWidth = 6;
             this.ColumnTime.Name = "ColumnTime";
             this.ColumnTime.ReadOnly = true;
-            this.ColumnTime.Width = 125;
             // 
             // ColumnTorneio
             // 
@@ -79,7 +78,6 @@
             this.ColumnTorneio.MinimumWidth = 6;
             this.ColumnTorneio.Name = "ColumnTorneio";
             this.ColumnTorneio.ReadOnly = true;
-            this.ColumnTorneio.Width = 125;
             // 
             // buttonCadastrar
             // 

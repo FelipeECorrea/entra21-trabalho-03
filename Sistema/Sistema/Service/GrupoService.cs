@@ -11,8 +11,7 @@ namespace Sistema.Service
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = @"DELETE FROM grupos
-WHERE id = @ID";
+            comando.CommandText = @"DELETE FROM grupos WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
             comando.ExecuteNonQuery();
             conexao.Close();

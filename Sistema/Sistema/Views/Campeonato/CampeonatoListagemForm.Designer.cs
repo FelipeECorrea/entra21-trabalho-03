@@ -55,6 +55,7 @@
             this.dataGridViewListaCampeonato.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewListaCampeonato.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewListaCampeonato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewListaCampeonato.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
@@ -80,7 +81,6 @@
             this.ColumnId.Name = "ColumnId";
             this.ColumnId.ReadOnly = true;
             this.ColumnId.Visible = false;
-            this.ColumnId.Width = 125;
             // 
             // ColumnNome
             // 
@@ -88,7 +88,6 @@
             this.ColumnNome.MinimumWidth = 6;
             this.ColumnNome.Name = "ColumnNome";
             this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 150;
             // 
             // ColumnStilo
             // 
@@ -96,7 +95,6 @@
             this.ColumnStilo.MinimumWidth = 6;
             this.ColumnStilo.Name = "ColumnStilo";
             this.ColumnStilo.ReadOnly = true;
-            this.ColumnStilo.Width = 125;
             // 
             // ColumnModoStreaming
             // 
@@ -104,7 +102,6 @@
             this.ColumnModoStreaming.MinimumWidth = 6;
             this.ColumnModoStreaming.Name = "ColumnModoStreaming";
             this.ColumnModoStreaming.ReadOnly = true;
-            this.ColumnModoStreaming.Width = 150;
             // 
             // ColumnDataIn
             // 
@@ -112,7 +109,6 @@
             this.ColumnDataIn.MinimumWidth = 6;
             this.ColumnDataIn.Name = "ColumnDataIn";
             this.ColumnDataIn.ReadOnly = true;
-            this.ColumnDataIn.Width = 125;
             // 
             // ColumnDataFim
             // 
@@ -120,7 +116,6 @@
             this.ColumnDataFim.MinimumWidth = 6;
             this.ColumnDataFim.Name = "ColumnDataFim";
             this.ColumnDataFim.ReadOnly = true;
-            this.ColumnDataFim.Width = 125;
             // 
             // ColumnCat
             // 
@@ -128,7 +123,6 @@
             this.ColumnCat.MinimumWidth = 6;
             this.ColumnCat.Name = "ColumnCat";
             this.ColumnCat.ReadOnly = true;
-            this.ColumnCat.Width = 150;
             // 
             // ColumnPremio
             // 
@@ -136,7 +130,6 @@
             this.ColumnPremio.MinimumWidth = 6;
             this.ColumnPremio.Name = "ColumnPremio";
             this.ColumnPremio.ReadOnly = true;
-            this.ColumnPremio.Width = 125;
             // 
             // button1
             // 

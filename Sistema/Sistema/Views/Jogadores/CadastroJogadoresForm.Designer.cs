@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroJogadoresForm));
-            this.textBoxEMAIL = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNick = new System.Windows.Forms.TextBox();
@@ -44,19 +44,31 @@
             this.radioButtonGlobal = new System.Windows.Forms.RadioButton();
             this.buttonSalvar = new System.Windows.Forms.Button();
             this.labelTime = new System.Windows.Forms.Label();
-            this.textBoxTime = new System.Windows.Forms.TextBox();
-            this.panelConteudoIII = new System.Windows.Forms.Panel();
             this.pictureBoxFechar = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridViewJogadores = new System.Windows.Forms.DataGridView();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNick = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPatente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBoxTimes = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJogadores)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBoxEMAIL
+            // textBoxEmail
             // 
-            this.textBoxEMAIL.Location = new System.Drawing.Point(28, 132);
-            this.textBoxEMAIL.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxEMAIL.Name = "textBoxEMAIL";
-            this.textBoxEMAIL.Size = new System.Drawing.Size(254, 26);
-            this.textBoxEMAIL.TabIndex = 0;
+            this.textBoxEmail.Location = new System.Drawing.Point(35, 133);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(254, 26);
+            this.textBoxEmail.TabIndex = 0;
             // 
             // labelEmail
             // 
@@ -86,21 +98,19 @@
             // 
             // textBoxNick
             // 
-            this.textBoxNick.Location = new System.Drawing.Point(28, 66);
+            this.textBoxNick.Location = new System.Drawing.Point(35, 66);
             this.textBoxNick.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNick.Name = "textBoxNick";
             this.textBoxNick.Size = new System.Drawing.Size(254, 26);
             this.textBoxNick.TabIndex = 3;
-            this.textBoxNick.TextChanged += new System.EventHandler(this.textBoxNick_TextChanged);
             // 
             // textBoxSenha
             // 
-            this.textBoxSenha.Location = new System.Drawing.Point(28, 194);
+            this.textBoxSenha.Location = new System.Drawing.Point(35, 195);
             this.textBoxSenha.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(254, 26);
             this.textBoxSenha.TabIndex = 4;
-            this.textBoxSenha.TextChanged += new System.EventHandler(this.textBoxSenha_TextChanged);
             // 
             // labelSenha
             // 
@@ -236,29 +246,12 @@
             this.labelTime.BackColor = System.Drawing.Color.Transparent;
             this.labelTime.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTime.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelTime.Location = new System.Drawing.Point(260, 254);
+            this.labelTime.Location = new System.Drawing.Point(222, 251);
             this.labelTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(46, 19);
             this.labelTime.TabIndex = 14;
             this.labelTime.Text = "Time:";
-            // 
-            // textBoxTime
-            // 
-            this.textBoxTime.Location = new System.Drawing.Point(263, 281);
-            this.textBoxTime.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxTime.Name = "textBoxTime";
-            this.textBoxTime.Size = new System.Drawing.Size(148, 26);
-            this.textBoxTime.TabIndex = 15;
-            // 
-            // panelConteudoIII
-            // 
-            this.panelConteudoIII.Location = new System.Drawing.Point(447, 36);
-            this.panelConteudoIII.Margin = new System.Windows.Forms.Padding(2);
-            this.panelConteudoIII.Name = "panelConteudoIII";
-            this.panelConteudoIII.Size = new System.Drawing.Size(572, 506);
-            this.panelConteudoIII.TabIndex = 20;
-            this.panelConteudoIII.Visible = false;
             // 
             // pictureBoxFechar
             // 
@@ -272,6 +265,139 @@
             this.pictureBoxFechar.TabStop = false;
             this.pictureBoxFechar.Click += new System.EventHandler(this.pictureBoxFechar_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(102, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 20);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(71, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 20);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(75, 174);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 20);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(264, 251);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(16, 20);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "*";
+            // 
+            // dataGridViewJogadores
+            // 
+            this.dataGridViewJogadores.AllowUserToAddRows = false;
+            this.dataGridViewJogadores.AllowUserToDeleteRows = false;
+            this.dataGridViewJogadores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewJogadores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewJogadores.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dataGridViewJogadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewJogadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnId,
+            this.ColumnNick,
+            this.ColumnEmail,
+            this.ColumnSenha,
+            this.ColumnPatente,
+            this.ColumnTime});
+            this.dataGridViewJogadores.Location = new System.Drawing.Point(441, 38);
+            this.dataGridViewJogadores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewJogadores.Name = "dataGridViewJogadores";
+            this.dataGridViewJogadores.ReadOnly = true;
+            this.dataGridViewJogadores.RowHeadersWidth = 51;
+            this.dataGridViewJogadores.RowTemplate.Height = 24;
+            this.dataGridViewJogadores.Size = new System.Drawing.Size(580, 519);
+            this.dataGridViewJogadores.TabIndex = 23;
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.HeaderText = "Id";
+            this.ColumnId.MinimumWidth = 6;
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            this.ColumnId.Visible = false;
+            // 
+            // ColumnNick
+            // 
+            this.ColumnNick.HeaderText = "Nickname";
+            this.ColumnNick.MinimumWidth = 6;
+            this.ColumnNick.Name = "ColumnNick";
+            this.ColumnNick.ReadOnly = true;
+            // 
+            // ColumnEmail
+            // 
+            this.ColumnEmail.HeaderText = "Email";
+            this.ColumnEmail.MinimumWidth = 6;
+            this.ColumnEmail.Name = "ColumnEmail";
+            this.ColumnEmail.ReadOnly = true;
+            // 
+            // ColumnSenha
+            // 
+            this.ColumnSenha.HeaderText = "Senha";
+            this.ColumnSenha.MinimumWidth = 6;
+            this.ColumnSenha.Name = "ColumnSenha";
+            this.ColumnSenha.ReadOnly = true;
+            this.ColumnSenha.Visible = false;
+            // 
+            // ColumnPatente
+            // 
+            this.ColumnPatente.HeaderText = "Patente";
+            this.ColumnPatente.MinimumWidth = 6;
+            this.ColumnPatente.Name = "ColumnPatente";
+            this.ColumnPatente.ReadOnly = true;
+            // 
+            // ColumnTime
+            // 
+            this.ColumnTime.HeaderText = "Time";
+            this.ColumnTime.MinimumWidth = 6;
+            this.ColumnTime.Name = "ColumnTime";
+            this.ColumnTime.ReadOnly = true;
+            // 
+            // comboBoxTimes
+            // 
+            this.comboBoxTimes.DisplayMember = "Nome";
+            this.comboBoxTimes.FormattingEnabled = true;
+            this.comboBoxTimes.Location = new System.Drawing.Point(226, 277);
+            this.comboBoxTimes.Name = "comboBoxTimes";
+            this.comboBoxTimes.Size = new System.Drawing.Size(193, 28);
+            this.comboBoxTimes.TabIndex = 31;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(88, 251);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 20);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "*";
+            // 
             // CadastroJogadoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -280,9 +406,14 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 574);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridViewJogadores);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboBoxTimes);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBoxFechar);
-            this.Controls.Add(this.panelConteudoIII);
-            this.Controls.Add(this.textBoxTime);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.radioButtonGlobal);
@@ -297,7 +428,7 @@
             this.Controls.Add(this.textBoxNick);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelEmail);
-            this.Controls.Add(this.textBoxEMAIL);
+            this.Controls.Add(this.textBoxEmail);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -305,6 +436,7 @@
             this.Name = "CadastroJogadoresForm";
             this.Text = "CadastroJogadorForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJogadores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,7 +444,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBoxEMAIL;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxNick;
@@ -327,8 +459,19 @@
         private System.Windows.Forms.RadioButton radioButtonGlobal;
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Label labelTime;
-        private System.Windows.Forms.TextBox textBoxTime;
-        private System.Windows.Forms.Panel panelConteudoIII;
         private System.Windows.Forms.PictureBox pictureBoxFechar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dataGridViewJogadores;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNick;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSenha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPatente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTime;
+        private System.Windows.Forms.ComboBox comboBoxTimes;
+        private System.Windows.Forms.Label label5;
     }
 }

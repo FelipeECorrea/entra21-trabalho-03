@@ -57,7 +57,7 @@
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.MenuVertical.BackColor = System.Drawing.Color.DimGray;
             this.MenuVertical.Controls.Add(this.button3);
             this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.buttonPartidas);
@@ -82,10 +82,10 @@
             this.button3.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 271);
+            this.button3.Location = new System.Drawing.Point(0, 288);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(296, 40);
+            this.button3.Size = new System.Drawing.Size(296, 46);
             this.button3.TabIndex = 8;
             this.button3.Text = "        Cadastro de Jogador";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -102,10 +102,10 @@
             this.button1.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1, 356);
+            this.button1.Location = new System.Drawing.Point(0, 335);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(296, 40);
+            this.button1.Size = new System.Drawing.Size(296, 46);
             this.button1.TabIndex = 7;
             this.button1.Text = "        Cadastrar Transmissão";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -122,10 +122,10 @@
             this.buttonPartidas.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPartidas.Image = ((System.Drawing.Image)(resources.GetObject("buttonPartidas.Image")));
             this.buttonPartidas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPartidas.Location = new System.Drawing.Point(1, 399);
+            this.buttonPartidas.Location = new System.Drawing.Point(0, 432);
             this.buttonPartidas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPartidas.Name = "buttonPartidas";
-            this.buttonPartidas.Size = new System.Drawing.Size(296, 40);
+            this.buttonPartidas.Size = new System.Drawing.Size(296, 46);
             this.buttonPartidas.TabIndex = 6;
             this.buttonPartidas.Text = "        Partidas";
             this.buttonPartidas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -142,10 +142,10 @@
             this.buttonCadastroGrupos.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCadastroGrupos.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastroGrupos.Image")));
             this.buttonCadastroGrupos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCadastroGrupos.Location = new System.Drawing.Point(1, 313);
+            this.buttonCadastroGrupos.Location = new System.Drawing.Point(1, 384);
             this.buttonCadastroGrupos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCadastroGrupos.Name = "buttonCadastroGrupos";
-            this.buttonCadastroGrupos.Size = new System.Drawing.Size(296, 40);
+            this.buttonCadastroGrupos.Size = new System.Drawing.Size(296, 46);
             this.buttonCadastroGrupos.TabIndex = 5;
             this.buttonCadastroGrupos.Text = "        Cadastro Grupos";
             this.buttonCadastroGrupos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -162,12 +162,12 @@
             this.button5.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(1, 229);
+            this.button5.Location = new System.Drawing.Point(0, 239);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(296, 40);
+            this.button5.Size = new System.Drawing.Size(296, 46);
             this.button5.TabIndex = 4;
-            this.button5.Text = "        Listagem Times";
+            this.button5.Text = "        Cadastro Times";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
@@ -182,10 +182,10 @@
             this.buttonListaCamp.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonListaCamp.Image = ((System.Drawing.Image)(resources.GetObject("buttonListaCamp.Image")));
             this.buttonListaCamp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonListaCamp.Location = new System.Drawing.Point(0, 186);
+            this.buttonListaCamp.Location = new System.Drawing.Point(0, 191);
             this.buttonListaCamp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonListaCamp.Name = "buttonListaCamp";
-            this.buttonListaCamp.Size = new System.Drawing.Size(296, 40);
+            this.buttonListaCamp.Size = new System.Drawing.Size(296, 46);
             this.buttonListaCamp.TabIndex = 2;
             this.buttonListaCamp.Text = "        Listagem Campeonato";
             this.buttonListaCamp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -205,7 +205,7 @@
             this.buttonCadastroCamp.Location = new System.Drawing.Point(0, 143);
             this.buttonCadastroCamp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCadastroCamp.Name = "buttonCadastroCamp";
-            this.buttonCadastroCamp.Size = new System.Drawing.Size(296, 40);
+            this.buttonCadastroCamp.Size = new System.Drawing.Size(296, 46);
             this.buttonCadastroCamp.TabIndex = 1;
             this.buttonCadastroCamp.Text = "        Cadastro Campeonato";
             this.buttonCadastroCamp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

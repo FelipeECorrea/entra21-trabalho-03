@@ -49,7 +49,7 @@ CREATE TABLE jogadores (
 	patente VARCHAR(25),
 	
 	FOREIGN KEY(id_time) REFERENCES times(id));
-
+	
 INSERT INTO jogadores VALUES
 	('1', 'João', 'João@gmail.com', '123', 'global'),
 	('1', 'Amanda', 'Amanda@gmail.com', '456', 'global'),
@@ -91,8 +91,8 @@ CREATE TABLE contas (
 	id INT PRIMARY KEY IDENTITY(1,1),
 	usuario VARCHAR(25) NOT NULL,
 	email VARCHAR(50) NOT NULL,
-	senha VARCHAR(20) NOT NULL
-);
+	senha VARCHAR(20) NOT NULL);
+
 INSERT INTO contas VALUES
 	('Felipe Corrêa','pessoal.fec@gmail.com', '2022'),
 	('Juliana Forbici','juliana@gmail.com', '2022'),

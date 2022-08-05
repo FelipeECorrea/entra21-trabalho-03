@@ -16,7 +16,7 @@ namespace Sistema.Service
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "DELETE FROM jogador WHERE id = @ID";
+            comando.CommandText = "DELETE FROM jogadores WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
 
             comando.ExecuteNonQuery();
@@ -29,13 +29,12 @@ namespace Sistema.Service
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "INSERT INTO jogador (id, nick, email, senha, patente, time) VALUES (@ID, @NICK, @EMAIL, @SENHA, @PATENTE, @TIME);";
-            comando.Parameters.AddWithValue("@ID", jogador.Id);
+            comando.CommandText = "INSERT INTO jogadores (nick, email, senha, patente, id_time) VALUES (@NICK, @EMAIL, @SENHA, @PATENTE, @IDTIME)";
             comando.Parameters.AddWithValue("@NICK", jogador.Nick);
             comando.Parameters.AddWithValue("@EMAIL", jogador.Email);
             comando.Parameters.AddWithValue("@SENHA", jogador.Senha);
             comando.Parameters.AddWithValue("@PATENTE", jogador.Patente);
-            comando.Parameters.AddWithValue("@TIME", jogador.Time);
+            comando.Parameters.AddWithValue("@IDTIME", jogador.Time.Id);
 
             comando.ExecuteNonQuery();
 
@@ -47,13 +46,13 @@ namespace Sistema.Service
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "UPDATE jogador SET id = @ID, nick = @NICK, email = @EMAIL, senha = @SENHA, patente = @PATENTE, time = @TIME WHERE id = @ID";
+            comando.CommandText = "UPDATE jogadores SET nick = @NICK, email = @EMAIL, senha = @SENHA, patente = @PATENTE, id_time = @IDTIME WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", jogador.Id);
             comando.Parameters.AddWithValue("@NICK", jogador.Nick);
             comando.Parameters.AddWithValue("@EMAIL", jogador.Email);
             comando.Parameters.AddWithValue("@SENHA", jogador.Senha);
             comando.Parameters.AddWithValue("@PATENTE", jogador.Patente);
-            comando.Parameters.AddWithValue("@TIME", jogador.Time);
+            comando.Parameters.AddWithValue("@IDTIME", jogador.Time.Id);
             comando.ExecuteNonQuery();
 
             comando.Connection.Close();
@@ -64,7 +63,7 @@ namespace Sistema.Service
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "SELECT id, nick, email, senha, patente, time FROM jogador WHERE id = @ID;";
+            comando.CommandText = "SELECT id, nick, email, senha, patente, id_time FROM jogadores WHERE id = @ID;";
             comando.Parameters.AddWithValue("@ID", id);
 
             var tabelaEmMemoria = new DataTable();
@@ -84,6 +83,7 @@ namespace Sistema.Service
             jogador.Email = registro["email"].ToString();
             jogador.Senha = registro["senha"].ToString();
             jogador.Patente = registro["patente"].ToString();
+            jogador = new Jogador();
             jogador.Time.Id = Convert.ToInt32(registro["id_time"].ToString());
 
             comando.Connection.Close();
@@ -96,7 +96,16 @@ namespace Sistema.Service
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "SELECT id, nick, email, senha, patente, time FROM jogadores";
+            comando.CommandText = @"SELECT 
+jogadores.id,
+jogadores.nick,
+jogadores.email,
+jogadores.senha,
+jogadores.patente,
+times.id_time,
+times.nome
+FROM jogadores
+INNER JOIN times ON(jogadores.id_time = times.id)";
 
             var tabelaEmMemoria = new DataTable();
 
@@ -109,13 +118,14 @@ namespace Sistema.Service
                 var registro = tabelaEmMemoria.Rows[i];
 
                 var jogador = new Jogador();
-
                 jogador.Id = Convert.ToInt32(registro["id"].ToString());
                 jogador.Nick = registro["nick"].ToString();
                 jogador.Email = registro["email"].ToString();
                 jogador.Senha = registro["senha"].ToString();
                 jogador.Patente = registro["patente"].ToString();
-                jogador.Time.Id = Convert.ToInt32(registro["time"].ToString());
+                jogador.Time = new Time();
+                jogador.Time.Id = Convert.ToInt32(registro["time_id"]);
+                jogador.Time.Nome = registro["time_nome"].ToString();
 
 
                 jogadores.Add(jogador);
