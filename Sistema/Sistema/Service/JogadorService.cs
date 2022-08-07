@@ -29,13 +29,13 @@ namespace Sistema.Service
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = @"INSERT INTO jogadores (nick, email, senha, patente, id_time) VALUES
-            (@NICK, @EMAIL, @SENHA, @PATENTE, @ID_TIME);";
+            comando.CommandText = @"INSERT INTO jogadores (id_time, nick, email, senha, patente) VALUES
+            (@ID_TIME, @NICK, @EMAIL, @SENHA, @PATENTE);";
+            comando.Parameters.AddWithValue("@ID_TIME", jogador.Time.Id);
             comando.Parameters.AddWithValue("@NICK", jogador.Nick);
             comando.Parameters.AddWithValue("@EMAIL", jogador.Email);
             comando.Parameters.AddWithValue("@SENHA", jogador.Senha);
             comando.Parameters.AddWithValue("@PATENTE", jogador.Patente);
-            comando.Parameters.AddWithValue("@ID_TIME", jogador.Time.Id);
 
             comando.ExecuteNonQuery();
 

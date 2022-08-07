@@ -1,9 +1,6 @@
-﻿using Sistema.Database;
-using Sistema.Models;
+﻿using Sistema.Models;
 using Sistema.Service;
 using System;
-using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Sistema.Views.Transmissao

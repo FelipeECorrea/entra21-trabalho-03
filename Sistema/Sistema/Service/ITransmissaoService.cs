@@ -7,8 +7,8 @@ namespace Sistema.Service
     {
         List<Live> ObterTodos();
         Live ObterPorId(int id);
-        void Cadastrar(Live transmissao);
-        void Editar(Live transmissao);
+        void Cadastrar(Live live);
+        void Editar(Live live);
         void Apagar(int id);
     }
 }

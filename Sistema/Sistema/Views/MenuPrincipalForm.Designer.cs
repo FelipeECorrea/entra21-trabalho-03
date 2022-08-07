@@ -82,7 +82,7 @@
             this.button3.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 288);
+            this.button3.Location = new System.Drawing.Point(0, 287);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(296, 46);
@@ -122,7 +122,7 @@
             this.buttonPartidas.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPartidas.Image = ((System.Drawing.Image)(resources.GetObject("buttonPartidas.Image")));
             this.buttonPartidas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPartidas.Location = new System.Drawing.Point(0, 432);
+            this.buttonPartidas.Location = new System.Drawing.Point(0, 431);
             this.buttonPartidas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPartidas.Name = "buttonPartidas";
             this.buttonPartidas.Size = new System.Drawing.Size(296, 46);
@@ -142,7 +142,7 @@
             this.buttonCadastroGrupos.Font = new System.Drawing.Font("Swis721 BlkCn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCadastroGrupos.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastroGrupos.Image")));
             this.buttonCadastroGrupos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCadastroGrupos.Location = new System.Drawing.Point(1, 384);
+            this.buttonCadastroGrupos.Location = new System.Drawing.Point(0, 383);
             this.buttonCadastroGrupos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCadastroGrupos.Name = "buttonCadastroGrupos";
             this.buttonCadastroGrupos.Size = new System.Drawing.Size(296, 46);

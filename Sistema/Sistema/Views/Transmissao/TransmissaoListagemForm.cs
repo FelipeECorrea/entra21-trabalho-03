@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema.Views.Jogadores
+namespace Sistema.Views.Transmissao
 {
-    public partial class JogadorListarForm : Form
+    public partial class TransmissaoListagemForm : Form
     {
-        public JogadorListarForm()
+        public TransmissaoListagemForm()
         {
             InitializeComponent();
         }

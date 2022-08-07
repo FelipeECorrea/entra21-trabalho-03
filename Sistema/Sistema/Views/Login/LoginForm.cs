@@ -29,6 +29,7 @@ namespace Sistema.Views
         {
             Controle controle = new Controle();
             controle.AcessarProg(textBoxEmail.Text, textBoxSenha.Text);
+
             if (controle.validar)
             {
                 MessageBox.Show("Seja Bem Vindo","Entrando...",MessageBoxButtons.OK,MessageBoxIcon.Information);

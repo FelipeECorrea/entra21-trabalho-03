@@ -96,7 +96,7 @@
             // 
             // buttonCadastrar
             // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(566, 547);
+            this.buttonCadastrar.Location = new System.Drawing.Point(566, 532);
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(86, 67);
             this.buttonCadastrar.TabIndex = 12;
@@ -106,7 +106,7 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(566, 90);
+            this.buttonEditar.Location = new System.Drawing.Point(566, 75);
             this.buttonEditar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(86, 67);
@@ -117,7 +117,7 @@
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(566, 312);
+            this.buttonApagar.Location = new System.Drawing.Point(566, 297);
             this.buttonApagar.Margin = new System.Windows.Forms.Padding(4);
             this.buttonApagar.Name = "buttonApagar";
             this.buttonApagar.Size = new System.Drawing.Size(86, 67);

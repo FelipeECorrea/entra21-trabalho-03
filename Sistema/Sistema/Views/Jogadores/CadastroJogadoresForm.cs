@@ -26,11 +26,22 @@ namespace Sistema.Views.Times
         {
             _idEdicao = jogador.Id;
 
+            for (int i = 0; i < comboBoxTimes.Items.Count; i++)
+            {
+                var timepercorrido = comboBoxTimes.Items[i] as Time;
+
+                if (timepercorrido.Id == jogador.Time.Id)
+                {
+                    comboBoxTimes.SelectedItem = timepercorrido;
+                }
+            }
+
             textBoxNick.Text = jogador.Nick;
             textBoxEmail.Text = jogador.Email;
             textBoxSenha.Text = jogador.Senha;
 
             ValidarPatenteSelecionada();
+                
         }
 
         private string ValidarPatenteSelecionada()

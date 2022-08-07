@@ -18,7 +18,7 @@ namespace Sistema
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadastroJogadoresForm());
+            Application.Run(new MenuPrincipalForm());
         }
     }
 }
