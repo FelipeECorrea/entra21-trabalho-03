@@ -27,6 +27,8 @@ Foram utilizadas as seguintes tecnologias na construção deste projeto:
 
 * Além disso, também é necessário possuir o [.NET 6.0](https://dotnet.microsoft.com/en-us/download). Antes de realizar o download deste verifique, por meio de um terminal, o seguinte comando:
   
+* Comando para o Windows conseguir iniciar o projeto e o Visual Studio 2022 reconhecer as pastas. (ERRO) acontece quando o diretorio é muito grande.
+
 ```
 dotnet --version
 ```
